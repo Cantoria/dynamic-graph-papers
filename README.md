@@ -1,7 +1,18 @@
 
 # 动态图表示论文汇总
 本文总结了动态图表示学习的有关论文，目录如下：
-[TOC]
+- [动态图表示论文汇总](#---------)
+  * [静态图表示的权威论文](#----------)
+      - [Semi-Supervised Classification with Graph Convolutional Networks](#semi-supervised-classification-with-graph-convolutional-networks)
+      - [Inductive representation learning on large graphs](#inductive-representation-learning-on-large-graphs)
+  * [可供借鉴的其他领域工作](#-----------)
+    + [异质图/异质信息网络](#----------)
+    + [其他工作](#----)
+  * [动态图表示的权威论文](#----------)
+      - [Representation Learning for Dynamic Graphs: A Survey](#representation-learning-for-dynamic-graphs--a-survey)
+  * [动态图表示的较新工作（不断更新中）](#-----------------)
+      - [EvolveGCN: Evolving Graph Convolutional Networks for Dynamic Graphs](#evolvegcn--evolving-graph-convolutional-networks-for-dynamic-graphs)
+      - [Temporal Graph Networks for Deep Learning on Dynamic Graphs](#temporal-graph-networks-for-deep-learning-on-dynamic-graphs)
 
 
 ## 静态图表示的权威论文
