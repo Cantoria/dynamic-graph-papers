@@ -1,18 +1,20 @@
 
 # 动态图表示论文汇总
 本文总结了动态图表示学习的有关论文，目录如下：
-- [动态图表示论文汇总](#---------)
-  * [静态图表示的权威论文](#----------)
-      - [Semi-Supervised Classification with Graph Convolutional Networks](#semi-supervised-classification-with-graph-convolutional-networks)
-      - [Inductive representation learning on large graphs](#inductive-representation-learning-on-large-graphs)
-  * [可供借鉴的其他领域工作](#-----------)
-    + [异质图/异质信息网络](#----------)
-    + [其他工作](#----)
-  * [动态图表示的权威论文](#----------)
-      - [Representation Learning for Dynamic Graphs: A Survey](#representation-learning-for-dynamic-graphs--a-survey)
-  * [动态图表示的较新工作（不断更新中）](#-----------------)
-      - [EvolveGCN: Evolving Graph Convolutional Networks for Dynamic Graphs](#evolvegcn--evolving-graph-convolutional-networks-for-dynamic-graphs)
-      - [Temporal Graph Networks for Deep Learning on Dynamic Graphs](#temporal-graph-networks-for-deep-learning-on-dynamic-graphs)
+- [静态图表示的权威论文](#----------)
+    + [Semi-Supervised Classification with Graph Convolutional Networks](#semi-supervised-classification-with-graph-convolutional-networks)
+    + [Inductive representation learning on large graphs](#inductive-representation-learning-on-large-graphs)
+- [可供借鉴的其他领域工作](#-----------)
+  * [异质图/异质信息网络](#----------)
+  * [其他工作](#----)
+- [动态图表示的权威论文](#----------)
+    + [Representation Learning for Dynamic Graphs: A Survey](#representation-learning-for-dynamic-graphs--a-survey)
+- [动态图表示的较新工作（不断更新中）](#-----------------)
+    + [Real-Time Streaming Graph Embedding Through Local Actions](#real-time-streaming-graph-embedding-through-local-actions)
+    + [dyngraph2vec](#dyngraph2vec)
+    + [EvolveGCN: Evolving Graph Convolutional Networks for Dynamic Graphs](#evolvegcn--evolving-graph-convolutional-networks-for-dynamic-graphs)
+    + [Temporal Graph Networks for Deep Learning on Dynamic Graphs](#temporal-graph-networks-for-deep-learning-on-dynamic-graphs)
+- [相关数据集](#-----)
 
 
 ## 静态图表示的权威论文
@@ -62,6 +64,35 @@
 ## 动态图表示的较新工作（不断更新中）
 挑选了动态图表示领域最近2-3年的工作。
 
+#### Real-Time Streaming Graph Embedding Through Local Actions
+* 作者： Xi Liu, et al. (德州农工大学)
+* 发表时间：2019
+* 发表于：WWW 2019
+* 关键词：streaming graph
+* 概述：本文认为已有的动态图嵌入式学习方法强烈依赖节点属性，时间复杂度高，新节点加入后需要重新训练等缺点。本文提出了streaming graph的概念，提出了一种动态图表示的在线近似算法。该算法能够为新加入图中的节点快速高效生成节点表示，并能够为新加入节点“影响”到的节点更新节点的表示。
+* 链接：https://dl.acm.org/doi/abs/10.1145/3308560.3316585
+* 相关数据集：
+    * Blog
+    * CiteSeer
+    * Cora
+    * Flickr
+    * Wiki
+* 是否有开源代码：无
+
+#### dyngraph2vec
+* 作者： Palash Goyal, et al. (南加州州立大学)
+* 发表时间：2020
+* 发表于：Knowledge-Based Systems
+* 关键词：DTDG
+* 概述：本文提出了一种能够捕捉动态图演化的动力学特征，生成动态图表示的方法，并通过AE/RNN/AERNN三种方法进行了实验。基于此，作者设计了一个图embedding生成库GEM
+* 链接：https://www.sciencedirect.com/science/article/pii/S0950705119302916
+* 相关数据集：
+    * SBM dataset
+    * Hep-th Dataset
+    * AS Dataset
+* 是否有开源代码：有
+
+
 #### EvolveGCN: Evolving Graph Convolutional Networks for Dynamic Graphs
 * 作者： Aldo Pareja, et al.(MIT-IBM Watson AI Lab)
 * 发表时间：2019
@@ -91,3 +122,17 @@
     * Reddit
     * Twitter
 * 是否有开源代码：无
+
+## 相关数据集
+
+* Social Evolution Dataset
+* Github Dataset
+* GDELT (Global data on events, location, and tone)
+* ICEWS (Integrated Crisis Early Warning System)
+* FB-FORUM
+* UCI Message data
+* YELP
+* MovieLens-10M
+* SNAP数据集合网站：http://snap.stanford.edu/data/index.html
+* SNAP时态数据集合：http://snap.stanford.edu/data/index.html#temporal
+* KONECT数据集合网站（部分数据集的edge带有时间戳，可看作时序数据）
