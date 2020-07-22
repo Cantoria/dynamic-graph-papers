@@ -1,20 +1,22 @@
 
-# 动态图表示论文汇总
-本文总结了动态图表示学习的有关论文，目录如下：
 - [静态图表示的权威论文](#----------)
     + [Semi-Supervised Classification with Graph Convolutional Networks](#semi-supervised-classification-with-graph-convolutional-networks)
     + [Inductive representation learning on large graphs](#inductive-representation-learning-on-large-graphs)
 - [可供借鉴的其他领域工作](#-----------)
   * [异质图/异质信息网络](#----------)
   * [其他工作](#----)
-- [动态图表示的权威论文](#----------)
+- [动态图表示相关论文](#---------)
     + [Representation Learning for Dynamic Graphs: A Survey](#representation-learning-for-dynamic-graphs--a-survey)
+    + [A Survey on Knowledge Graphs: Representation, Acquisition and Applications](#a-survey-on-knowledge-graphs--representation--acquisition-and-applications)
 - [动态图表示的较新工作（不断更新中）](#-----------------)
+    + [Know-Evolve: Deep Temporal Reasoning for Dynamic Knowledge Graphs](#know-evolve--deep-temporal-reasoning-for-dynamic-knowledge-graphs)
+    + [DYREP: LEARNING REPRESENTATIONS OVER DYNAMIC GRAPHS](#dyrep--learning-representations-over-dynamic-graphs)
+    + [Context-Aware Temporal Knowledge Graph Embedding](#context-aware-temporal-knowledge-graph-embedding)
     + [Real-Time Streaming Graph Embedding Through Local Actions](#real-time-streaming-graph-embedding-through-local-actions)
     + [dyngraph2vec](#dyngraph2vec)
     + [EvolveGCN: Evolving Graph Convolutional Networks for Dynamic Graphs](#evolvegcn--evolving-graph-convolutional-networks-for-dynamic-graphs)
     + [Temporal Graph Networks for Deep Learning on Dynamic Graphs](#temporal-graph-networks-for-deep-learning-on-dynamic-graphs)
-- [相关数据集](#-----)
+- [相关数据集](#---------)
 
 
 ## 静态图表示的权威论文
@@ -51,18 +53,63 @@
 
 ### 其他工作
 
-## 动态图表示的权威论文
+## 动态图表示相关论文
+该部分包括综述论文，以及一些动态图表示的传统工作。
 
 #### Representation Learning for Dynamic Graphs: A Survey
 * 作者：Seyed Mehran Kazemi, et al. (Borealis AI)
 * 发表时间：2020.3
 * 发表于：JMLR 21 (2020) 1-73
 * 标签：动态图表示，综述
-* 概述：针对目前动态图表示已有的方法，从encoder/decoder的角度进行了概述，覆盖面很全，是动态图研究的重要工作。
+* 概述：针对目前动态图表示已有的方法，从encoder/decoder的角度进行了概述，覆盖面很全，是了解动态图研究的必读工作。
 * 链接：https://deepai.org/publication/relational-representation-learning-for-dynamic-knowledge-graphs-a-survey
 
+#### A Survey on Knowledge Graphs: Representation, Acquisition and Applications
+* 作者： Shaoxiong Ji, et al.
+* 发表时间：2020
+* 发表于：Expert Systems with Applications, 2020
+* 关键词：知识图谱，综述
+* 概述：本文从知识的表示学习、知识获取，**时态知识图谱**以及知识感知应用等方面做了阐述，内容全面又不失深度，值得一读。
+* 链接：https://arxiv.org/pdf/2002.00388.pdf
+
 ## 动态图表示的较新工作（不断更新中）
-挑选了动态图表示领域最近2-3年的工作。
+挑选了动态图表示领域最近2-3年的工作（2017-2020）。
+
+#### Know-Evolve: Deep Temporal Reasoning for Dynamic Knowledge Graphs
+* 作者： Rakshit Trivedi, et al. (Georgia Institute of Technology)
+* 发表时间：2017
+* 发表于：PMLR 2017
+* 关键词：动态知识图谱
+* 概述：作者提出了一套能够在动态演化知识图谱上学习实体表示随时间动态演化的框架。其中采用了基于强度函数的多变量点过程来建模事实的发生概率。作者在两个real-world数据集上对链接预测、实体预测、时间预测与滑动窗口预测等任务进行了评价，验证了该框架的有效性。该论文可以看作DyRep的前置工作。
+* 链接：https://arxiv.org/pdf/1705.05742.pdf
+* 相关数据集：
+    * GDELT
+    * ICEWS
+* 是否有开源代码：无
+
+#### DYREP: LEARNING REPRESENTATIONS OVER DYNAMIC GRAPHS
+* 作者： Rakshit Trivedi, et al. (Georgia Institute of Technology & DeepMind)
+* 发表时间：2019
+* 发表于：ICLR 2019
+* 关键词：CTDG
+* 概述：在本文中，作者提出了一套动态图节点表示学习框架，该框架能很好地建模网络的动态演化特征，并能够对unseen nodes进行表示。有对于动态图结构中节点的交互行为，作者将其分为association与communication两种，前者代表长期稳定的联系，网络拓扑结构发生了变化，后者代表短暂、临时的联系。在节点的信息传播方面，作者将节点的信息传播定义为Localized Embedding Propagation/Self-Propagation/Exogenous Drive，分别代表节点邻居的信息聚合传播，节点自身信息传播以及外因驱动（由时间控制）。作者在dynamic link prediction & time prediction任务上对该方法的有效性进行了验证。
+* 链接：https://openreview.net/pdf?id=HyePrhR5KX
+* 相关数据集：
+    * Social Evolution Dataset
+    * Github Dataset
+* 是否有开源代码：无（有第三方开源代码）
+
+#### Context-Aware Temporal Knowledge Graph Embedding
+* 作者： Yu Liu, et al. (昆士兰大学)
+* 发表时间：2019
+* 发表于：WISE 2019
+* 关键词：时态知识图谱，知识表示
+* 概述：作者认为现有的knowledge graph embedding方法忽略了时态一致性；时态一致性能够建模事实与事实所在上下文（上下文是指包含参与该事实的所有实体）的关系。为了验证时态知识图谱中事实的有效性，作者提出了上下文选择的双重策略：1、验证组成该事实的三元组是否可信；2、验证这个事实的时态区间是否与其上下文冲突。作者在实体预测/上下文选择任务上证明了方法的有效性。
+* 链接：https://link.springer.com/chapter/10.1007/978-3-030-34223-4_37
+* 相关数据集：
+    * YAGO11k
+    * Wikidata12k
+* 是否有开源代码：无
 
 #### Real-Time Streaming Graph Embedding Through Local Actions
 * 作者： Xi Liu, et al. (德州农工大学)
@@ -134,5 +181,7 @@
 * YELP
 * MovieLens-10M
 * SNAP数据集合网站：http://snap.stanford.edu/data/index.html
+* SNAP时态数据集合：http://snap.stanford.edu/data/index.html#temporal
+* KONECT数据集合网站（部分数据集的edge带有时间戳，可看作时序数据）
 * SNAP时态数据集合：http://snap.stanford.edu/data/index.html#temporal
 * KONECT数据集合网站（部分数据集的edge带有时间戳，可看作时序数据）
