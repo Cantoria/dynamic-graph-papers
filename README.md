@@ -1,14 +1,16 @@
+# 动态图表示论文汇总
+本文总结了动态图表示学习的有关论文，目录如下：
 
-- [静态图表示的权威论文](#----------)
+- [Static Graph Representation](#static-graph-representation)
     + [Semi-Supervised Classification with Graph Convolutional Networks](#semi-supervised-classification-with-graph-convolutional-networks)
     + [Inductive representation learning on large graphs](#inductive-representation-learning-on-large-graphs)
-- [可供借鉴的其他领域工作](#-----------)
-  * [异质图/异质信息网络](#----------)
-  * [其他工作](#----)
-- [动态图表示相关论文](#---------)
+- [Other Related Works](#other-related-works)
+  * [Heterogeneous Graph/Heterogeneous Information Network](#heterogeneous-graph-heterogeneous-information-network)
+  * [Others](#others)
+- [Dynamic Graph Representation](#dynamic-graph-representation)
     + [Representation Learning for Dynamic Graphs: A Survey](#representation-learning-for-dynamic-graphs--a-survey)
     + [A Survey on Knowledge Graphs: Representation, Acquisition and Applications](#a-survey-on-knowledge-graphs--representation--acquisition-and-applications)
-- [动态图表示的较新工作（不断更新中）](#-----------------)
+- [New Works of Dynamic Graph Representation (Updating)](#new-works-of-dynamic-graph-representation--updating-)
     + [Know-Evolve: Deep Temporal Reasoning for Dynamic Knowledge Graphs](#know-evolve--deep-temporal-reasoning-for-dynamic-knowledge-graphs)
     + [DYREP: LEARNING REPRESENTATIONS OVER DYNAMIC GRAPHS](#dyrep--learning-representations-over-dynamic-graphs)
     + [Context-Aware Temporal Knowledge Graph Embedding](#context-aware-temporal-knowledge-graph-embedding)
@@ -16,10 +18,10 @@
     + [dyngraph2vec](#dyngraph2vec)
     + [EvolveGCN: Evolving Graph Convolutional Networks for Dynamic Graphs](#evolvegcn--evolving-graph-convolutional-networks-for-dynamic-graphs)
     + [Temporal Graph Networks for Deep Learning on Dynamic Graphs](#temporal-graph-networks-for-deep-learning-on-dynamic-graphs)
-- [相关数据集](#---------)
+- [Related Datasets](#related-datasets)
 
 
-## 静态图表示的权威论文
+## Static Graph Representation
 挑选了引用数较高、知名度较大的一些静态图表示学习的工作。
 
 #### Semi-Supervised Classification with Graph Convolutional Networks
@@ -48,12 +50,12 @@
     * PPI
 * 是否有开源代码：有
 
-## 可供借鉴的其他领域工作
-### 异质图/异质信息网络
+## Other Related Works
+### Heterogeneous Graph/Heterogeneous Information Network
 
-### 其他工作
+### Others
 
-## 动态图表示相关论文
+## Dynamic Graph Representation
 该部分包括综述论文，以及一些动态图表示的传统工作。
 
 #### Representation Learning for Dynamic Graphs: A Survey
@@ -72,7 +74,7 @@
 * 概述：本文从知识的表示学习、知识获取，**时态知识图谱**以及知识感知应用等方面做了阐述，内容全面又不失深度，值得一读。
 * 链接：https://arxiv.org/pdf/2002.00388.pdf
 
-## 动态图表示的较新工作（不断更新中）
+## New Works of Dynamic Graph Representation (Updating)
 挑选了动态图表示领域最近2-3年的工作（2017-2020）。
 
 #### Know-Evolve: Deep Temporal Reasoning for Dynamic Knowledge Graphs
@@ -170,7 +172,7 @@
     * Twitter
 * 是否有开源代码：无
 
-## 相关数据集
+## Related Datasets
 
 * Social Evolution Dataset
 * Github Dataset
@@ -181,7 +183,5 @@
 * YELP
 * MovieLens-10M
 * SNAP数据集合网站：http://snap.stanford.edu/data/index.html
-* SNAP时态数据集合：http://snap.stanford.edu/data/index.html#temporal
-* KONECT数据集合网站（部分数据集的edge带有时间戳，可看作时序数据）
 * SNAP时态数据集合：http://snap.stanford.edu/data/index.html#temporal
 * KONECT数据集合网站（部分数据集的edge带有时间戳，可看作时序数据）
