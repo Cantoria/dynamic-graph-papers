@@ -18,6 +18,7 @@
     + [dyngraph2vec](#dyngraph2vec)
     + [EvolveGCN: Evolving Graph Convolutional Networks for Dynamic Graphs](#evolvegcn--evolving-graph-convolutional-networks-for-dynamic-graphs)
     + [Temporal Graph Networks for Deep Learning on Dynamic Graphs](#temporal-graph-networks-for-deep-learning-on-dynamic-graphs)
+    + [Modeling Dynamic Heterogeneous Network for Link Prediction using Hierarchical Attention with Temporal RNN](#modeling-dynamic-heterogeneous-network-for-link-prediction-using-hierarchical-attention-with-temporalr-rnn)
 - [Related Datasets](#related-datasets)
 
 
@@ -171,6 +172,20 @@
     * Reddit
     * Twitter
 * 是否有开源代码：无
+
+#### Modeling Dynamic Heterogeneous Network for Link Prediction using Hierarchical Attention with Temporal RNN
+* 作者：Hansheng Xue, Luwei Yang, et al.（澳大利亚国立大学, 阿里巴巴）
+* 发表时间：2020.6
+* 发表于：arXiv
+* 标签：动态图表示，异构图，注意力机制，DTDG
+* 概述：本文同时考虑到图的异构性和动态性的特点，对于图的每个时间切片，利用node-level attention和edge-level attention以上两个层次的注意力机制实现异质信息的有效处理，并且通过循环神经网络结合self-attention研究节点embedding的演化特性，并且通过链接预测任务进行试验，验证模型的有效性。
+* 链接：https://arxiv.org/pdf/2004.01024.pdf
+* 相关数据集：
+    * Twitter
+    * Math-Overflow
+    * Ecomm
+    * Alibaba.com
+* 是否有开源代码：有(https://github.com/skx300/DyHATR)
 
 ## Related Datasets
 
