@@ -187,6 +187,35 @@
     * Alibaba.com
 * 是否有开源代码：有(https://github.com/skx300/DyHATR)
 
+#### DySAT: Deep Neural Representation Learning on Dynamic Graphs via Self-Attention Networks
+* 作者： Aravind Sankar, et al.(UIUC)
+* 发表时间：2020
+* 发表于：WSDE 2020
+* 标签：DTDG，注意力机制
+* 概述：作者提出了DYNAMIC SELF-ATTENTION NETWORK机制，通过结构化注意力模块与时态注意力模块对动态变化的节点进行表示。
+* 链接：http://yhwu.me/publications/dysat_wsdm20.pdf
+* 相关数据集：
+    * Enron Email
+    * UCI Email
+    * MovieLens-10M
+    * Yelp      
+* 是否有开源代码：有（https://github.com/aravindsankar28/DySAT）
+
+#### Evolving network representation learning based on random walks
+* 作者： Farzaneh Heidari, et al.(York University)
+* 发表时间：2020
+* 发表于：Journal Applied Network Science 2020 (5)
+* 标签：DTDG，随机游走
+* 概述：针对DTDG动态图的4种演化行为（增加/删除节点，增加/删除边），作者提出了一种在动态图上更新已采样随机游走路径的算法，并设计了网络结构演化程度的Peak Detection算法，从而以较小代价更新不断演化的节点表示。
+* 链接：https://appliednetsci.springeropen.com/articles/10.1007/s41109-020-00257-3
+* 相关数据集：
+    * Protein-Protein Interactions
+    * BlogCatalog (Reza and Huan)
+    * Facebook Ego Network(Leskovec and Krevl 2014)
+    * Arxiv HEP-TH (Leskovec and Krevl 2014)  
+    * Synthetic Networks (Watts-Strogatz (Newman 2003) random networks)    
+* 是否有开源代码：有（https://github.com/farzana0/EvoNRL）
+
 ## Related Datasets
 
 * Social Evolution Dataset
@@ -200,3 +229,4 @@
 * SNAP数据集合网站：http://snap.stanford.edu/data/index.html
 * SNAP时态数据集合：http://snap.stanford.edu/data/index.html#temporal
 * KONECT数据集合网站（部分数据集的edge带有时间戳，可看作时序数据）
+* Network Repository：http://networkrepository.com/
