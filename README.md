@@ -19,6 +19,9 @@
     + [EvolveGCN: Evolving Graph Convolutional Networks for Dynamic Graphs](#evolvegcn--evolving-graph-convolutional-networks-for-dynamic-graphs)
     + [Temporal Graph Networks for Deep Learning on Dynamic Graphs](#temporal-graph-networks-for-deep-learning-on-dynamic-graphs)
     + [Modeling Dynamic Heterogeneous Network for Link Prediction using Hierarchical Attention with Temporal RNN](#modeling-dynamic-heterogeneous-network-for-link-prediction-using-hierarchical-attention-with-temporal-rnn)
+    + [Relationship Prediction in Dynamic Heterogeneous Information Networks](#relationship-prediction-in-dynamic-hetergeneous-information-networks)
+    + [Link Prediction on Dynamic Heterogeneous Information Networks](#link-prediction-on-dynamic-heterogeneous-information-networks)
+    + [Continuous-Time Relationship Prediction in Dynamic Heterogeneous Information Networks](#continuous-time-relationship-prediction-in-dynamic-heterogeneous-information-networks)
 - [Related Datasets](#related-datasets)
 
 
@@ -215,6 +218,44 @@
     * Arxiv HEP-TH (Leskovec and Krevl 2014)  
     * Synthetic Networks (Watts-Strogatz (Newman 2003) random networks)    
 * 是否有开源代码：有（https://github.com/farzana0/EvoNRL）
+
+#### Relationship Prediction in Dynamic Heterogeneous Information Networks
+* 作者： Amin Milani Fard, et al.(New York Institute of Technology)
+* 发表时间：2019
+* 发表于：Advances in Information Retrieval 2019 (4)
+* 标签：DTDG，异质信息
+* 概述：本文在考虑图动态性的同时，考虑图的异质性，认为不同类型节点对之间的关系自然有所区别，因此提出了动态异质图表示学习，并且做了规范定义。并且提出MetaDynaMix 方法，通过meta-path标注每个节点和边的特征，在此基础上通过矩阵分解得到特征向量，并用于计算关系预测时的概率。
+* 链接：https://www.researchgate.net/publication/332257507_Relationship_Prediction_in_Dynamic_Heterogeneous_Information_Networks
+* 相关数据集：
+    * Publication Network (DBLP+ ACM)
+    * Movies Network (IMDB)
+* 是否有开源代码：无
+
+#### Link Prediction on Dynamic Heterogeneous Information Networks
+* 作者： Chao Kong, et al.(Anhui Polytechnic University)
+* 发表时间：2019
+* 发表于：Lecture Notes in Computer Science 2019
+* 标签：DTDG，异质信息，广度学习，图神经网络
+* 概述：本文考虑到动态图相关研究中异质信息缺乏有效的利用，且对于大规模图的表示学习过程中，深度学习方法效率较低，因此提出了一种宽度学习(?)的框架，并且与图神经网络相结合，实现高效的动态异质图表示学习。
+* 链接：https://link.springer.com/chapter/10.1007%2F978-3-030-34980-6_36
+* 相关数据集：
+    * Reddit
+    * Stack Overflow
+    * Ask Ubuntu
+* 是否有开源代码：无
+
+#### Continuous-Time Relationship Prediction in Dynamic Heterogeneous Information Networks
+* 作者： SINA SAJADMANESH, et al.(Sharif University of Technology)
+* 发表时间：2018
+* 发表于：ACM Transactions on Knowledge Discovery from Data (5)
+* 标签：CTDG，异质信息
+* 概述：本文同时关注到图的动态性与异质性，针对于连续时间的关系预测问题进行了定义，并且提出了一种新的特征抽取框架，通过Meta-Path以及循环神经网络实现对于异质信息与时间信息的有效利用，并且提出NP-GLM框架，用于实现关系预测(预测关系创建的时间点)。
+* 链接：https://www.researchgate.net/publication/320195531_Continuous-Time_Relationship_Prediction_in_Dynamic_Heterogeneous_Information_Networks
+* 相关数据集：
+    * DBLP
+    * Delicious
+    * MovieLens
+* 是否有开源代码：无
 
 ## Related Datasets
 
