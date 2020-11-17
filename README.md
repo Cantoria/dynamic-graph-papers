@@ -22,6 +22,7 @@
     + [Relationship Prediction in Dynamic Heterogeneous Information Networks](#relationship-prediction-in-dynamic-hetergeneous-information-networks)
     + [Link Prediction on Dynamic Heterogeneous Information Networks](#link-prediction-on-dynamic-heterogeneous-information-networks)
     + [Continuous-Time Relationship Prediction in Dynamic Heterogeneous Information Networks](#continuous-time-relationship-prediction-in-dynamic-heterogeneous-information-networks)
+    + [Continuous-Time Dynamic Graph Learning via Neural Interaction Processes](#continuous-time-dynamic-graph-learning-via-neural-Interaction-processes)
 - [Related Datasets](#related-datasets)
 
 
@@ -256,6 +257,21 @@
     * Delicious
     * MovieLens
 * 是否有开源代码：无
+
+#### Continuous-Time Dynamic Graph Learning via Neural Interaction Processes
+* 作者： Xiaofu Chang, et al.(Ant Group)
+* 发表时间：2020
+* 发表于：CIKM '20: Proceedings of the 29th ACM International Conference on Information & Knowledge Management
+* 标签：CTDG，异质信息，时态点序列过程
+* 概述：针对动态图中并存的拓扑信息与时态信息，本文提出了TDIG(Temporal Dependency Interaction Graph)的概念，并基于该概念提出了一种新的编码框架TDIG-MPNN，能够产生连续时间上的节点动态表示。该框架由TDIG-HGAN与TDIG-RGNN组成。前者能够聚合来自异质邻居节点的局部时态与结构信息；后者使用LSTM架构建模长序列的信息传递，整合了TDIG-HGAN的输出，捕捉全局的信息。此外，作者采用了一种基于注意力机制的选择算法，能够针对某一节点u，计算历史与其关联的节点对其不同重要程度分值。在训练过程中，作者将其定义为一个时态点序列过程(Temporal Point Process)问题进行优化。在实验中，作者针对时态链接预测问题，通过hit@10/Mean Rank指标对一些经典的静态图表示学习算法与STOA的动态图表示学习方法进行了对比，作者提出的模型在多个Transductive与一个Inductive数据集上取得了最好的效果。
+* 链接：https://dl.acm.org/doi/pdf/10.1145/3340531.3411946
+* 相关数据集：
+    * CollegeMsg (Transductive)
+    * Amazon (Transductive)
+    * LastFM  (Transductive)
+    * Huabei Trades (Inductive)
+* 是否有开源代码：无
+
 
 ## Related Datasets 
 
