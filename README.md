@@ -9,6 +9,7 @@
   * [Others](#others)
 - [Dynamic Graph Representation](#dynamic-graph-representation)
     + [Representation Learning for Dynamic Graphs: A Survey](#representation-learning-for-dynamic-graphs--a-survey)
+    + [Foundations and modelling of dynamic networks using Dynamic Graph Neural Networks: A survey](#foundations-and-modelling-of-dynamic-networks-using-dynamic-graph-neural-networks--a-survey)
     + [A Survey on Knowledge Graphs: Representation, Acquisition and Applications](#a-survey-on-knowledge-graphs--representation--acquisition-and-applications)
 - [New Works of Dynamic Graph Representation (Updating)](#new-works-of-dynamic-graph-representation--updating-)
     + [Know-Evolve: Deep Temporal Reasoning for Dynamic Knowledge Graphs](#know-evolve--deep-temporal-reasoning-for-dynamic-knowledge-graphs)
@@ -19,11 +20,16 @@
     + [EvolveGCN: Evolving Graph Convolutional Networks for Dynamic Graphs](#evolvegcn--evolving-graph-convolutional-networks-for-dynamic-graphs)
     + [Temporal Graph Networks for Deep Learning on Dynamic Graphs](#temporal-graph-networks-for-deep-learning-on-dynamic-graphs)
     + [Modeling Dynamic Heterogeneous Network for Link Prediction using Hierarchical Attention with Temporal RNN](#modeling-dynamic-heterogeneous-network-for-link-prediction-using-hierarchical-attention-with-temporal-rnn)
-    + [Relationship Prediction in Dynamic Heterogeneous Information Networks](#relationship-prediction-in-dynamic-hetergeneous-information-networks)
+    + [DySAT: Deep Neural Representation Learning on Dynamic Graphs via Self-Attention Networks](#dysat--deep-neural-representation-learning-on-dynamic-graphs-via-self-attention-networks)
+    + [Evolving network representation learning based on random walks](#evolving-network-representation-learning-based-on-random-walks)
+    + [Relationship Prediction in Dynamic Heterogeneous Information Networks](#relationship-prediction-in-dynamic-heterogeneous-information-networks)
     + [Link Prediction on Dynamic Heterogeneous Information Networks](#link-prediction-on-dynamic-heterogeneous-information-networks)
+    + [TemporalGAT: Attention-Based Dynamic Graph Representation Learning](#temporalgat--attention-based-dynamic-graph-representation-learning)
     + [Continuous-Time Relationship Prediction in Dynamic Heterogeneous Information Networks](#continuous-time-relationship-prediction-in-dynamic-heterogeneous-information-networks)
-    + [Continuous-Time Dynamic Graph Learning via Neural Interaction Processes](#continuous-time-dynamic-graph-learning-via-neural-Interaction-processes)
+    + [Continuous-Time Dynamic Graph Learning via Neural Interaction Processes](#continuous-time-dynamic-graph-learning-via-neural-interaction-processes)
 - [Related Datasets](#related-datasets)
+
+
 
 
 ## Static Graph Representation
@@ -70,6 +76,14 @@
 * 标签：动态图表示，综述
 * 概述：针对目前动态图表示已有的方法，从encoder/decoder的角度进行了概述，覆盖面很全，是了解动态图研究的必读工作。
 * 链接：https://deepai.org/publication/relational-representation-learning-for-dynamic-knowledge-graphs-a-survey
+
+#### Foundations and modelling of dynamic networks using Dynamic Graph Neural Networks: A survey
+* 作者：Joakim Skarding, et al. (University of Technology Sydney)
+* 发表时间：2020.5
+* 发表于：arXiv
+* 标签：动态图表示，综述，动态图神经网络
+* 概述：该文侧重于从图神经网络的角度与具体任务的角度去讲述目前动态网络的研究方向。在第二章中，作者将动态图的有关定义整理为体系，从3个维度（时态粒度、节点动态性、边持续的时间）上，分别定义了8种动态网络的定义。在第三章中，阐述了编码动态网络拓扑结构的深度学习模型；在第四章中，阐述了被编码的动态网络信息如何用于预测，即动态网络的解码器、损失函数、评价指标等。在最后一章，作者阐述了动态图表示、建模的一些挑战，并对未来的发展方向进行了展望。
+* 链接：https://arxiv.org/abs/2005.07496
 
 #### A Survey on Knowledge Graphs: Representation, Acquisition and Applications
 * 作者： Shaoxiong Ji, et al.
@@ -243,6 +257,19 @@
     * Reddit
     * Stack Overflow
     * Ask Ubuntu
+* 是否有开源代码：无
+
+#### TemporalGAT: Attention-Based Dynamic Graph Representation Learning
+* 作者： Ahmed Fathy and Kan Li(Beijing Institute of Technology)
+* 发表时间： 2020
+* 发表于：PAKDD 2020
+* 标签：DTDG，图神经网络
+* 概述：目前的方法使用了时态约束权重（temporal regularized weights）来使节点在相邻时态状态的变化是平滑的，但是这种约束权重是不变的，无法反映图中节点随时间演化的规律。本文借鉴了GAT的思路，提出了TCN。但作者提到本文的贡献只是提高了精度，感觉并不是很有说服力。
+* 链接：https://link.springer.com/chapter/10.1007/978-3-030-47426-3_32
+* 相关数据集：
+    * Enron
+    * UCI
+    * Yelp
 * 是否有开源代码：无
 
 #### Continuous-Time Relationship Prediction in Dynamic Heterogeneous Information Networks
