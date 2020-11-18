@@ -16,7 +16,8 @@
     + [DYREP: LEARNING REPRESENTATIONS OVER DYNAMIC GRAPHS](#dyrep--learning-representations-over-dynamic-graphs)
     + [Context-Aware Temporal Knowledge Graph Embedding](#context-aware-temporal-knowledge-graph-embedding)
     + [Real-Time Streaming Graph Embedding Through Local Actions](#real-time-streaming-graph-embedding-through-local-actions)
-    + [dyngraph2vec](#dyngraph2vec)
+    + [Predicting Dynamic Embedding Trajectory in Temporal Interaction Networks](#predicting-dynamic-embedding-trajectory-in-temporal-interaction-networks)
+    + [dyngraph2vec-Capturing Network Dynamics using Dynamic Graph Representation Learning](#dyngraph2vec-capturing-network-dynamics-using-dynamic-graph-representation-learning)
     + [EvolveGCN: Evolving Graph Convolutional Networks for Dynamic Graphs](#evolvegcn--evolving-graph-convolutional-networks-for-dynamic-graphs)
     + [Temporal Graph Networks for Deep Learning on Dynamic Graphs](#temporal-graph-networks-for-deep-learning-on-dynamic-graphs)
     + [Modeling Dynamic Heterogeneous Network for Link Prediction using Hierarchical Attention with Temporal RNN](#modeling-dynamic-heterogeneous-network-for-link-prediction-using-hierarchical-attention-with-temporal-rnn)
@@ -28,6 +29,8 @@
     + [Continuous-Time Relationship Prediction in Dynamic Heterogeneous Information Networks](#continuous-time-relationship-prediction-in-dynamic-heterogeneous-information-networks)
     + [Continuous-Time Dynamic Graph Learning via Neural Interaction Processes](#continuous-time-dynamic-graph-learning-via-neural-interaction-processes)
 - [Related Datasets](#related-datasets)
+
+
 
 
 
@@ -147,18 +150,32 @@
     * Wiki
 * 是否有开源代码：无
 
-#### dyngraph2vec
+#### Predicting Dynamic Embedding Trajectory in Temporal Interaction Networks
+* 作者： Srijan Kumar, et al. (斯坦福大学，Jure团队)
+* 发表时间：2019
+* 发表于：KDD 2019
+* 关键词：CTDG，user-item dynamic embedding
+* 概述：这篇论文解决的问题是建模user-item之间的序列互动问题。而表示学习能够为建模user-item之间的动态演化提供很好的解决方案。目前工作的缺陷是只有在user作出变化时才会更新其表示，并不能生成user/item未来的轨迹embedding。因此，作者设计了JODIE（Joint Dynamic User-Item Embeddings），其包括更新部分与预测部分。更新部分由一个耦合循环神经网络（coupled recurrent neural network）学习user与item未来轨迹。其使用了两个循环神经网络更新user/item在每次interaction的表示，还能表示user/item未来的embedding变化轨迹（trajectory）。预测部分由一个映射算子组成，其能够学习user在未来任意某个时间点的embedding表示。为了让这个方法可扩展性更强，作者提出了一个t-Batch算法，能够创建时间一致性的batch（time-consistent batch），且能够提升9倍训练速度。为了验证方法的有效性，作者在4个实验数据集上做了实验，对比了6种方法，发现在预测未来互动（predicting future interaction）任务上提升了20%，在状态变化预测（state change prediction任务上提升了12%）
+* 链接：https://cs.stanford.edu/~srijan/pubs/jodie-kdd2019.pdf
+* 相关数据集：
+    * Reddit
+    * Wikipedia
+    * Last FM
+    * MOOC
+* 是否有开源代码：有(https://snap.stanford.edu/jodie/)
+
+#### dyngraph2vec-Capturing Network Dynamics using Dynamic Graph Representation Learning
 * 作者： Palash Goyal, et al. (南加州州立大学)
 * 发表时间：2020
 * 发表于：Knowledge-Based Systems
 * 关键词：DTDG
-* 概述：本文提出了一种能够捕捉动态图演化的动力学特征，生成动态图表示的方法，并通过AE/RNN/AERNN三种方法进行了实验。基于此，作者设计了一个图embedding生成库GEM
+* 概述：本文首先针对动态图表示学习进行了定义，即：学习到一个函数的映射，这个映射能将每个时间点的图中节点映射为向量y，并且这个向量能够捕捉到节点变化的时态模式。基于此，作者提出了一种能够捕捉动态图演化的动力学特征，生成动态图表示的方法，本质上是输入为动态图的前T个时间步的snapshot，输出为T+1时刻的图嵌入式表达。在实验中，作者采用了AE/RNN/AERNN三种编码器进行了实验。此外，作者设计了一个图embedding生成库DynamicGEM。
 * 链接：https://www.sciencedirect.com/science/article/pii/S0950705119302916
 * 相关数据集：
     * SBM dataset
     * Hep-th Dataset
     * AS Dataset
-* 是否有开源代码：有
+* 是否有开源代码：有(https://github.com/palash1992/DynamicGEM)
 
 
 #### EvolveGCN: Evolving Graph Convolutional Networks for Dynamic Graphs
@@ -176,7 +193,7 @@
     * Autonomous systems
     * Reddit Hyperlink Network
     * Elliptic      
-* 是否有开源代码：有
+* 是否有开源代码：有（https://github.com/IBM/EvolveGCN）
 
 #### Temporal Graph Networks for Deep Learning on Dynamic Graphs
 * 作者：Rossi, Emanuele, et al.（Twitter）
@@ -217,7 +234,7 @@
     * UCI Email
     * MovieLens-10M
     * Yelp      
-* 是否有开源代码：有（https://github.com/aravindsankar28/DySAT）
+* 是否有开源代码：有(https://github.com/aravindsankar28/DySAT)
 
 #### Evolving network representation learning based on random walks
 * 作者： Farzaneh Heidari, et al.(York University)
@@ -232,7 +249,7 @@
     * Facebook Ego Network(Leskovec and Krevl 2014)
     * Arxiv HEP-TH (Leskovec and Krevl 2014)  
     * Synthetic Networks (Watts-Strogatz (Newman 2003) random networks)    
-* 是否有开源代码：有（https://github.com/farzana0/EvoNRL）
+* 是否有开源代码：有(https://github.com/farzana0/EvoNRL)
 
 #### Relationship Prediction in Dynamic Heterogeneous Information Networks
 * 作者： Amin Milani Fard, et al.(New York Institute of Technology)
