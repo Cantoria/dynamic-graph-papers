@@ -6,7 +6,7 @@
     + [Inductive representation learning on large graphs](#inductive-representation-learning-on-large-graphs)
 - [Other Related Works](#other-related-works)
   * [Heterogeneous Graph/Heterogeneous Information Network](#heterogeneous-graph-heterogeneous-information-network)
-    + [Heterogeneous Network Representation Learning_Survey, Benchmark, Evaluation, and Beyond](#hewterogeneous-network-representation-learning)
+    [Heterogeneous Network Representation Learning_Survey, Benchmark, Evaluation, and Beyond](#hewterogeneous-network-representation-learning)
   * [Others](#others)
 - [Dynamic Graph Representation](#dynamic-graph-representation)
     + [Representation Learning for Dynamic Graphs: A Survey](#representation-learning-for-dynamic-graphs--a-survey)
