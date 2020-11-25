@@ -6,6 +6,7 @@
     + [Inductive representation learning on large graphs](#inductive-representation-learning-on-large-graphs)
 - [Other Related Works](#other-related-works)
   * [Heterogeneous Graph/Heterogeneous Information Network](#heterogeneous-graph-heterogeneous-information-network)
+    + [Heterogeneous Network Representation Learning: Survey, Benchmark, Evaluation, and Beyond](#heterogeneous-network-representation-learning--survey--benchmark--evaluation--and-beyond)
   * [Others](#others)
 - [Dynamic Graph Representation](#dynamic-graph-representation)
     + [Representation Learning for Dynamic Graphs: A Survey](#representation-learning-for-dynamic-graphs--a-survey)
@@ -66,7 +67,19 @@
 
 ## Other Related Works
 ### Heterogeneous Graph/Heterogeneous Information Network
-
+#### Heterogeneous Network Representation Learning: Survey, Benchmark, Evaluation, and Beyond
+* 作者： Carl Yang, et al.(UIUC韩家炜团队)
+* 发表时间：2020
+* 发表于：Arxiv
+* 标签：Heterogeneous Network Reprensentation Learning
+* 概述：本文是异质图相关研究的综述文章，系统性地梳理了异质图的经典工作以及前沿工作，将已有工作规范到统一的框架内，且提出了异质图表示学习的Benchmark，并且对于经典的异质图方法进行了复现与评测。
+* 链接：https://arxiv.org/abs/2004.00216
+* 相关数据集：
+    * DBLP
+    * Yelp
+    * Freebase
+    * PubMed
+* 是否有开源代码：有
 ### Others
 
 ## Dynamic Graph Representation
