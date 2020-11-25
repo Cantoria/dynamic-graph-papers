@@ -11,6 +11,8 @@
     + [Representation Learning for Dynamic Graphs: A Survey](#representation-learning-for-dynamic-graphs--a-survey)
     + [Foundations and modelling of dynamic networks using Dynamic Graph Neural Networks: A survey](#foundations-and-modelling-of-dynamic-networks-using-dynamic-graph-neural-networks--a-survey)
     + [A Survey on Knowledge Graphs: Representation, Acquisition and Applications](#a-survey-on-knowledge-graphs--representation--acquisition-and-applications)
+    + [Temporal Link Prediction: A Survey](#temporal-link-prediction--a-survey)
+    + [Temporal Networks](#temporal-networks)
 - [New Works of Dynamic Graph Representation (Updating)](#new-works-of-dynamic-graph-representation--updating-)
     + [Know-Evolve: Deep Temporal Reasoning for Dynamic Knowledge Graphs](#know-evolve--deep-temporal-reasoning-for-dynamic-knowledge-graphs)
     + [DYREP: LEARNING REPRESENTATIONS OVER DYNAMIC GRAPHS](#dyrep--learning-representations-over-dynamic-graphs)
@@ -29,9 +31,7 @@
     + [Continuous-Time Relationship Prediction in Dynamic Heterogeneous Information Networks](#continuous-time-relationship-prediction-in-dynamic-heterogeneous-information-networks)
     + [Continuous-Time Dynamic Graph Learning via Neural Interaction Processes](#continuous-time-dynamic-graph-learning-via-neural-interaction-processes)
 - [Related Datasets](#related-datasets)
-
-
-
+- [其他参考资料](#------)
 
 
 
@@ -95,6 +95,24 @@
 * 关键词：知识图谱，综述
 * 概述：本文从知识的表示学习、知识获取，**时态知识图谱**以及知识感知应用等方面做了阐述，内容全面又不失深度，值得一读。
 * 链接：https://arxiv.org/pdf/2002.00388.pdf
+
+#### Temporal Link Prediction: A Survey
+* 作者： Divakaran A, et al.
+* 发表时间：2019
+* 发表于：New Generation Computing (2019)
+* 关键词：时态链接预测，综述
+* 概述：从离散动态图（DTDG）的角度出发，本文针对时态链接预测任务给出了相关定义，并从实现方法的角度出发，构建了时态链接预测的分类体系，分别从矩阵分解/概率模型/谱聚类/时间序列模型/深度学习等不同方法实现的模型进行了比较与论述。文章还列举出了时态链接预测任务的相关数据集（论文互引网络、通讯网络、社交网络、人类交往网络数据等）。最后，文章对时态链接预测任务的难点进行了展望。
+* 链接：https://link.springer.com/article/10.1007%2Fs00354-019-00065-z
+
+
+#### Temporal Networks
+* 作者： Holme P, Saramäki J.
+* 发表时间：2012
+* 发表于：Physics reports, 2012
+* 关键词：时态网络，综述
+* 概述：这篇论文是一篇时态网络的经典综述论文。论文中给出了时态网络的三种形式，并且从时态网络的拓扑结构的衡量方法、将时态数据表示为静态图、时态网络的一些模型、时态网络上的传播动力学和区间模型等进行了论述。最后，文章对时态网络的未来发展趋势进行了展望。
+* 链接：https://link.springer.com/article/10.1007%2Fs00354-019-00065-z
+
 
 ## New Works of Dynamic Graph Representation (Updating)
 挑选了动态图表示领域最近2-3年的工作（2017-2020）。
@@ -331,3 +349,6 @@
 * SNAP时态数据集合：http://snap.stanford.edu/data/index.html#temporal
 * KONECT数据集合网站（部分数据集的edge带有时间戳，可看作时序数据）
 * Network Repository：http://networkrepository.com/
+
+## 其他参考资料
+
