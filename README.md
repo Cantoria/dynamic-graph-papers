@@ -39,6 +39,19 @@
 ## Static Graph Representation
 挑选了引用数较高、知名度较大的一些静态图表示学习的工作。
 
+#### node2vec: Scalable Feature Learning for Networks
+* 作者：Grover A, Leskovec J. (University of Amsterdam)
+* 发表时间：2016
+* 发表于：KDD 2016
+* 标签：图表示学习
+* 概述：依据表示学习，提出了一套在网络中学习节点连续型表示的方法，取代了传统使用人工定义节点结构化特征的方式（如中心度等）。其指导思想是是最大化节点邻居共现的似然。其另一贡献是在随机游走采样的基础上提出了BFS与DFS结合的灵活采样方法，能够采样到不同的邻居。
+* 链接：https://arxiv.org/pdf/1607.00653.pdf
+* 相关数据集：
+    * BlogCatalog
+    * PPI
+    * Wikipedia
+* 是否有开源代码：有
+
 #### Semi-Supervised Classification with Graph Convolutional Networks
 * 作者：Thomas N. Kipf, et al. (University of Amsterdam)
 * 发表时间：2016
@@ -52,6 +65,8 @@
     * Pubmed
     * NELL
 * 是否有开源代码：有
+
+
 #### Inductive representation learning on large graphs
 * 作者： Hamilton W, et al.(斯坦福大学Leskovec团队)
 * 发表时间：2017
@@ -141,6 +156,24 @@
     * GDELT
     * ICEWS
 * 是否有开源代码：无
+
+#### Continuous-Time Dynamic Network Embeddings
+* 作者： Giang Hoang Nguyen, et al. (Worcester Polytechnic Institute)
+* 发表时间：2018
+* 发表于：WWW 2018
+* 关键词：动态图表示，temporal random walk
+* 概述：依据deepwalk与node2vec等模型的启发，作者基于动态图的性质，提出了temporal random walk的概念，即在一条随机游走路径上，从起始节点到终止节点，连边的时态信息依次递增。针对边上存在时态信息的问题，作者提出了unbiased/biased采样算法。采样后的路径将会蕴含动态图中的时态依赖信息。作者在多个动态图数据集上做了实验，并与Deepwalk/Node2vec/LINE等静态图表示学习算法进行了对比。
+* 链接：https://dl.acm.org/doi/abs/10.1145/3184558.3191526
+* 相关数据集：
+    * ia-contact
+    * ia-hypertext09
+    * ia-enron-employees
+    * ia-radoslaw-email
+    * ia-email-eu
+    * fb-forum
+    * soc-bitcoinA
+    * soc-wiki-elec
+* 是否有开源代码：有一个第三方复现版本https://github.com/Shubhranshu-Shekhar/ctdne
 
 #### DYREP: LEARNING REPRESENTATIONS OVER DYNAMIC GRAPHS
 * 作者： Rakshit Trivedi, et al. (Georgia Institute of Technology & DeepMind)
@@ -349,6 +382,7 @@
 
 
 ## Related Datasets 
+包含一些知名的动态网络数据集，以及能够下载动态网络数据集合的网站。
 
 * Social Evolution Dataset
 * Github Dataset
@@ -361,7 +395,8 @@
 * SNAP数据集合网站：http://snap.stanford.edu/data/index.html
 * SNAP时态数据集合：http://snap.stanford.edu/data/index.html#temporal
 * KONECT数据集合网站（部分数据集的edge带有时间戳，可看作时序数据）
-* Network Repository：http://networkrepository.com/
+* Network Repository（包含了数千个网络数据集）：http://networkrepository.com/
+* Network Repository中的动态网络数据集：http://networkrepository.com/dynamic.php
 
 ## 其他参考资料
 
