@@ -2,6 +2,7 @@
 本文总结了动态图表示学习的有关论文，目录如下：
 
 - [Static Graph Representation](#static-graph-representation)
+    + [node2vec: Scalable Feature Learning for Networks](#node2vec--scalable-feature-learning-for-networks)
     + [Semi-Supervised Classification with Graph Convolutional Networks](#semi-supervised-classification-with-graph-convolutional-networks)
     + [Inductive representation learning on large graphs](#inductive-representation-learning-on-large-graphs)
 - [Other Related Works](#other-related-works)
@@ -16,6 +17,7 @@
     + [Temporal Networks](#temporal-networks)
 - [New Works of Dynamic Graph Representation (Updating)](#new-works-of-dynamic-graph-representation--updating-)
     + [Know-Evolve: Deep Temporal Reasoning for Dynamic Knowledge Graphs](#know-evolve--deep-temporal-reasoning-for-dynamic-knowledge-graphs)
+    + [Continuous-Time Dynamic Network Embeddings](#continuous-time-dynamic-network-embeddings)
     + [DYREP: LEARNING REPRESENTATIONS OVER DYNAMIC GRAPHS](#dyrep--learning-representations-over-dynamic-graphs)
     + [Context-Aware Temporal Knowledge Graph Embedding](#context-aware-temporal-knowledge-graph-embedding)
     + [Real-Time Streaming Graph Embedding Through Local Actions](#real-time-streaming-graph-embedding-through-local-actions)
@@ -33,6 +35,7 @@
     + [Continuous-Time Dynamic Graph Learning via Neural Interaction Processes](#continuous-time-dynamic-graph-learning-via-neural-interaction-processes)
 - [Related Datasets](#related-datasets)
 - [其他参考资料](#------)
+
 
 
 
@@ -388,15 +391,17 @@
 * Github Dataset
 * GDELT (Global data on events, location, and tone)
 * ICEWS (Integrated Crisis Early Warning System)
+* DBLP：https://dblp.uni-trier.de/xml/
 * FB-FORUM
 * UCI Message data
-* YELP
+* YELP：https://www.yelp.com/dataset/download
 * MovieLens-10M
 * SNAP数据集合网站：http://snap.stanford.edu/data/index.html
 * SNAP时态数据集合：http://snap.stanford.edu/data/index.html#temporal
-* KONECT数据集合网站（部分数据集的edge带有时间戳，可看作时序数据）
+* KONECT数据集合网站（部分数据集的edge带有时间戳，可看作时序数据）  http://konect.cc/
 * Network Repository（包含了数千个网络数据集）：http://networkrepository.com/
 * Network Repository中的动态网络数据集：http://networkrepository.com/dynamic.php
+* Aminer数据集：https://www.aminer.cn/data
 
 ## 其他参考资料
 
