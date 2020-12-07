@@ -35,8 +35,12 @@
     + [TemporalGAT: Attention-Based Dynamic Graph Representation Learning](#temporalgat--attention-based-dynamic-graph-representation-learning)
     + [Continuous-Time Relationship Prediction in Dynamic Heterogeneous Information Networks](#continuous-time-relationship-prediction-in-dynamic-heterogeneous-information-networks)
     + [Continuous-Time Dynamic Graph Learning via Neural Interaction Processes](#continuous-time-dynamic-graph-learning-via-neural-interaction-processes)
+    + [A Data-Driven Graph Generative Model for Temporal Interaction Networks](#a-data-driven-graph-generative-model-for-temporal-interaction-networks)
 - [Related Datasets](#related-datasets)
 - [其他参考资料](#------)
+
+<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
+
 
 
 
@@ -407,6 +411,23 @@
     * Huabei Trades (Inductive)
 * 是否有开源代码：无
 
+#### A Data-Driven Graph Generative Model for Temporal Interaction Networks
+* 作者： Dawei Zhou, et al.(UIUC)
+* 发表时间：2020
+* 发表于：KDD 2020
+* 标签：CTDG，图生成模型
+* 概述：这篇论文是一篇深度图生成领域的文章，作者将动态图生成领域与transformer模型结合，设计了一种端到端的图生成模型TagGen。TagGen包含一种新颖的采样机制，能够捕捉到时态网络中的结构信息与时态信息。而且TagGen能够参数化双向自注意力机制，选择local operation，从而生成时态随机游走序列。最后，一个判别器（discriminator）在其中选择更贴近于真实数据的随机游走序列，将这些序列返回至一个组装模块（assembling module），生成新的随机游走序列。
+作者在7个数据集上进行了实验，在跨度不同的指标中，TagGen表现更好；在具体任务（异常检测，链接预测）中，TagGen大幅度提升了性能。
+* 链接：https://www.kdd.org/kdd2020/accepted-papers/view/a-data-driven-graph-generative-model-for-temporal-interaction-networks
+* 相关数据集：
+    * DBLP 
+    * SO
+    * MO
+    * WIKI
+    * EMAIL
+    * MSG
+    * BITCOIN
+* 是否有开源代码：有（https://github.com/davidchouzdw/TagGen ）
 
 ## Related Datasets 
 包含一些知名的动态网络数据集，以及能够下载动态网络数据集合的网站。
