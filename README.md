@@ -188,6 +188,18 @@
     * ICEWS
 * 是否有开源代码：无
 
+#### Spatio-Temporal Graph Convolutional Networks: A Deep Learning Framework for Traffic Forecasting
+* 作者： Bing Yu, et al. (Peking University)
+* 发表时间：2018
+* 发表于：IJCAI 2018
+* 关键词：时空图，交通流量预测，DTDG
+* 概述：作者将交通流量预测建模为时空图（Spatial- Temporal Graph）的形式，设计了一种能够在时空图上进行运算的GCN架构模型STGCN，其参数量较于传统的序列预测模型（RNN等）大大减少，能够以更快的速度运算。作者在两个交通流量数据集上进行了指标性能与时间运算性能的比较，证明了STGCN的优越性。总体来说，这是一篇偏工程应用的论文。
+* 链接：https://www.ijcai.org/Proceedings/2018/0505.pdf
+* 相关数据集：
+    * BJER4
+    * PeMSD7
+* 是否有开源代码：无
+
 #### Continuous-Time Dynamic Network Embeddings
 * 作者： Giang Hoang Nguyen, et al. (Worcester Polytechnic Institute)
 * 发表时间：2018
@@ -205,6 +217,19 @@
     * soc-bitcoinA
     * soc-wiki-elec
 * 是否有开源代码：有一个第三方复现版本https://github.com/Shubhranshu-Shekhar/ctdne
+
+#### Dynamic Network Embedding by Modeling Triadic Closure Process
+* 作者： Lekui Zhou, et al. (Zhejiang University)
+* 发表时间：2018
+* 发表于：AAAI 2018
+* 关键词：动态图表示，DTDG
+* 概述：作者依据动态网络的特性，提出了依据triad结构建模动态图演化模式的方法DynamicTraid。三元组（Triad）演化的过程就是三个节点中两个互不链接的节点之间建立链接，形成一个闭合三元组的过程。作者在几个不同的真实业务场景（电信欺诈，贷款偿还等）数据集中做了实验，证明了模型的有效性。
+* 链接：http://yangy.org/works/dynamictriad/dynamic_triad.pdf
+* 相关数据集：
+    * Mobile
+    * Loan
+    * Academic
+* 是否有开源代码：有（https://github.com/luckiezhou/DynamicTriad ）
 
 #### DYREP: LEARNING REPRESENTATIONS OVER DYNAMIC GRAPHS
 * 作者： Rakshit Trivedi, et al. (Georgia Institute of Technology & DeepMind)
