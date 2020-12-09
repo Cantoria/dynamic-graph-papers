@@ -127,6 +127,18 @@
     * DBLP
 * 是否有开源代码：有
 
+#### Modeling Dynamic Heterogeneous Network for Link Prediction using Hierarchical Attention with Temporal RNN
+* 作者： Hansheng Xue, et al.
+* 发表时间：2020
+* 发表于：ArXiv
+* 标签：CTDG，异质信息，动态信息， 图神经网络
+* 概述：本文提出一个能够同时学习图中动态信息和异质信息的框架DyHATR，通过类似于HAN的异质图神经网络建模每个时间步上节点的表示，其中通过分层注意力机制同时关注到聚合信息时不同节点的重要性，以及不同Meta-path的重要性。在对于每个时间切片图中学到节点的表示基础上，通过RNN来建模节点表示的演化。本文通过Link Prediction实验验证了模型的有效性。
+* 链接：https://ieeexplore.ieee.org/document/8843962
+* 相关数据集：
+    * Twitter
+    * Math-Overflow
+    * Ecomm
+* 是否有开源代码：有(https://github.com/skx300/DyHATR)
 
 ### Others
 
