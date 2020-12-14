@@ -329,7 +329,20 @@
     * AS Dataset
 * 是否有开源代码：有(https://github.com/palash1992/DynamicGEM)
 
-
+#### Temporal Network Embedding with Micro- and Macro-dynamics
+* 作者： Yuanfu Lu, et al. (德州农工大学)
+* 发表时间：2019
+* 发表于：CIKM 2019
+* 关键词：micro/macro dynamic, Temporal Point Process
+* 概述：作者提出了从微观/宏观两种层级建模动态网络中节点演化规律，并能够在节点表示中学习到这种规律。微观更偏向于捕捉具体边对形成过程
+宏观更偏向于从网络动力学挖掘网络演变的规律，最终生成节点的表示。论文作者设计了多种实验，并依据实验验证了模型在准确性（分别是Network Reconstruction与Node Classification）、动态性（Temporal Node Recommendation与Temporal Link Prediction）、可扩展性（规模预测、趋势预测）等性能上的表现，证明了模型的有效性。
+* 链接：https://dl.acm.org/doi/abs/10.1145/3308560.3316585
+* 相关数据集：
+    * Eucore
+    * DBLP
+    * Tmall
+* 是否有开源代码：有（https://github.com/rootlu/MMDNE ）
+ 
 #### EvolveGCN: Evolving Graph Convolutional Networks for Dynamic Graphs
 * 作者： Aldo Pareja, et al.(MIT-IBM Watson AI Lab)
 * 发表时间：2019
@@ -345,7 +358,7 @@
     * Autonomous systems
     * Reddit Hyperlink Network
     * Elliptic      
-* 是否有开源代码：有（https://github.com/IBM/EvolveGCN）
+* 是否有开源代码：有（https://github.com/IBM/EvolveGCN ）
 
 #### Temporal Graph Networks for Deep Learning on Dynamic Graphs
 * 作者：Rossi, Emanuele, et al.（Twitter）
