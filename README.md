@@ -12,6 +12,7 @@
   * [Dynamic & Heterogeneous Graph Representation](#dynamic---heterogeneous-graph-representation)
     + [DHNE: Network Representation Learning Method for Dynamic Heterogeneous Networks](#dhne--network-representation-learning-method-for-dynamic-heterogeneous-networks)
     + [Modeling Dynamic Heterogeneous Network for Link Prediction using Hierarchical Attention with Temporal RNN](#modeling-dynamic-heterogeneous-network-for-link-prediction-using-hierarchical-attention-with-temporal-rnn)
+    + [Dynamic Heterogeneous Information NetworkEmbedding with Meta-path based Proximity](#dynamic-heterogeneous-information-networkembedding-with-meta-path-based-proximity)
   * [Others](#others)
 - [Dynamic Graph Representation](#dynamic-graph-representation)
     + [Representation Learning for Dynamic Graphs: A Survey](#representation-learning-for-dynamic-graphs--a-survey)
@@ -30,6 +31,7 @@
     + [Real-Time Streaming Graph Embedding Through Local Actions](#real-time-streaming-graph-embedding-through-local-actions)
     + [Predicting Dynamic Embedding Trajectory in Temporal Interaction Networks](#predicting-dynamic-embedding-trajectory-in-temporal-interaction-networks)
     + [dyngraph2vec-Capturing Network Dynamics using Dynamic Graph Representation Learning](#dyngraph2vec-capturing-network-dynamics-using-dynamic-graph-representation-learning)
+    + [Temporal Network Embedding with Micro- and Macro-dynamics](#temporal-network-embedding-with-micro--and-macro-dynamics)
     + [EvolveGCN: Evolving Graph Convolutional Networks for Dynamic Graphs](#evolvegcn--evolving-graph-convolutional-networks-for-dynamic-graphs)
     + [Temporal Graph Networks for Deep Learning on Dynamic Graphs](#temporal-graph-networks-for-deep-learning-on-dynamic-graphs)
     + [Modeling Dynamic Heterogeneous Network for Link Prediction using Hierarchical Attention with Temporal RNN](#modeling-dynamic-heterogeneous-network-for-link-prediction-using-hierarchical-attention-with-temporal-rnn-1)
@@ -43,8 +45,6 @@
     + [A Data-Driven Graph Generative Model for Temporal Interaction Networks](#a-data-driven-graph-generative-model-for-temporal-interaction-networks)
 - [Related Datasets](#related-datasets)
 - [其他参考资料](#------)
-
-
 
 
 
@@ -143,6 +143,19 @@
     * Math-Overflow
     * Ecomm
 * 是否有开源代码：有(https://github.com/skx300/DyHATR)
+
+#### Dynamic Heterogeneous Information NetworkEmbedding with Meta-path based Proximity
+* 作者： Xiao Wang, et al.
+* 发表时间：2020
+* 发表于：TKDE
+* 标签：DTDG，异质信息，动态信息， 矩阵分解
+* 概述：对于动态异质图，本文提出一种新的增量式更新方法，用于在考虑图演化的情况下节点向量表示的更新。首先本文对于静态异质图的表示学习，提出了新的StHNE模型，能够同时考虑到一阶邻居相似性以及二阶邻居相似性用于作为节点表示的参照；在此基础上，对于动态演化的异质图，本文提出DyHNE模型，将图的演化转化成特征值和特征向量的变化，并且据此提出了一套新的增量式更新的方法，用于更新节点的表示。本文通过节点分类以及关系预测验证了模型的有效性。
+* 链接：https://yuanfulu.github.io/publication/TKDE-DyHNE.pdf
+* 相关数据集：
+    * Yelp
+    * DBLP
+    * AMiner
+* 是否有开源代码：有(https://github.com/rootlu/DyHNE)
 
 ### Others
 
