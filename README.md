@@ -510,7 +510,7 @@
     * EMAIL
     * MSG
     * BITCOIN
-* 是否有开源代码：有（https://github.com/davidchouzdw/TagGen ）
+* 是否有开源代码：有 (https://github.com/davidchouzdw/TagGen)
 
 ## Related Datasets 
 包含一些知名的动态网络数据集，以及能够下载动态网络数据集合的网站。
