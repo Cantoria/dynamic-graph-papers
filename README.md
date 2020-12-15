@@ -117,6 +117,19 @@
 * 链接：http://www.shichuan.org/doc/94.pdf
 * 是否有开源代码：有 https://github.com/BUPT-GAMMA/OpenHINE
 
+#### Modeling Relational Data with Graph Convolutional Networks
+* 作者： Michael Schlichtkrull, Thomas N. Kipf, et al.
+* 发表时间：2018
+* 发表于：ESWC 2018
+* 标签：Knowledge Graph, Multi Relation, Graph Neural Network
+* 概述：本文关注于真实世界图中边的异质性，例如FB15K-237和WN18包含多种类型的边。现有图神经网络GCN无法建模边的异质性，因此本文提出了R-GCN模型，在信息传递时对于不同类型的边使用不同的权值矩阵，同时考虑到在边比较多的情况下矩阵的数目也较多，因此采取了共享权值的方式，将每种类型边的权值矩阵视作多个基的带权加和，以此缩小参数量。对于实验部分，本文在FB15K，和WN18两个数据集上，从实体分类以及连接预测(知识图谱补全)两个实验角度验证了模型的有效性。
+* 链接：https://arxiv.org/abs/1703.06103
+* 相关数据集：
+    * WN18
+    * FB15K-237
+* 是否有开源代码：有(https://github.com/tkipf/relational-gcn)
+
+
 ### Dynamic & Heterogeneous Graph Representation
 
 #### DHNE: Network Representation Learning Method for Dynamic Heterogeneous Networks
