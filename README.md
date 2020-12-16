@@ -9,10 +9,13 @@
   * [Heterogeneous Graph/Heterogeneous Information Network](#heterogeneous-graph-heterogeneous-information-network)
     + [Heterogeneous Network Representation Learning: Survey, Benchmark, Evaluation, and Beyond](#heterogeneous-network-representation-learning--survey--benchmark--evaluation--and-beyond)
     + [异质信息网络分析与应用综述](#-------------)
+    + [Modeling Relational Data with Graph Convolutional Networks](#modeling-relational-data-with-graph-convolutional-networks)
   * [Dynamic & Heterogeneous Graph Representation](#dynamic---heterogeneous-graph-representation)
     + [DHNE: Network Representation Learning Method for Dynamic Heterogeneous Networks](#dhne--network-representation-learning-method-for-dynamic-heterogeneous-networks)
     + [Modeling Dynamic Heterogeneous Network for Link Prediction using Hierarchical Attention with Temporal RNN](#modeling-dynamic-heterogeneous-network-for-link-prediction-using-hierarchical-attention-with-temporal-rnn)
     + [Dynamic Heterogeneous Information NetworkEmbedding with Meta-path based Proximity](#dynamic-heterogeneous-information-networkembedding-with-meta-path-based-proximity)
+    + [Relationship Prediction in Dynamic Heterogeneous Information Networks](#relationship-prediction-in-dynamic-heterogeneous-information-networks)
+    + [Link Prediction on Dynamic Heterogeneous Information Networks](#link-prediction-on-dynamic-heterogeneous-information-networks)
   * [Others](#others)
 - [Dynamic Graph Representation](#dynamic-graph-representation)
     + [Representation Learning for Dynamic Graphs: A Survey](#representation-learning-for-dynamic-graphs--a-survey)
@@ -37,15 +40,12 @@
     + [Modeling Dynamic Heterogeneous Network for Link Prediction using Hierarchical Attention with Temporal RNN](#modeling-dynamic-heterogeneous-network-for-link-prediction-using-hierarchical-attention-with-temporal-rnn-1)
     + [DySAT: Deep Neural Representation Learning on Dynamic Graphs via Self-Attention Networks](#dysat--deep-neural-representation-learning-on-dynamic-graphs-via-self-attention-networks)
     + [Evolving network representation learning based on random walks](#evolving-network-representation-learning-based-on-random-walks)
-    + [Relationship Prediction in Dynamic Heterogeneous Information Networks](#relationship-prediction-in-dynamic-heterogeneous-information-networks)
-    + [Link Prediction on Dynamic Heterogeneous Information Networks](#link-prediction-on-dynamic-heterogeneous-information-networks)
     + [TemporalGAT: Attention-Based Dynamic Graph Representation Learning](#temporalgat--attention-based-dynamic-graph-representation-learning)
     + [Continuous-Time Relationship Prediction in Dynamic Heterogeneous Information Networks](#continuous-time-relationship-prediction-in-dynamic-heterogeneous-information-networks)
     + [Continuous-Time Dynamic Graph Learning via Neural Interaction Processes](#continuous-time-dynamic-graph-learning-via-neural-interaction-processes)
     + [A Data-Driven Graph Generative Model for Temporal Interaction Networks](#a-data-driven-graph-generative-model-for-temporal-interaction-networks)
 - [Related Datasets](#related-datasets)
 - [其他参考资料](#------)
-
 
 
 ## Static Graph Representation
@@ -169,6 +169,31 @@
     * DBLP
     * AMiner
 * 是否有开源代码：有(https://github.com/rootlu/DyHNE)
+
+#### Relationship Prediction in Dynamic Heterogeneous Information Networks
+* 作者： Amin Milani Fard, et al.(New York Institute of Technology)
+* 发表时间：2019
+* 发表于：Advances in Information Retrieval 2019 (4)
+* 标签：DTDG，异质信息
+* 概述：本文在考虑图动态性的同时，考虑图的异质性，认为不同类型节点对之间的关系自然有所区别，因此提出了动态异质图表示学习，并且做了规范定义。并且提出MetaDynaMix 方法，通过meta-path标注每个节点和边的特征，在此基础上通过矩阵分解得到特征向量，并用于计算关系预测时的概率。
+* 链接：https://www.researchgate.net/publication/332257507_Relationship_Prediction_in_Dynamic_Heterogeneous_Information_Networks
+* 相关数据集：
+    * Publication Network (DBLP+ ACM)
+    * Movies Network (IMDB)
+* 是否有开源代码：无
+
+#### Link Prediction on Dynamic Heterogeneous Information Networks
+* 作者： Chao Kong, et al.(Anhui Polytechnic University)
+* 发表时间：2019
+* 发表于：Lecture Notes in Computer Science 2019
+* 标签：DTDG，异质信息，广度学习，图神经网络
+* 概述：本文考虑到动态图相关研究中异质信息缺乏有效的利用，且对于大规模图的表示学习过程中，深度学习方法效率较低，因此提出了一种宽度学习(?)的框架，并且与图神经网络相结合，实现高效的动态异质图表示学习。
+* 链接：https://link.springer.com/chapter/10.1007%2F978-3-030-34980-6_36
+* 相关数据集：
+    * Reddit
+    * Stack Overflow
+    * Ask Ubuntu
+* 是否有开源代码：无
 
 ### Others
 
@@ -441,31 +466,6 @@
     * Arxiv HEP-TH (Leskovec and Krevl 2014)  
     * Synthetic Networks (Watts-Strogatz (Newman 2003) random networks)    
 * 是否有开源代码：有(https://github.com/farzana0/EvoNRL)
-
-#### Relationship Prediction in Dynamic Heterogeneous Information Networks
-* 作者： Amin Milani Fard, et al.(New York Institute of Technology)
-* 发表时间：2019
-* 发表于：Advances in Information Retrieval 2019 (4)
-* 标签：DTDG，异质信息
-* 概述：本文在考虑图动态性的同时，考虑图的异质性，认为不同类型节点对之间的关系自然有所区别，因此提出了动态异质图表示学习，并且做了规范定义。并且提出MetaDynaMix 方法，通过meta-path标注每个节点和边的特征，在此基础上通过矩阵分解得到特征向量，并用于计算关系预测时的概率。
-* 链接：https://www.researchgate.net/publication/332257507_Relationship_Prediction_in_Dynamic_Heterogeneous_Information_Networks
-* 相关数据集：
-    * Publication Network (DBLP+ ACM)
-    * Movies Network (IMDB)
-* 是否有开源代码：无
-
-#### Link Prediction on Dynamic Heterogeneous Information Networks
-* 作者： Chao Kong, et al.(Anhui Polytechnic University)
-* 发表时间：2019
-* 发表于：Lecture Notes in Computer Science 2019
-* 标签：DTDG，异质信息，广度学习，图神经网络
-* 概述：本文考虑到动态图相关研究中异质信息缺乏有效的利用，且对于大规模图的表示学习过程中，深度学习方法效率较低，因此提出了一种宽度学习(?)的框架，并且与图神经网络相结合，实现高效的动态异质图表示学习。
-* 链接：https://link.springer.com/chapter/10.1007%2F978-3-030-34980-6_36
-* 相关数据集：
-    * Reddit
-    * Stack Overflow
-    * Ask Ubuntu
-* 是否有开源代码：无
 
 #### TemporalGAT: Attention-Based Dynamic Graph Representation Learning
 * 作者： Ahmed Fathy and Kan Li(Beijing Institute of Technology)
