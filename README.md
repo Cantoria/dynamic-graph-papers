@@ -17,6 +17,7 @@
     + [Relationship Prediction in Dynamic Heterogeneous Information Networks](#relationship-prediction-in-dynamic-heterogeneous-information-networks)
     + [Link Prediction on Dynamic Heterogeneous Information Networks](#link-prediction-on-dynamic-heterogeneous-information-networks)
   * [Others](#others)
+    + [A Survey on Knowledge Graphs: Representation, Acquisition and Applications](#a-survey-on-knowledge-graphs--representation--acquisition-and-applications-1)
 - [Dynamic Graph Representation](#dynamic-graph-representation)
     + [Representation Learning for Dynamic Graphs: A Survey](#representation-learning-for-dynamic-graphs--a-survey)
     + [Foundations and modelling of dynamic networks using Dynamic Graph Neural Networks: A survey](#foundations-and-modelling-of-dynamic-networks-using-dynamic-graph-neural-networks--a-survey)
@@ -196,6 +197,14 @@
 * 是否有开源代码：无
 
 ### Others
+#### A Survey on Knowledge Graphs: Representation, Acquisition and Applications
+* 作者：Shaoxiong Ji, Shirui Pan, Erik Cambria, Senior Member, IEEE, Pekka Marttinen, Philip S. Yu, Fellow IEEE
+* 发表时间：2020
+* 发表于：Arxiv
+* 标签：Knowledge Graph, Representation Learning
+* 概述：本文是一篇知识图谱领域的前沿综述，文中给出了知识图谱的具体定义，并且从知识获取、知识表示、动态知识图谱、知识图谱的应用等多个角度围绕知识图谱技术进行了讨论。同时文章还对于知识图谱未来的发展提出了展望。
+* 链接：https://arxiv.org/abs/2002.00388
+* 是否有开源代码：无
 
 
 ## Dynamic Graph Representation
