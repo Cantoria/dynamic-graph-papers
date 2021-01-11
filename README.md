@@ -1,5 +1,6 @@
 # 动态图表示论文汇总
 本文总结了动态图表示学习的有关论文，目录如下：
+社交知识图谱专题：https://github.com/jxh4945777/Social-Knowledge-Graph-Papers
 
 - [Static Graph Representation](#static-graph-representation)
     + [node2vec: Scalable Feature Learning for Networks](#node2vec--scalable-feature-learning-for-networks)
