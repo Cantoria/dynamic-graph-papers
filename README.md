@@ -554,6 +554,7 @@
 * Network Repository（包含了数千个网络数据集）：http://networkrepository.com/
 * Network Repository中的动态网络数据集：http://networkrepository.com/dynamic.php
 * Aminer数据集：https://www.aminer.cn/data
+* 社会行为模式数据集：http://www.sociopatterns.org/datasets/
 
 ## 其他参考资料
 
