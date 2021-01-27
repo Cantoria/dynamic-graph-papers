@@ -254,6 +254,15 @@
 * 链接：https://link.springer.com/article/10.1007%2Fs00354-019-00065-z
 
 
+#### Motifs in Temporal Networks
+* 作者： Ashwin Paranjape, et al. 
+* 发表时间：2017
+* 发表于：WSDM, 2017
+* 关键词：时态网络，motif
+* 概述：该文将传统图分析中的motif概念引入时态网络中，认为时态网络中的motif是网络中的最基本构成单位，定义了Temporal network motifs与时间间隔关联的δ-temporal motifs的概念；并利用时态网络上的motif分析时态网络上的演化交互规律。此外，作者设计了一种快速计算时态网络中不同类型motif数目的算法，能够快速分析某个时态网络的演化特性。
+* 链接：https://dl.acm.org/doi/abs/10.1145/3018661.3018731
+
+
 ## New Works of Dynamic Graph Representation (Updating)
 挑选了动态图表示领域最近2-3年的工作（2017-2020）。
 
@@ -534,7 +543,22 @@
     * EMAIL
     * MSG
     * BITCOIN
-* 是否有开源代码：有 (https://github.com/davidchouzdw/TagGen)
+* 是否有开源代码：有 (https://github.com/davidchouzdw/TagGen )，但是其代码存在问题，如测试时未读取训练好的模型等
+
+
+#### Motif-Preserving Temporal Network Embedding
+* 作者： Hong Huang, et al.(hust)
+* 发表时间：2020
+* 发表于：IJCAI 2020
+* 标签：CTDG，motif，hawkes
+* 概述：本论文采用了一种meso-dynamics的建模方法，通过一种时序网络上的motif——open triad，考虑三个节点之间的triad结构，利用Hawkes过程建模节点对之间的密度函数，来学习时态网络中的embedding。论文在节点分类、链接预测（这一部分实验写的不清楚，不太明白是怎么做的实验）、链接推荐上取得了较好的效果。）
+* 链接：https://www.ijcai.org/Proceedings/2020/0172.pdf
+* 相关数据集：
+    * School 
+    * Digg
+    * Mobile
+    * dblp
+* 是否有开源代码：无
 
 ## Related Datasets 
 包含一些知名的动态网络数据集，以及能够下载动态网络数据集合的网站。
