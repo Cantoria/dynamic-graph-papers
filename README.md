@@ -1,7 +1,7 @@
 # 动态图表示论文汇总
 本文总结了动态图表示学习的有关论文，目录如下：
 
-社交知识图谱专题：https://github.com/jxh4945777/Social-Knowledge-Graph-Papers
+引流：【这也是我们的工作】社交知识图谱专题：https://github.com/jxh4945777/Social-Knowledge-Graph-Papers
 
 - [Static Graph Representation](#static-graph-representation)
     + [node2vec: Scalable Feature Learning for Networks](#node2vec--scalable-feature-learning-for-networks)
@@ -551,7 +551,22 @@
 * 发表时间：2020
 * 发表于：IJCAI 2020
 * 标签：CTDG，motif，hawkes
-* 概述：本论文采用了一种meso-dynamics的建模方法，通过一种时序网络上的motif——open triad，考虑三个节点之间的triad结构，利用Hawkes过程建模节点对之间的密度函数，来学习时态网络中的embedding。论文在节点分类、链接预测（这一部分实验写的不清楚，不太明白是怎么做的实验）、链接推荐上取得了较好的效果。）
+* 概述：本论文采用了一种meso-dynamics的建模方法，通过一种时序网络上的motif——open triad，考虑三个节点之间的triad结构，利用Hawkes过程建模节点对之间的密度函数，来学习时态网络中的embedding。论文在节点分类、链接预测（这一部分实验写的不清楚，不太明白是怎么做的实验）、链接推荐上取得了较好的效果。
+* 链接：https://www.ijcai.org/Proceedings/2020/0172.pdf
+* 相关数据集：
+    * School 
+    * Digg
+    * Mobile
+    * dblp
+* 是否有开源代码：无
+
+
+#### INDUCTIVE REPRESENTATION LEARNING IN TEMPORAL NETWORKS VIA CAUSAL ANONYMOUS WALKS
+* 作者： Yanbang Wang, et al.(stanford snap团队)
+* 发表时间：2021
+* 发表于：ICLR 2021
+* 标签：CTDG，motif，hawkes
+* 概述：本论文采用了一种meso-dynamics的建模方法，通过一种时序网络上的motif——open triad，考虑三个节点之间的triad结构，利用Hawkes过程建模节点对之间的密度函数，来学习时态网络中的embedding。论文在节点分类、链接预测（这一部分实验写的不清楚，不太明白是怎么做的实验）、链接推荐上取得了较好的效果。
 * 链接：https://www.ijcai.org/Proceedings/2020/0172.pdf
 * 相关数据集：
     * School 
@@ -563,6 +578,7 @@
 ## Related Datasets 
 包含一些知名的动态网络数据集，以及能够下载动态网络数据集合的网站。
 
+动态网络数据集（仅展示部分）：
 * Social Evolution Dataset
 * Github Dataset
 * GDELT (Global data on events, location, and tone)
@@ -572,12 +588,16 @@
 * UCI Message data
 * YELP：https://www.yelp.com/dataset/download
 * MovieLens-10M
+
+动态网络数据集合网站：
 * SNAP数据集合网站：http://snap.stanford.edu/data/index.html
 * SNAP时态数据集合：http://snap.stanford.edu/data/index.html#temporal
 * KONECT数据集合网站（部分数据集的edge带有时间戳，可看作时序数据）  http://konect.cc/
-* Network Repository（包含了数千个网络数据集）：http://networkrepository.com/
+* LINQS数据集合网站 https://linqs.soe.ucsc.edu/data
+* CNets数据集合网站 https://cnets.indiana.edu/data-repository-for-nan-group/
+* Network Repository（包含了数千个网络数据集，且包含简单的可视化与数据集统计）：http://networkrepository.com/
 * Network Repository中的动态网络数据集：http://networkrepository.com/dynamic.php
-* Aminer数据集：https://www.aminer.cn/data
+* Aminer学术社交网络数据集：https://www.aminer.cn/data
 * 社会行为模式数据集：http://www.sociopatterns.org/datasets/
 
 ## 其他参考资料
