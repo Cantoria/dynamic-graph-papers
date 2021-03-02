@@ -18,6 +18,7 @@
     + [Dynamic Heterogeneous Information NetworkEmbedding with Meta-path based Proximity](#dynamic-heterogeneous-information-networkembedding-with-meta-path-based-proximity)
     + [Relationship Prediction in Dynamic Heterogeneous Information Networks](#relationship-prediction-in-dynamic-heterogeneous-information-networks)
     + [Link Prediction on Dynamic Heterogeneous Information Networks](#link-prediction-on-dynamic-heterogeneous-information-networks)
+    + [Heterogeneous Graph Transformer](#heterogeneous-graph-transformer)
   * [Others](#others)
     + [A Survey on Knowledge Graphs: Representation, Acquisition and Applications](#a-survey-on-knowledge-graphs--representation--acquisition-and-applications-1)
 - [Dynamic Graph Representation](#dynamic-graph-representation)
@@ -197,6 +198,17 @@
     * Stack Overflow
     * Ask Ubuntu
 * 是否有开源代码：无
+
+#### Heterogeneous Graph Transformer
+* 作者： Ziniu Hu, et al. (UCLA Yizhou Sun团队)
+* 发表时间：2020
+* 发表于：WWW 2020
+* 标签：Heterogeneous Network Reprensentation Learning, Transformer, Multi-Head Attention
+* 概述：考虑到已有异质图的研究存在以下几点局限：1. 需要人工设计Meta-path；2.无法建模动态信息；3.对于大规模的异质图，缺乏有效的采样方式。针对于以上三点，本文首选给出Meta Relation的概念，直接建模相连的异质节点，基于此设计了类Transformer的网络结构用于图表示学习。考虑到异质图的动态特性，本文提出了RTE编码方式，用于建模异质图的动态演化。考虑到大规模异质图上网络的训练，本文提出了HGSampling方式，用于均匀采样不同类型的节点信息，以实现高效的图表示学习。
+* 链接：https://arxiv.org/abs/2003.01332
+* 相关数据集：
+    * OAG
+* 是否有开源代码：有 https://github.com/acbull/pyHGT
 
 ### Others
 #### A Survey on Knowledge Graphs: Representation, Acquisition and Applications
