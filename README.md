@@ -1,7 +1,7 @@
 # 动态图表示论文汇总
 本文总结了动态图表示学习的有关论文，目录如下：
 
-引流：【这也是我们的工作】社交知识图谱专题：https://github.com/jxh4945777/Social-Knowledge-Graph-Papers
+引流：【这也是我们的工作，欢迎watch/star/fork】社交知识图谱专题：https://github.com/jxh4945777/Social-Knowledge-Graph-Papers
 
 - [Static Graph Representation](#static-graph-representation)
     + [node2vec: Scalable Feature Learning for Networks](#node2vec--scalable-feature-learning-for-networks)
@@ -20,13 +20,14 @@
     + [Link Prediction on Dynamic Heterogeneous Information Networks](#link-prediction-on-dynamic-heterogeneous-information-networks)
     + [Heterogeneous Graph Transformer](#heterogeneous-graph-transformer)
   * [Others](#others)
-    + [A Survey on Knowledge Graphs: Representation, Acquisition and Applications](#a-survey-on-knowledge-graphs--representation--acquisition-and-applications-1)
+    + [A Survey on Knowledge Graphs: Representation, Acquisition and Applications](#a-survey-on-knowledge-graphs--representation--acquisition-and-applications)
 - [Dynamic Graph Representation](#dynamic-graph-representation)
     + [Representation Learning for Dynamic Graphs: A Survey](#representation-learning-for-dynamic-graphs--a-survey)
     + [Foundations and modelling of dynamic networks using Dynamic Graph Neural Networks: A survey](#foundations-and-modelling-of-dynamic-networks-using-dynamic-graph-neural-networks--a-survey)
-    + [A Survey on Knowledge Graphs: Representation, Acquisition and Applications](#a-survey-on-knowledge-graphs--representation--acquisition-and-applications)
+    + [A Survey on Knowledge Graphs: Representation, Acquisition and Applications](#a-survey-on-knowledge-graphs--representation--acquisition-and-applications-1)
     + [Temporal Link Prediction: A Survey](#temporal-link-prediction--a-survey)
     + [Temporal Networks](#temporal-networks)
+    + [Motifs in Temporal Networks](#motifs-in-temporal-networks)
 - [New Works of Dynamic Graph Representation (Updating)](#new-works-of-dynamic-graph-representation--updating-)
     + [Deep Coevolutionary Network: Embedding User and Item Features for Recommendation](#deep-coevolutionary-network--embedding-user-and-item-features-for-recommendation)
     + [Know-Evolve: Deep Temporal Reasoning for Dynamic Knowledge Graphs](#know-evolve--deep-temporal-reasoning-for-dynamic-knowledge-graphs)
@@ -48,6 +49,9 @@
     + [Continuous-Time Relationship Prediction in Dynamic Heterogeneous Information Networks](#continuous-time-relationship-prediction-in-dynamic-heterogeneous-information-networks)
     + [Continuous-Time Dynamic Graph Learning via Neural Interaction Processes](#continuous-time-dynamic-graph-learning-via-neural-interaction-processes)
     + [A Data-Driven Graph Generative Model for Temporal Interaction Networks](#a-data-driven-graph-generative-model-for-temporal-interaction-networks)
+    + [Motif-Preserving Temporal Network Embedding](#motif-preserving-temporal-network-embedding)
+    + [INDUCTIVE REPRESENTATION LEARNING ON TEMPORAL GRAPHS](#inductive-representation-learning-on-temporal-graphs)
+    + [INDUCTIVE REPRESENTATION LEARNING IN TEMPORAL NETWORKS VIA CAUSAL ANONYMOUS WALKS](#inductive-representation-learning-in-temporal-networks-via-causal-anonymous-walks)
 - [Related Datasets](#related-datasets)
 - [其他参考资料](#------)
 
@@ -573,19 +577,35 @@
 * 是否有开源代码：无
 
 
+#### INDUCTIVE REPRESENTATION LEARNING ON TEMPORAL GRAPHS
+* 作者： Da Xu, et al.
+* 发表时间：2020
+* 发表于：ICLR 2020
+* 标签：CTDG，inductive learning
+* 概述：传统动态图表示学习的工作是transductive的，意即只能对训练集中出现过的节点进行表示，无法对unseen nodes进行表示。作者受到静态图中GraphSage、GAT等inductive learning方法的启发，提出了temporal graph attention layer（TGAT）这一结构。该结构使用了通过Bochner定理推导出时态核函数的时态编码模块，建模节点embedding识别为时间的函数，并能够随着图的演化，来有效聚合时态-拓扑邻居特征，从而学习到节点的时态-拓扑邻居聚合函数，使用inductive的方法快速生成节点表示。
+* 链接：https://arxiv.org/abs/2002.07962
+* 相关数据集：
+    * Wikipedia
+    * Reddit
+    * Industrial dataset
+* 是否有开源代码：无
+
+
 #### INDUCTIVE REPRESENTATION LEARNING IN TEMPORAL NETWORKS VIA CAUSAL ANONYMOUS WALKS
 * 作者： Yanbang Wang, et al.(stanford snap团队)
 * 发表时间：2021
 * 发表于：ICLR 2021
-* 标签：CTDG，motif，hawkes
-* 概述：本论文采用了一种meso-dynamics的建模方法，通过一种时序网络上的motif——open triad，考虑三个节点之间的triad结构，利用Hawkes过程建模节点对之间的密度函数，来学习时态网络中的embedding。论文在节点分类、链接预测（这一部分实验写的不清楚，不太明白是怎么做的实验）、链接推荐上取得了较好的效果。
-* 链接：https://www.ijcai.org/Proceedings/2020/0172.pdf
+* 标签：CTDG，inductive learning，causal anonymous walk
+* 概述：时态网络的演化是存在一定规律的，如社交网络中存在广泛的三元组闭环规律。作者认为，时态图上的inductive算法应该能够学习到这种规律，并应用至训练阶段未见过的数据中。为了表征这种规律，过滤掉节点特征对学习这种规律的影响，作者提出了基于Causal Anonymous Walks的节点表征方式，能够匿名化采样时态因果路径上的节点信息，从而对采样到的motif进行真正的关注学习。
+* 链接：https://arxiv.org/abs/2101.05974
 * 相关数据集：
-    * School 
-    * Digg
-    * Mobile
-    * dblp
-* 是否有开源代码：无
+    * Wikipedia
+    * Reddit
+    * MOOC
+    * Social Evolution
+    * Enron
+    * UCI
+* 是否有开源代码：有（https://github.com/snap-stanford/CAW ）
 
 ## Related Datasets 
 包含一些知名的动态网络数据集，以及能够下载动态网络数据集合的网站。
