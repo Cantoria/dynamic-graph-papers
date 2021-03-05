@@ -1,7 +1,13 @@
 # 动态图表示论文汇总
-本文总结了动态图表示学习的有关论文，目录如下：
 
-引流：【这也是我们的工作，欢迎watch/star/fork】社交知识图谱专题：https://github.com/jxh4945777/Social-Knowledge-Graph-Papers
+本项目总结了动态图表示学习的有关论文，该项目在持续更新中，欢迎大家watch/star/fork！
+如果大家有值得推荐的工作，可以在issue中提出要推荐的工作、论文下载链接及其工作亮点。项目中表述有误的部分，也可以在issue中提出。感谢！
+
+引流：【这也是我们的工作，欢迎watch/star/fork】
+
+社交知识图谱专题：https://github.com/jxh4945777/Social-Knowledge-Graph-Papers
+
+目录如下：
 
 - [Static Graph Representation](#static-graph-representation)
     + [node2vec: Scalable Feature Learning for Networks](#node2vec--scalable-feature-learning-for-networks)
@@ -56,8 +62,8 @@
 - [其他参考资料](#------)
 
 
-## Static Graph Representation
-挑选了引用数较高、知名度较大的一些静态图表示学习的工作。
+## Static Graph Representation & Analyzing Works
+针对静态图表示学习以及静态图分析、挖掘领域，挑选了个人认为值得借鉴的引用数较高、知名度较大的或最近的一些工作。
 
 #### node2vec: Scalable Feature Learning for Networks
 * 作者：Grover A, Leskovec J. (University of Amsterdam)
@@ -139,6 +145,8 @@
 
 
 ### Dynamic & Heterogeneous Graph Representation
+
+本部分为动态异质图表示学习领域的相关文章，其研究对象为动态异质图。
 
 #### DHNE: Network Representation Learning Method for Dynamic Heterogeneous Networks
 * 作者： Ying Yin, et al.
@@ -226,7 +234,9 @@
 
 
 ## Dynamic Graph Representation
-该部分包括综述论文，以及一些动态图表示的传统工作。
+该部分包括综述论文，以及一些动态图分析与挖掘、动态图表示的传统工作。
+
+
 
 #### Representation Learning for Dynamic Graphs: A Survey
 * 作者：Seyed Mehran Kazemi, et al. (Borealis AI)
@@ -278,6 +288,14 @@
 * 概述：该文将传统图分析中的motif概念引入时态网络中，认为时态网络中的motif是网络中的最基本构成单位，定义了Temporal network motifs与时间间隔关联的δ-temporal motifs的概念；并利用时态网络上的motif分析时态网络上的演化交互规律。此外，作者设计了一种快速计算时态网络中不同类型motif数目的算法，能够快速分析某个时态网络的演化特性。
 * 链接：https://dl.acm.org/doi/abs/10.1145/3018661.3018731
 
+
+#### 动态网络模式挖掘方法及其应用
+* 作者： 高 琳, 杨建业, 覃桂敏（西安电子科技大学）
+* 发表时间：2013
+* 发表于：软件学报
+* 关键词：动态网络，模式挖掘
+* 概述：该论文以动态网络为对象，对动态网络的拓扑特性分析、社团结构挖掘、子图模式挖掘与模式预测相关的模型和方法进行了综述、比较和分析，在应用层面，描述了生物网络以及社会网络的动态模式。
+* 链接：http://www.jos.org.cn/ch/reader/create_pdf.aspx?file_no=4439&amp;journal_id=jos
 
 ## New Works of Dynamic Graph Representation (Updating)
 挑选了动态图表示领域最近2-3年的工作（2017-2020）。
@@ -360,7 +378,18 @@
 * 相关数据集：
     * Social Evolution Dataset
     * Github Dataset
-* 是否有开源代码：无（有第三方开源代码）
+* 是否有开源代码：无（有第三方实现的开源代码）
+
+#### Learning to Represent the Evolution of Dynamic Graphs with Recurrent Models
+* 作者： Aynaz Taheri, et al. (UIUC)
+* 发表时间：2019
+* 发表于：ICLR 2019
+* 关键词：DTDG
+* 概述：本文提出了一种适用于离散型动态网络的门限图神经网络模型DyGGNN，用于动物行为（animal behaviour）的预测任务。具体地，该框架遵循编码-解码器构造，encoder使用GGNN编码每一个离散图，并利用LSTM编码当前时刻及其前T步的历史序列数据，从而得到整个图的编码向量；decoder使用一个LSTM结构来解码图在每一时间步的拓扑结构。
+* 链接：https://dl.acm.org/doi/10.1145/3308560.3316581
+* 相关数据集：
+    * baboon data
+* 是否有开源代码：无
 
 #### Context-Aware Temporal Knowledge Graph Embedding
 * 作者： Yu Liu, et al. (昆士兰大学)
@@ -575,6 +604,21 @@
     * Mobile
     * dblp
 * 是否有开源代码：无
+
+#### Local Motif Clustering on Time-Evolving Graphs
+* 作者： Dongqi Fu, et al.(UIUC)
+* 发表时间：2020
+* 发表于：KDD 2020
+* 标签：DTDG，motif，cluster
+* 概述：图的motif是研究复杂网络的一种手段，能够揭示图形成的规律。motif clustering通过挖掘图中存在motif的不同形式，寻找图中节点的聚类簇。目前，局部聚类技术（一种聚焦于一组种子节点并为其划分cluster）已经广泛应用于静态图中，但在动态图领域尚未被应用。基于此，作者提出了一种适用于时态演化图（time- evolving graph）的局部motif聚类算法（L-MEGA）。在该算法中，作者设计了edge filtering/motif push operation与incremental sweep cut等技术，提高了算法的性能和效率。
+* 链接：https://dl.acm.org/doi/10.1145/3308560.3316581
+* 相关数据集：
+    * Alpha
+    * OTC
+    * Call
+    * Contact
+* 是否有开源代码：有（https://github.com/DongqiFu/L-MEGA ）
+
 
 
 #### INDUCTIVE REPRESENTATION LEARNING ON TEMPORAL GRAPHS
