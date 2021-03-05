@@ -9,7 +9,7 @@
 
 目录如下：
 
-- [Static Graph Representation](#static-graph-representation)
+- [Static Graph Representation & Analyzing Works](#static-graph-representation---analyzing-works)
     + [node2vec: Scalable Feature Learning for Networks](#node2vec--scalable-feature-learning-for-networks)
     + [Semi-Supervised Classification with Graph Convolutional Networks](#semi-supervised-classification-with-graph-convolutional-networks)
     + [Inductive representation learning on large graphs](#inductive-representation-learning-on-large-graphs)
@@ -34,6 +34,7 @@
     + [Temporal Link Prediction: A Survey](#temporal-link-prediction--a-survey)
     + [Temporal Networks](#temporal-networks)
     + [Motifs in Temporal Networks](#motifs-in-temporal-networks)
+    + [动态网络模式挖掘方法及其应用](#--------------)
 - [New Works of Dynamic Graph Representation (Updating)](#new-works-of-dynamic-graph-representation--updating-)
     + [Deep Coevolutionary Network: Embedding User and Item Features for Recommendation](#deep-coevolutionary-network--embedding-user-and-item-features-for-recommendation)
     + [Know-Evolve: Deep Temporal Reasoning for Dynamic Knowledge Graphs](#know-evolve--deep-temporal-reasoning-for-dynamic-knowledge-graphs)
@@ -41,6 +42,7 @@
     + [Continuous-Time Dynamic Network Embeddings](#continuous-time-dynamic-network-embeddings)
     + [Dynamic Network Embedding by Modeling Triadic Closure Process](#dynamic-network-embedding-by-modeling-triadic-closure-process)
     + [DYREP: LEARNING REPRESENTATIONS OVER DYNAMIC GRAPHS](#dyrep--learning-representations-over-dynamic-graphs)
+    + [Learning to Represent the Evolution of Dynamic Graphs with Recurrent Models](#learning-to-represent-the-evolution-of-dynamic-graphs-with-recurrent-models)
     + [Context-Aware Temporal Knowledge Graph Embedding](#context-aware-temporal-knowledge-graph-embedding)
     + [Real-Time Streaming Graph Embedding Through Local Actions](#real-time-streaming-graph-embedding-through-local-actions)
     + [Predicting Dynamic Embedding Trajectory in Temporal Interaction Networks](#predicting-dynamic-embedding-trajectory-in-temporal-interaction-networks)
@@ -56,6 +58,7 @@
     + [Continuous-Time Dynamic Graph Learning via Neural Interaction Processes](#continuous-time-dynamic-graph-learning-via-neural-interaction-processes)
     + [A Data-Driven Graph Generative Model for Temporal Interaction Networks](#a-data-driven-graph-generative-model-for-temporal-interaction-networks)
     + [Motif-Preserving Temporal Network Embedding](#motif-preserving-temporal-network-embedding)
+    + [Local Motif Clustering on Time-Evolving Graphs](#local-motif-clustering-on-time-evolving-graphs)
     + [INDUCTIVE REPRESENTATION LEARNING ON TEMPORAL GRAPHS](#inductive-representation-learning-on-temporal-graphs)
     + [INDUCTIVE REPRESENTATION LEARNING IN TEMPORAL NETWORKS VIA CAUSAL ANONYMOUS WALKS](#inductive-representation-learning-in-temporal-networks-via-causal-anonymous-walks)
 - [Related Datasets](#related-datasets)
