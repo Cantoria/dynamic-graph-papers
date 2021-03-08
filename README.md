@@ -1,7 +1,7 @@
-# 动态图表示论文汇总
+# 动态图表示论文汇总项目
 
 本项目总结了动态图表示学习的有关论文，该项目在持续更新中，欢迎大家watch/star/fork！
-如果大家有值得推荐的工作，可以在issue中提出要推荐的工作、论文下载链接及其工作亮点。项目中表述有误的部分，也可以在issue中提出。感谢！
+如果大家有值得推荐的工作，可以在issue中提出要推荐的工作、论文下载链接及其工作亮点（有优秀代码实现的工作，会优先考虑在内）。项目中表述有误的部分，也可以在issue中提出。感谢！
 
 引流：【这也是我们的工作，欢迎watch/star/fork】
 
@@ -100,13 +100,25 @@
     * NELL
 * 是否有开源代码：有
 
+#### LINE: Large-scale Information Network Embedding
+* 作者： Jian Tang, et al.(MSRA)
+* 发表时间：2015
+* 发表于：WWW 2015
+* 标签：Inductive Graph Embedding
+* 概述：本文研究了一种将大规模网络结构高效表示为嵌入式表示的算法，能够在表示中保持节点的一度、二度邻居关系结构，并在学术论文引用数据集上做了实验。
+* 链接：https://arxiv.org/pdf/1503.03578.pdf
+* 相关数据集：
+    * DBLP(AuthorCitation) Network
+    * DBLP(PaperCitation) Network
+* 是否有开源代码：有，原始代码为(https://github.com/tangjianpku/LINE)
+
 
 #### Inductive representation learning on large graphs
 * 作者： Hamilton W, et al.(斯坦福大学Leskovec团队)
 * 发表时间：2017
 * 发表于：Advances in neural information processing systems
 * 标签：Inductive Graph Embedding
-* 概述：针对以往transductive的方式（不能表示unseen nodes）的方法作了改进，提出了一种inductive的方式改进这个问题，该方法学习聚合函数，而不是某个节点的向量
+* 概述：针对以往transductive的方式（不能表示unseen nodes）的方法作了改进，提出了一种inductive的方式改进这个问题，该方法学习聚合函数，而不是某个节点的向量表示。
 * 链接：https://papers.nips.cc/paper/6703-inductive-representation-learning-on-large-graphs.pdf
 * 相关数据集：
     * Citation
@@ -306,13 +318,29 @@
 * 链接：http://www.jos.org.cn/ch/reader/create_pdf.aspx?file_no=4439&amp;journal_id=jos
 
 ## New Works of Dynamic Graph Representation (Updating)
-挑选了动态图表示领域最近2-3年的工作（2017-2020）。
+挑选了动态图表示领域最近3年的工作（2017-2020）。
+
+
+#### Link Prediction with Spatial and Temporal Consistency in Dynamic Networks
+* 作者： Hanjun Dai, et al.
+* 发表时间：2017
+* 发表于：IJCAI 2017
+* 关键词：DTDG，空间时间一致性
+* 概述：本文聚焦于动态网络的链接预测任务。在动态网络中，随着时间推移，节点会不断涌现，并与图中已有节点建立联系。作者提出了两种一致性，即空间时间一致性（spatial and temporal consistency），并认为动态图的演化过程遵循该定律。该定律是指，从微观的节点角度，涌现出的新节点更倾向于与其具有更高相似度的节点建立联系，是空间一致性的体现；从宏观的角度，图结构演化是一个平滑过程，出现突变的几率较小，是时间一致性的体现。作者提出了LIST（link prediction model with spatial and temporal consistency）模型，利用传统静态图分析方法的矩阵分析模式衡量空间时间一致性。最后，在单步时间戳/多步时间戳链接预测任务上进行了实验。
+* 链接：https://www.ijcai.org/Proceedings/2017/0467.pdf
+* 相关数据集：
+    * Infectious
+    * UCI Msg
+    * Digg
+    * DBLP
+* 是否有开源代码：无
+
 
 #### Deep Coevolutionary Network: Embedding User and Item Features for Recommendation
 * 作者： Hanjun Dai, et al. (Georgia Institute of Technology)
 * 发表时间：2017
 * 发表于：KDD 2017
-* 关键词：动态演化网络，推荐系统
+* 关键词：动态演化网络，推荐系统，点过程
 * 概述：该论文首次将时态点过程与深度学习相结合，针对推荐系统中的user-item时态交互网络中两类节点互相演化的特点，依据点过程（Point Process）理论，提出了一套能够依据交互过程，不断迭代更新user/item节点表示的框架。其中，框架主体采用了两套RNN模型损失函数采用了基于Rayleigh process的强度函数（Intensity function）的联合非负似然概率函数，其包括发生概率（happened probability）与生存概率（survival probability）组成。作者在两个real-world数据集上对链接预测、实体预测、时间预测与滑动窗口预测等任务进行了评价，验证了该框架的有效性。
 * 链接：https://arxiv.org/pdf/1609.03675.pdf
 * 相关数据集：
@@ -343,6 +371,19 @@
 * 相关数据集：
     * BJER4
     * PeMSD7
+* 是否有开源代码：无
+
+
+#### Dynamic Network Embedding : An Extended Approach for Skip-gram based Network Embedding
+* 作者：Lun Du, et al. (Peking University)
+* 发表时间：2018
+* 发表于：IJCAI 2018
+* 关键词：DTDG，skip-gram
+* 概述：本文借鉴表示学习中的skip-gram方法以及图表示学习中的skip-gram based methods，将该理论应用至离散动态网络表示学习中，提出了DNE框架。其思想是为每一个时态图切片学习到一个映射函数，借鉴了LINE的组合目标优化函数，并考虑到了新加入节点的表示与已有节点的表示更新（为了节省运算资源，仅更新在下一时间步受影响较大的节点）。作者在节点分类与网络可视化任务上进行了实验，与LINE、GraphSage等方法进行了对比。
+* 链接：https://www.ijcai.org/Proceedings/2018/0288.pdf
+* 相关数据集：
+    * Facebook social networks
+    * Karate
 * 是否有开源代码：无
 
 
