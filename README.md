@@ -12,6 +12,7 @@
 - [Static Graph Representation & Analyzing Works](#static-graph-representation---analyzing-works)
     + [node2vec: Scalable Feature Learning for Networks](#node2vec--scalable-feature-learning-for-networks)
     + [Semi-Supervised Classification with Graph Convolutional Networks](#semi-supervised-classification-with-graph-convolutional-networks)
+    + [LINE: Large-scale Information Network Embedding](#line--large-scale-information-network-embedding)
     + [Inductive representation learning on large graphs](#inductive-representation-learning-on-large-graphs)
 - [Other Related Works](#other-related-works)
   * [Heterogeneous Graph/Heterogeneous Information Network](#heterogeneous-graph-heterogeneous-information-network)
@@ -33,12 +34,15 @@
     + [A Survey on Knowledge Graphs: Representation, Acquisition and Applications](#a-survey-on-knowledge-graphs--representation--acquisition-and-applications-1)
     + [Temporal Link Prediction: A Survey](#temporal-link-prediction--a-survey)
     + [Temporal Networks](#temporal-networks)
+    + [Evolutionary Network Analysis: A Survey](#evolutionary-network-analysis--a-survey)
     + [Motifs in Temporal Networks](#motifs-in-temporal-networks)
     + [动态网络模式挖掘方法及其应用](#--------------)
 - [New Works of Dynamic Graph Representation (Updating)](#new-works-of-dynamic-graph-representation--updating-)
+    + [Link Prediction with Spatial and Temporal Consistency in Dynamic Networks](#link-prediction-with-spatial-and-temporal-consistency-in-dynamic-networks)
     + [Deep Coevolutionary Network: Embedding User and Item Features for Recommendation](#deep-coevolutionary-network--embedding-user-and-item-features-for-recommendation)
     + [Know-Evolve: Deep Temporal Reasoning for Dynamic Knowledge Graphs](#know-evolve--deep-temporal-reasoning-for-dynamic-knowledge-graphs)
     + [Spatio-Temporal Graph Convolutional Networks: A Deep Learning Framework for Traffic Forecasting](#spatio-temporal-graph-convolutional-networks--a-deep-learning-framework-for-traffic-forecasting)
+    + [Dynamic Network Embedding : An Extended Approach for Skip-gram based Network Embedding](#dynamic-network-embedding---an-extended-approach-for-skip-gram-based-network-embedding)
     + [Embedding Temporal Network via Neighborhood Formation](#embedding-temporal-network-via-neighborhood-formation)
     + [Continuous-Time Dynamic Network Embeddings](#continuous-time-dynamic-network-embeddings)
     + [Dynamic Network Embedding by Modeling Triadic Closure Process](#dynamic-network-embedding-by-modeling-triadic-closure-process)
@@ -68,6 +72,7 @@
     + [INDUCTIVE REPRESENTATION LEARNING IN TEMPORAL NETWORKS VIA CAUSAL ANONYMOUS WALKS](#inductive-representation-learning-in-temporal-networks-via-causal-anonymous-walks)
 - [Related Datasets](#related-datasets)
 - [其他参考资料](#------)
+
 
 
 ## Static Graph Representation & Analyzing Works
@@ -296,6 +301,15 @@
 * 发表时间：2012
 * 发表于：Physics reports, 2012
 * 关键词：时态网络，综述
+* 概述：这篇论文是一篇时态网络的经典综述论文。论文中给出了时态网络的三种形式，并且从时态网络的拓扑结构的衡量方法、将时态数据表示为静态图、时态网络的一些模型、时态网络上的传播动力学和区间模型等进行了论述。最后，文章对时态网络的未来发展趋势进行了展望。
+* 链接：https://link.springer.com/article/10.1007%2Fs00354-019-00065-z、
+
+
+#### Evolutionary Network Analysis: A Survey
+* 作者： CHARU AGGARWAL, KARTHIK SUBBIAN
+* 发表时间：2014
+* 发表于：ACM Computing Surveys
+* 关键词：演化网络，综述
 * 概述：这篇论文是一篇时态网络的经典综述论文。论文中给出了时态网络的三种形式，并且从时态网络的拓扑结构的衡量方法、将时态数据表示为静态图、时态网络的一些模型、时态网络上的传播动力学和区间模型等进行了论述。最后，文章对时态网络的未来发展趋势进行了展望。
 * 链接：https://link.springer.com/article/10.1007%2Fs00354-019-00065-z
 
