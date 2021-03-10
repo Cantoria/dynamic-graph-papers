@@ -1,6 +1,8 @@
 # 动态图表示论文汇总项目
 
 本项目总结了动态图表示学习的有关论文，该项目在持续更新中，欢迎大家watch/star/fork！
+
+
 如果大家有值得推荐的工作，可以在issue中提出要推荐的工作、论文下载链接及其工作亮点（有优秀代码实现的工作，会优先考虑在内）。项目中表述有误的部分，也可以在issue中提出。感谢！
 
 引流：【这也是我们的工作，欢迎watch/star/fork】
@@ -131,132 +133,6 @@
     * PPI
 * 是否有开源代码：有
 
-## Other Related Works
-### Heterogeneous Graph/Heterogeneous Information Network
-#### Heterogeneous Network Representation Learning: Survey, Benchmark, Evaluation, and Beyond
-* 作者： Carl Yang, et al.(UIUC韩家炜团队)
-* 发表时间：2020
-* 发表于：Arxiv
-* 标签：Heterogeneous Network Reprensentation Learning
-* 概述：本文是异质图相关研究的综述文章，系统性地梳理了异质图的经典工作以及前沿工作，将已有工作规范到统一的框架内，且提出了异质图表示学习的Benchmark，并且对于经典的异质图方法进行了复现与评测。
-* 链接：https://arxiv.org/abs/2004.00216
-* 相关数据集：
-    * DBLP
-    * Yelp
-    * Freebase
-    * PubMed
-* 是否有开源代码：有
-
-#### 异质信息网络分析与应用综述
-* 作者： Chuan Shi, et al.
-* 发表时间：2020
-* 发表于：软件学报
-* 标签：Heterogeneous Information Network
-* 概述：本文是一篇关于异质信息网络的最新中文综述，对于异质信息网络给出了明确的定义，并且对于现有异质信息网络的从网络结构的角度进行了归类，对于异质信息网络表示学习相关的工作也进行了归类为基于图分解的方法、基于随机游走的方法、基于编码器-解码器的方法以及基于图神经网络的方法。同时本文对于异质信息网络的应用进行了叙述，最后对于异质信息网络的发展提出了展望。
-* 链接：http://www.shichuan.org/doc/94.pdf
-* 是否有开源代码：有 https://github.com/BUPT-GAMMA/OpenHINE
-
-#### Modeling Relational Data with Graph Convolutional Networks
-* 作者： Michael Schlichtkrull, Thomas N. Kipf, et al.
-* 发表时间：2018
-* 发表于：ESWC 2018
-* 标签：Knowledge Graph, Multi Relation, Graph Neural Network
-* 概述：本文关注于真实世界图中边的异质性，例如FB15K-237和WN18包含多种类型的边。现有图神经网络GCN无法建模边的异质性，因此本文提出了R-GCN模型，在信息传递时对于不同类型的边使用不同的权值矩阵，同时考虑到在边比较多的情况下矩阵的数目也较多，因此采取了共享权值的方式，将每种类型边的权值矩阵视作多个基的带权加和，以此缩小参数量。对于实验部分，本文在FB15K，和WN18两个数据集上，从实体分类以及连接预测(知识图谱补全)两个实验角度验证了模型的有效性。
-* 链接：https://arxiv.org/abs/1703.06103
-* 相关数据集：
-    * WN18
-    * FB15K-237
-* 是否有开源代码：有(https://github.com/tkipf/relational-gcn)
-
-
-### Dynamic & Heterogeneous Graph Representation
-
-本部分为动态异质图表示学习领域的相关文章，其研究对象为动态异质图。
-
-#### DHNE: Network Representation Learning Method for Dynamic Heterogeneous Networks
-* 作者： Ying Yin, et al.
-* 发表时间：2019
-* 发表于：IEEE Access
-* 标签：CTDG，异质信息，动态信息， random walk
-* 概述：本文同时考虑到图的异质性与动态性，通过构建Historical-Current图将中心节点的历史邻居信息与当前邻居信息进行拼接，并在此基础上进行Random Walk采样，通过Skip-Gram更新节点在当前时间的向量表示。本文在包含时间信息的DBLP和Aminer数据集上通过节点分类的下游任务验证了模型的有效性。
-* 链接：https://ieeexplore.ieee.org/document/8843962
-* 相关数据集：
-    * AMiner
-    * DBLP
-* 是否有开源代码：有
-
-#### Modeling Dynamic Heterogeneous Network for Link Prediction using Hierarchical Attention with Temporal RNN
-* 作者： Hansheng Xue, et al.
-* 发表时间：2020
-* 发表于：ArXiv
-* 标签：CTDG，异质信息，动态信息， 图神经网络
-* 概述：本文提出一个能够同时学习图中动态信息和异质信息的框架DyHATR，通过类似于HAN的异质图神经网络建模每个时间步上节点的表示，其中通过分层注意力机制同时关注到聚合信息时不同节点的重要性，以及不同Meta-path的重要性。在对于每个时间切片图中学到节点的表示基础上，通过RNN来建模节点表示的演化。本文通过Link Prediction实验验证了模型的有效性。
-* 链接：https://ieeexplore.ieee.org/document/8843962
-* 相关数据集：
-    * Twitter
-    * Math-Overflow
-    * Ecomm
-* 是否有开源代码：有(https://github.com/skx300/DyHATR)
-
-#### Dynamic Heterogeneous Information NetworkEmbedding with Meta-path based Proximity
-* 作者： Xiao Wang, et al.
-* 发表时间：2020
-* 发表于：TKDE
-* 标签：DTDG，异质信息，动态信息， 矩阵分解
-* 概述：对于动态异质图，本文提出一种新的增量式更新方法，用于在考虑图演化的情况下节点向量表示的更新。首先本文对于静态异质图的表示学习，提出了新的StHNE模型，能够同时考虑到一阶邻居相似性以及二阶邻居相似性用于作为节点表示的参照；在此基础上，对于动态演化的异质图，本文提出DyHNE模型，将图的演化转化成特征值和特征向量的变化，并且据此提出了一套新的增量式更新的方法，用于更新节点的表示。本文通过节点分类以及关系预测验证了模型的有效性。
-* 链接：https://yuanfulu.github.io/publication/TKDE-DyHNE.pdf
-* 相关数据集：
-    * Yelp
-    * DBLP
-    * AMiner
-* 是否有开源代码：有(https://github.com/rootlu/DyHNE)
-
-#### Relationship Prediction in Dynamic Heterogeneous Information Networks
-* 作者： Amin Milani Fard, et al.(New York Institute of Technology)
-* 发表时间：2019
-* 发表于：Advances in Information Retrieval 2019 (4)
-* 标签：DTDG，异质信息
-* 概述：本文在考虑图动态性的同时，考虑图的异质性，认为不同类型节点对之间的关系自然有所区别，因此提出了动态异质图表示学习，并且做了规范定义。并且提出MetaDynaMix 方法，通过meta-path标注每个节点和边的特征，在此基础上通过矩阵分解得到特征向量，并用于计算关系预测时的概率。
-* 链接：https://www.researchgate.net/publication/332257507_Relationship_Prediction_in_Dynamic_Heterogeneous_Information_Networks
-* 相关数据集：
-    * Publication Network (DBLP+ ACM)
-    * Movies Network (IMDB)
-* 是否有开源代码：无
-
-#### Link Prediction on Dynamic Heterogeneous Information Networks
-* 作者： Chao Kong, et al.(Anhui Polytechnic University)
-* 发表时间：2019
-* 发表于：Lecture Notes in Computer Science 2019
-* 标签：DTDG，异质信息，广度学习，图神经网络
-* 概述：本文考虑到动态图相关研究中异质信息缺乏有效的利用，且对于大规模图的表示学习过程中，深度学习方法效率较低，因此提出了一种宽度学习(?)的框架，并且与图神经网络相结合，实现高效的动态异质图表示学习。
-* 链接：https://link.springer.com/chapter/10.1007%2F978-3-030-34980-6_36
-* 相关数据集：
-    * Reddit
-    * Stack Overflow
-    * Ask Ubuntu
-* 是否有开源代码：无
-
-#### Heterogeneous Graph Transformer
-* 作者： Ziniu Hu, et al. (UCLA Yizhou Sun团队)
-* 发表时间：2020
-* 发表于：WWW 2020
-* 标签：Heterogeneous Network Reprensentation Learning, Transformer, Multi-Head Attention
-* 概述：考虑到已有异质图的研究存在以下几点局限：1. 需要人工设计Meta-path；2.无法建模动态信息；3.对于大规模的异质图，缺乏有效的采样方式。针对于以上三点，本文首选给出Meta Relation的概念，直接建模相连的异质节点，基于此设计了类Transformer的网络结构用于图表示学习。考虑到异质图的动态特性，本文提出了RTE编码方式，用于建模异质图的动态演化。考虑到大规模异质图上网络的训练，本文提出了HGSampling方式，用于均匀采样不同类型的节点信息，以实现高效的图表示学习。
-* 链接：https://arxiv.org/abs/2003.01332
-* 相关数据集：
-    * OAG
-* 是否有开源代码：有 https://github.com/acbull/pyHGT
-
-### Others
-#### A Survey on Knowledge Graphs: Representation, Acquisition and Applications
-* 作者：Shaoxiong Ji, Shirui Pan, Erik Cambria, Senior Member, IEEE, Pekka Marttinen, Philip S. Yu, Fellow IEEE
-* 发表时间：2020
-* 发表于：Arxiv
-* 标签：Knowledge Graph, Representation Learning
-* 概述：本文是一篇知识图谱领域的前沿综述，文中给出了知识图谱的具体定义，并且从知识获取、知识表示、动态知识图谱、知识图谱的应用等多个角度围绕知识图谱技术进行了讨论。同时文章还对于知识图谱未来的发展提出了展望。
-* 链接：https://arxiv.org/abs/2002.00388
-* 是否有开源代码：无
-
 
 ## Dynamic Graph Representation
 该部分包括综述论文，以及一些动态图分析与挖掘、动态图表示的传统工作。
@@ -310,8 +186,8 @@
 * 发表时间：2014
 * 发表于：ACM Computing Surveys
 * 关键词：演化网络，综述
-* 概述：这篇论文是一篇时态网络的经典综述论文。论文中给出了时态网络的三种形式，并且从时态网络的拓扑结构的衡量方法、将时态数据表示为静态图、时态网络的一些模型、时态网络上的传播动力学和区间模型等进行了论述。最后，文章对时态网络的未来发展趋势进行了展望。
-* 链接：https://link.springer.com/article/10.1007%2Fs00354-019-00065-z
+* 概述：该论文从演化性这一角度出发，论述了演化网络分析这一领域。作者从不同领域的演化网络类型、演化网络的不同种类（按照演化速度分类，作者将演化网络分为slowly evolving与streaming networks两类）的应用场景及相应分析手段的相关研究、含有交互内容的演化研究以及演化网络分析在不同领域演化网络中的应用。
+* 链接：http://charuaggarwal.net/CSUR-2013-0157.pdf
 
 
 #### Motifs in Temporal Networks
@@ -374,6 +250,20 @@
     * GDELT
     * ICEWS
 * 是否有开源代码：无
+
+#### NEURAL RELATIONAL INFERENCE FOR INTERACTING SYSTEMS
+* 作者： T Kipf, et al.
+* 发表时间：2018
+* 发表于：ICLR 2018
+* 关键词：神经网络推断（neural relational inference），动态交互系统（dynamic interaction system）
+* 概述：交互系统（dynamic interaction system）的特征是由组成系统的个体（individual）与个体间的交互刻画的，如一些物理系统，社交网络以及交通系统。建模交互系统的动态性是一个挑战性问题，因为个体之间的关系是隐性的，无法直接获取，仅有个体的轨迹数据是显式存在的。基于此，作者提出了神经网络推断（neural relational inference）模型，其可以依据交互系统中的个体运动轨迹，通过无监督的方式推断个体间存在的隐性关系结构。具体地，作者使用了概率隐变量模型中的变分自编码器（Variational autoencoder）框架，使用GNN做为编码器在全连接图上进行点-边-点的信息传播，通过观察到的节点轨迹特征编码pairwise的隐含变量，再通过隐含变量重采样得到隐含表示，得到整个系统的边隐含表示；解码时通过节点的历史轨迹特征与整个系统的边隐含表示得到节点在下一时间步的表示。作者在两个物理学仿真数据集上进行了实验，相较于传统静态方法或使用LSTM的动态序列预测方法，在单步预测与多步预测两个指标中，精度得到了提升，并在一个动作捕捉数据集上进行了可视化分析。
+* 链接：http://www.cs.toronto.edu/~zemel/documents/nriIcml.pdf
+* 相关数据集：
+    * Springs
+    * Kuramoto
+    * The CMU Motion Capture Database
+* 是否有开源代码：有（https://github.com/tkipf/nri ）
+
 
 #### Spatio-Temporal Graph Convolutional Networks: A Deep Learning Framework for Traffic Forecasting
 * 作者： Bing Yu, et al. (Peking University)
@@ -706,19 +596,6 @@
     * ELEA
 * 是否有开源代码：无
 
-#### Motif-Preserving Temporal Network Embedding
-* 作者： Hong Huang, et al.(hust)
-* 发表时间：2020
-* 发表于：IJCAI 2020
-* 标签：CTDG，motif，hawkes
-* 概述：本论文采用了一种meso-dynamics的建模方法，通过一种时序网络上的motif——open triad，考虑三个节点之间的triad结构，利用Hawkes过程建模节点对之间的密度函数，来学习时态网络中的embedding。论文在节点分类、链接预测（这一部分实验写的不清楚，不太明白是怎么做的实验）、链接推荐上取得了较好的效果。
-* 链接：https://www.ijcai.org/Proceedings/2020/0172.pdf
-* 相关数据集：
-    * School 
-    * Digg
-    * Mobile
-    * dblp
-* 是否有开源代码：无
 
 #### Motif-Preserving Temporal Network Embedding
 * 作者： Hong Huang, et al.(hust)
@@ -781,6 +658,161 @@
     * UCI
 * 是否有开源代码：有（https://github.com/snap-stanford/CAW ）
 
+
+#### Time-Series Event Prediction with Evolutionary State Graph
+* 作者： Wenjie Hu, et al.
+* 发表时间：2021
+* 发表于：WSDM 2021
+* 标签：时间序列预测（Time series），演化状态图（evolutionary state graph）
+* 概述：本文是一篇时间序列预测的论文。不同于利用循环神经网络建模时间序列并进行预测的传统方法，论文提出将时间序列建模为多个状态，并使用动态图表示的演化状态图（evolutionary state graph）建模不同时间步中事件状态节点之间的转移关系；基于此，作者提出了基于GNN的EvoNet（Evolutionary State Graph Network）模型建模动态图。为了验证模型的有效性，作者在5个数据集上进行了实验。该模型可应用于异常事件检测（anomaly event detection）等。
+* 链接：http://yangy.org/works/t2g/evonet_wsdm21.pdf
+* 相关数据集：
+    * DJIA30
+    * WebTraffic
+    * NetFlow
+    * ClockErr
+    * Enron
+    * AbServe
+* 是否有开源代码：有（https://github.com/zjunet/EvoNet ）
+
+## Other Related Works
+### Heterogeneous Graph/Heterogeneous Information Network
+#### Heterogeneous Network Representation Learning: Survey, Benchmark, Evaluation, and Beyond
+* 作者： Carl Yang, et al.(UIUC韩家炜团队)
+* 发表时间：2020
+* 发表于：Arxiv
+* 标签：Heterogeneous Network Reprensentation Learning
+* 概述：本文是异质图相关研究的综述文章，系统性地梳理了异质图的经典工作以及前沿工作，将已有工作规范到统一的框架内，且提出了异质图表示学习的Benchmark，并且对于经典的异质图方法进行了复现与评测。
+* 链接：https://arxiv.org/abs/2004.00216
+* 相关数据集：
+    * DBLP
+    * Yelp
+    * Freebase
+    * PubMed
+* 是否有开源代码：有
+
+#### 异质信息网络分析与应用综述
+* 作者： Chuan Shi, et al.
+* 发表时间：2020
+* 发表于：软件学报
+* 标签：Heterogeneous Information Network
+* 概述：本文是一篇关于异质信息网络的最新中文综述，对于异质信息网络给出了明确的定义，并且对于现有异质信息网络的从网络结构的角度进行了归类，对于异质信息网络表示学习相关的工作也进行了归类为基于图分解的方法、基于随机游走的方法、基于编码器-解码器的方法以及基于图神经网络的方法。同时本文对于异质信息网络的应用进行了叙述，最后对于异质信息网络的发展提出了展望。
+* 链接：http://www.shichuan.org/doc/94.pdf
+* 是否有开源代码：有 https://github.com/BUPT-GAMMA/OpenHINE
+
+#### Modeling Relational Data with Graph Convolutional Networks
+* 作者： Michael Schlichtkrull, Thomas N. Kipf, et al.
+* 发表时间：2018
+* 发表于：ESWC 2018
+* 标签：Knowledge Graph, Multi Relation, Graph Neural Network
+* 概述：本文关注于真实世界图中边的异质性，例如FB15K-237和WN18包含多种类型的边。现有图神经网络GCN无法建模边的异质性，因此本文提出了R-GCN模型，在信息传递时对于不同类型的边使用不同的权值矩阵，同时考虑到在边比较多的情况下矩阵的数目也较多，因此采取了共享权值的方式，将每种类型边的权值矩阵视作多个基的带权加和，以此缩小参数量。对于实验部分，本文在FB15K，和WN18两个数据集上，从实体分类以及连接预测(知识图谱补全)两个实验角度验证了模型的有效性。
+* 链接：https://arxiv.org/abs/1703.06103
+* 相关数据集：
+    * WN18
+    * FB15K-237
+* 是否有开源代码：有(https://github.com/tkipf/relational-gcn)
+
+
+### Dynamic & Heterogeneous Graph Representation
+
+本部分为动态异质图表示学习领域的相关文章，其研究对象为动态异质图。
+
+#### DHNE: Network Representation Learning Method for Dynamic Heterogeneous Networks
+* 作者： Ying Yin, et al.
+* 发表时间：2019
+* 发表于：IEEE Access
+* 标签：CTDG，异质信息，动态信息， random walk
+* 概述：本文同时考虑到图的异质性与动态性，通过构建Historical-Current图将中心节点的历史邻居信息与当前邻居信息进行拼接，并在此基础上进行Random Walk采样，通过Skip-Gram更新节点在当前时间的向量表示。本文在包含时间信息的DBLP和Aminer数据集上通过节点分类的下游任务验证了模型的有效性。
+* 链接：https://ieeexplore.ieee.org/document/8843962
+* 相关数据集：
+    * AMiner
+    * DBLP
+* 是否有开源代码：有
+
+#### Modeling Dynamic Heterogeneous Network for Link Prediction using Hierarchical Attention with Temporal RNN
+* 作者： Hansheng Xue, et al.
+* 发表时间：2020
+* 发表于：ArXiv
+* 标签：CTDG，异质信息，动态信息， 图神经网络
+* 概述：本文提出一个能够同时学习图中动态信息和异质信息的框架DyHATR，通过类似于HAN的异质图神经网络建模每个时间步上节点的表示，其中通过分层注意力机制同时关注到聚合信息时不同节点的重要性，以及不同Meta-path的重要性。在对于每个时间切片图中学到节点的表示基础上，通过RNN来建模节点表示的演化。本文通过Link Prediction实验验证了模型的有效性。
+* 链接：https://ieeexplore.ieee.org/document/8843962
+* 相关数据集：
+    * Twitter
+    * Math-Overflow
+    * Ecomm
+* 是否有开源代码：有(https://github.com/skx300/DyHATR)
+
+#### Dynamic Heterogeneous Information NetworkEmbedding with Meta-path based Proximity
+* 作者： Xiao Wang, et al.
+* 发表时间：2020
+* 发表于：TKDE
+* 标签：DTDG，异质信息，动态信息， 矩阵分解
+* 概述：对于动态异质图，本文提出一种新的增量式更新方法，用于在考虑图演化的情况下节点向量表示的更新。首先本文对于静态异质图的表示学习，提出了新的StHNE模型，能够同时考虑到一阶邻居相似性以及二阶邻居相似性用于作为节点表示的参照；在此基础上，对于动态演化的异质图，本文提出DyHNE模型，将图的演化转化成特征值和特征向量的变化，并且据此提出了一套新的增量式更新的方法，用于更新节点的表示。本文通过节点分类以及关系预测验证了模型的有效性。
+* 链接：https://yuanfulu.github.io/publication/TKDE-DyHNE.pdf
+* 相关数据集：
+    * Yelp
+    * DBLP
+    * AMiner
+* 是否有开源代码：有(https://github.com/rootlu/DyHNE)
+
+#### Relationship Prediction in Dynamic Heterogeneous Information Networks
+* 作者： Amin Milani Fard, et al.(New York Institute of Technology)
+* 发表时间：2019
+* 发表于：Advances in Information Retrieval 2019 (4)
+* 标签：DTDG，异质信息
+* 概述：本文在考虑图动态性的同时，考虑图的异质性，认为不同类型节点对之间的关系自然有所区别，因此提出了动态异质图表示学习，并且做了规范定义。并且提出MetaDynaMix 方法，通过meta-path标注每个节点和边的特征，在此基础上通过矩阵分解得到特征向量，并用于计算关系预测时的概率。
+* 链接：https://www.researchgate.net/publication/332257507_Relationship_Prediction_in_Dynamic_Heterogeneous_Information_Networks
+* 相关数据集：
+    * Publication Network (DBLP+ ACM)
+    * Movies Network (IMDB)
+* 是否有开源代码：无
+
+#### Link Prediction on Dynamic Heterogeneous Information Networks
+* 作者： Chao Kong, et al.(Anhui Polytechnic University)
+* 发表时间：2019
+* 发表于：Lecture Notes in Computer Science 2019
+* 标签：DTDG，异质信息，广度学习，图神经网络
+* 概述：本文考虑到动态图相关研究中异质信息缺乏有效的利用，且对于大规模图的表示学习过程中，深度学习方法效率较低，因此提出了一种宽度学习(?)的框架，并且与图神经网络相结合，实现高效的动态异质图表示学习。
+* 链接：https://link.springer.com/chapter/10.1007%2F978-3-030-34980-6_36
+* 相关数据集：
+    * Reddit
+    * Stack Overflow
+    * Ask Ubuntu
+* 是否有开源代码：无
+
+#### Heterogeneous Graph Transformer
+* 作者： Ziniu Hu, et al. (UCLA Yizhou Sun团队)
+* 发表时间：2020
+* 发表于：WWW 2020
+* 标签：Heterogeneous Network Reprensentation Learning, Transformer, Multi-Head Attention
+* 概述：考虑到已有异质图的研究存在以下几点局限：1. 需要人工设计Meta-path；2.无法建模动态信息；3.对于大规模的异质图，缺乏有效的采样方式。针对于以上三点，本文首选给出Meta Relation的概念，直接建模相连的异质节点，基于此设计了类Transformer的网络结构用于图表示学习。考虑到异质图的动态特性，本文提出了RTE编码方式，用于建模异质图的动态演化。考虑到大规模异质图上网络的训练，本文提出了HGSampling方式，用于均匀采样不同类型的节点信息，以实现高效的图表示学习。
+* 链接：https://arxiv.org/abs/2003.01332
+* 相关数据集：
+    * OAG
+* 是否有开源代码：有 https://github.com/acbull/pyHGT
+
+### Others
+#### A Survey on Knowledge Graphs: Representation, Acquisition and Applications
+* 作者：Shaoxiong Ji, Shirui Pan, Erik Cambria, Senior Member, IEEE, Pekka Marttinen, Philip S. Yu, Fellow IEEE
+* 发表时间：2020
+* 发表于：Arxiv
+* 标签：Knowledge Graph, Representation Learning
+* 概述：本文是一篇知识图谱领域的前沿综述，文中给出了知识图谱的具体定义，并且从知识获取、知识表示、动态知识图谱、知识图谱的应用等多个角度围绕知识图谱技术进行了讨论。同时文章还对于知识图谱未来的发展提出了展望。
+* 链接：https://arxiv.org/abs/2002.00388
+* 是否有开源代码：无
+
+#### Recovering dynamic networks in big static datasets
+* 作者： Wenjie Hu, et al.
+* 发表时间：2021
+* 发表于：Physics Reports (2021)
+* 标签：时间序列预测（Time series），演化状态图（evolutionary state graph）
+* 概述：伴随着各类传感器的使用与数据存储能力的提升，大型数据集在各个领域变得越来越普遍。为了挖掘复杂的数据中蕴含的信息，多种多样的信息处理手段层出不穷，网络理论与方法则在其中扮演了重要的角色。然而，受到技术、道德等多方因素的限制，我们获取到的数据通常是静态的，基于静态数据重构出的网络无法揭示出足够的信息。
+ 
+为了解决该问题，该文提出了一种从大型静态数据中恢复动态网络的统一框架。该框架结合了异速生长率与进化博弈论，使用常微分方程组对静态数据样本进行建模，引入生态位的概念来弥补静态数据缺少时间维度的不足。除此之外，本文针对常微分方程组模型下的网络社区划分、多空间网络构建、超网络构建等问题进行了详细的描述，给出了由静态数据到动态网络的完整解决方案。
+* 链接：https://www.sciencedirect.com/science/article/abs/pii/S0370157321000478
+* 论文概述参考链接：https://mp.weixin.qq.com/s/QhtFDTyPoIn56YmT688a1A
+
+
 ## Related Datasets 
 包含一些知名的动态网络数据集，以及能够下载动态网络数据集合的网站。
 
@@ -807,4 +839,8 @@
 * 社会行为模式数据集：http://www.sociopatterns.org/datasets/
 
 ## 其他参考资料
+### 图神经网络相关学习/参考资料：
+#### 图与机器学习课程
+* 简介：斯坦福开设的本科课程，Jure Leskovec担任课程顾问。
+* 链接：http://web.stanford.edu/class/cs224w/
 
