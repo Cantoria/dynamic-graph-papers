@@ -64,6 +64,14 @@
     + [Heterogeneous Network Representation Learning: Survey, Benchmark, Evaluation, and Beyond](#heterogeneous-network-representation-learning--survey--benchmark--evaluation--and-beyond)
     + [异质信息网络分析与应用综述](#-------------)
     + [Modeling Relational Data with Graph Convolutional Networks](#modeling-relational-data-with-graph-convolutional-networks)
+    + [Relation Structure-Aware Heterogeneous Information Network Embedding](#relation-structure-aware-heterogeneous-information-network-embedding)
+    + [Fast Attributed Multiplex Heterogeneous Network Embedding](#fast-attributed-multiplex-heterogeneous-network-embedding)
+    + [Genetic Meta-Structure Search for Recommendation on Heterogeneous Information Network](#genetic-meta-structure-search-for-recommendation-on-heterogeneous-information-network)
+    + [Homogenization with Explicit Semantics Preservation for Heterogeneous Information Network](#homogenization-with-explicit-semantics-preservation-for-heterogeneous-information-network)
+    + [Heterogeneous Graph Structure Learning for Graph Neural Networks](#heterogeneous-graph-structure-learning-for-graph-neural-networks)
+    + [Learning Intents behind Interactions with Knowledge Graph for Recommendation](#learning-intents-behind-interactions-with-knowledge-graph-for-recommendation)
+    + [MultiSage: Empowering GCN with Contextualized Multi-Embeddings on Web-Scale Multipartite Networks](#multisage--empowering-gcn-with-contextualized-multi-embeddings-on-web-scale-multipartite-networks)
+    + [RHINE: Relation Structure-Aware Heterogeneous Information Network Embedding](#rhine--relation-structure-aware-heterogeneous-information-network-embedding)
   * [Dynamic & Heterogeneous Graph Representation](#dynamic---heterogeneous-graph-representation)
     + [DHNE: Network Representation Learning Method for Dynamic Heterogeneous Networks](#dhne--network-representation-learning-method-for-dynamic-heterogeneous-networks)
     + [Modeling Dynamic Heterogeneous Network for Link Prediction using Hierarchical Attention with Temporal RNN](#modeling-dynamic-heterogeneous-network-for-link-prediction-using-hierarchical-attention-with-temporal-rnn-1)
@@ -716,6 +724,113 @@
     * WN18
     * FB15K-237
 * 是否有开源代码：有(https://github.com/tkipf/relational-gcn)
+
+#### Relation Structure-Aware Heterogeneous Information Network Embedding
+* 作者： Yuanfu Lu, et al. (BUPT 石川团队)
+* 发表时间：2019
+* 发表于：AAAI 2019
+* 标签：Heterogeneous Graph, Relation Structure, Random Walk
+* 概述：本文关注到异质图中不同Meta-path的结构性区别，核心就是将预定义的Meta-path通过统计分析分成两种类型-从属关系/交互关系，对于从属关系，本文计算节点相似度的方法是直接通过欧氏距离；对于交互关系，本文计算节点之间的关系是通过类似于TransE的Translation方法。通过两种不同类型关系的联合学习，最终能够做到考虑不同关系类型(从属/交互)的节点表示。最终本文通过节点聚类、节点分类、连接预测验证了模型的有效性。
+* 链接：https://arxiv.org/abs/1905.08027
+* 相关数据集：
+    * DBLP
+    * Yelp
+    * AMiner
+* 是否有开源代码：有(https://github.com/rootlu/RHINE)
+
+#### Fast Attributed Multiplex Heterogeneous Network Embedding
+* 作者： Zhijun Liu, et al. 
+* 发表时间：2020
+* 发表于：CIKM 2020
+* 标签：Heterogeneous Graph, Fast Learning
+* 概述：本文考虑到现有异质图表示学习方法从效率角度难以应用于大规模异质图数据上，因此提出了一个新的模型框架FAME，用于快速学习异质图上节点的表示。其主要贡献在于
+提出了一个新的图表示学习方法，使用随机映射的方式代替feature trasformation的方式(即随机删掉部分维度)。实验部分，本文在多个数据集上验证了模型的有效性，无论是从效率上，还是准确率上，都高于现有的Baseline方法。
+* 链接：https://dl.acm.org/doi/10.1145/3340531.3411944
+* 相关数据集：
+    * Alibaba
+    * Amazon
+    * Aminer
+    * IMDB
+* 是否有开源代码：有(https://github.com/ZhijunLiu95/FAME)
+
+#### Genetic Meta-Structure Search for Recommendation on Heterogeneous Information Network
+* 作者： Zhenyu Han, et al. (THU)
+* 发表时间：2020
+* 发表于：CIKM 2020
+* 标签：Heterogeneous Graph, Genetic Algorithm
+* 概述：本文考虑到异质图能够很好地建模推荐系统，但手动设计Meta-Path需要大量的人工，因此需要研究自动发现Meta-Path的方法。受优化问题中遗传算法的启发，本文设计了一个类似于遗传算法的Meta-Structure自动挖掘策略，用于推荐系统。实验部分，本文在Yelp, Douban Movie, Amazon三个数据集上进行了实验验证模型的有效性，同时通过给出Case Study，验证模型能够学习到新的有用的Meta-Structure。
+* 链接：https://dl.acm.org/doi/10.1145/3340531.3412015
+* 相关数据集：
+    * Yelp
+    * Douban
+    * Movie
+    * Amazon
+* 是否有开源代码：有(https://github.com/0oshowero0/GEMS)
+
+#### Homogenization with Explicit Semantics Preservation for Heterogeneous Information Network
+* 作者： Tiancheng Huang, et al. (ZJU)
+* 发表时间：2020
+* 发表于：CIKM 2020
+* 标签：Heterogeneous Graph, Homogenization
+* 概述：本文考虑到现有异质图算法在将图同质化的过程中(例如HAN)忽略了路径上的节点的丰富信息，且损失了大量的原本图中的信息。因此本文从异质图的同质化角度入手，设计了新的表示学习方法，能够使转化同质子图的过程中同时考虑路径上节点的信息。具体来讲，本文首先设定对称的Meta-path作为考虑对象，对于路径中对称的节点衡量其相似性，以此作为Meta-path重要性的参照。实验部分，本文在DBLP, IMDB，Yelp数据集上以节点分类和节点聚类作为任务进行了实验，验证了模型的有效性。
+* 链接：https://dl.acm.org/doi/10.1145/3340531.3412015
+* 相关数据集：
+    * Yelp
+    * IMDB
+    * DBLP
+* 是否有开源代码：有(https://dl.acm.org/doi/10.1145/3340531.3412135)
+
+#### Heterogeneous Graph Structure Learning for Graph Neural Networks
+* 作者： Jianan Zhao, et al. (BUPT石川团队)
+* 发表时间：2021
+* 发表于：AAAI 2021
+* 标签：Heterogeneous Graph, Structure Learning, Graph Neural Network
+* 概述：本文关注于现实世界中异质图是存在噪音和缺失的现象，因此针对于此首次提出异质图结构学习的相关工作，希望通过建模异质图的节点特征和已有图的拓补结构特征，能够学习到新的异质图结构，实现对于现有异质图缺失的结构的补充。具体来讲，本文提出了异质图结构学习模型HGSL，首先根据节点的特征信息以及邻居信息(对于关系r, 度量节点相似度，并连接相似节点生成Feature Similarity Graph -> 对于连接的节点间的邻居也进行连接 生成两个Feature Propagation Graph -> 通过Attention机制将三个生成的图进行融合)得到Feature Graph，然后对于关系r, 根据不同Meta-path利用Metapath2Vec学到的向量表示用于度量节点相似度，并生成多个子图，融合得到Semantic Graph，最终对于Feature Graph与Semantic Graph进行融合得到新的异质图结构，实现了缺失结构信息的学习与补充。实验部分，本文在DBLP, ACM, Yelp数据集上以节点分类为任务验证了模型的有效性，并且进行了相关分析。
+* 链接：https://github.com/Andy-Border/HGSL/tree/main/paper
+* 相关数据集：
+    * Yelp
+    * ACM
+    * DBLP
+* 是否有开源代码：有(https://github.com/Andy-Border/HGSL)
+
+#### Learning Intents behind Interactions with Knowledge Graph for Recommendation
+* 作者： Xiang Wang, et al. (新加坡国立、浙大、eBay)
+* 发表时间：2021
+* 发表于：WWW 2021
+* 标签：Heterogeneous Graph, Knowledge Graph, Recommendation System, Graph Neural Network
+* 概述：本文是一篇对于用户内容推荐算法的研究，对于User-Item的内容推荐，以往工作未考虑到其间存在的用户的意图(Intent)，因此本文定义了用户的意图，即user-intent-item，并且对此提出了Knowledge Graph Intent Graph，用KG中的relation集合来代表intent；并针对性地提出了GNN-based Method - KGIG，主要包括结合Intent的用户信息建模，以及考虑多跳异质关系路径的信息聚合，用于精准用户内容推荐。本文在三个数据集上验证了模型的有效性，且给出了全面地分析。
+* 链接：https://arxiv.org/abs/2102.07057
+* 相关数据集：
+    * Amazon-Book
+    * Last-FM
+    * Alibaba-iFashion
+* 是否有开源代码：有(https://github.com/huangtinglin/Knowledge_Graph_based_Intent_Network)
+
+#### MultiSage: Empowering GCN with Contextualized Multi-Embeddings on Web-Scale Multipartite Networks
+* 作者：Carl Yang, Jiawei Han, Jure Leskovec et al. (UIUC韩家炜团队, Standford Jure团队)
+* 发表时间：2020
+* 发表于：KDD 2020
+* 标签：Recommendation System, Graph Neural Network, Web-Scale 
+* 概述：本文是一篇对于用户内容推荐算法的研究，对于内容推荐主要考虑到了背景信息的作用，提出了Contextual Masking机制，用于考虑不同的上下文情下的内容表示，同时利用attention机制比较不同context的重要性差异；除此之外，本文考虑到了工业级的大规模数据推荐，提出了一套解决方案，对于中心节点的邻居，通过parallel pagerank based random walk用于进行邻居采样，然后通过Hadoop2+AWS进行数据的计算。本文在两个大规模数据集(但也是进行了采样并非完整数据集)进行了实验验证模型的有效性。
+* 链接：https://jiyang3.web.engr.illinois.edu/files/multisage.pdf
+* 相关数据集：
+    * OAG
+    * Printest
+* 是否有开源代码：无
+
+#### RHINE: Relation Structure-Aware Heterogeneous Information Network Embedding
+* 作者： Chuan Shi, et al. (BUPT& THU)
+* 发表时间：2020
+* 发表于：TKDE 2020
+* 标签：heterogeneous information network, relation structure
+* 概述：本文是一篇基于Meta-path随机游走的工作，主要创新点在于对于Meta-path分成了两类，即(从属/交互)，对于从属关系，本文考虑通过欧氏距离度量相似性，对于交互关系，本文考虑通过TransE类似的Translation进行建模。
+* 链接：https://ieeexplore.ieee.org/abstract/document/9050490
+* 相关数据集：
+    * DBLP
+    * Yelp
+    * AMiner
+    * Amazon
+* 是否有开源代码：有( https://github.com/rootlu/RHINE )
 
 
 ### Dynamic & Heterogeneous Graph Representation
