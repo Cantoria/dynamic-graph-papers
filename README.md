@@ -1,4 +1,4 @@
-# 动态图表示论文汇总项目
+# 动态图表示学习、动态图分析论文汇总项目
 
 本项目总结了动态图表示学习的有关论文，该项目在持续更新中，欢迎大家watch/star/fork！
 
@@ -348,6 +348,34 @@
     * Academic
 * 是否有开源代码：有（https://github.com/luckiezhou/DynamicTriad ）
 
+
+#### Dynamic graph convolutional networks
+* 作者： Franco Manessi, et al. 
+* 发表时间：2019
+* 发表于：Pattern Recognition
+* 关键词：动态图表示，DTDG，节点分类
+* 概述：本文据称是首先将深度神经网络应用于动态图表示中的工作。该论文的贡献是将GCN与LSTM相结合，设计了一套能够用于离散动态图的模型架构。该论文写作严谨，related work总结全面。作者设计了wd-GC layer（Waterfall Dynamic）/cd-GC layer（Concatenated Dynamic-GC）/v-LSTM layer（Vertex LSTM layer）/vs-FC layer（Vertex Sequential Fully Connected layer）/gs-FC layer（Graph Sequential Fully Connected layer）等多种形式的神经网络层，并在DTDG的监督分类与半监督分类任务上对WD-GCN/CD-GCN/FC/GC/LSTM等不同模型组合的性能、训练时间等进行了对比。
+* 链接：https://arxiv.org/pdf/1704.06199.pdf
+* 相关数据集：
+    * a synthetic dataset
+    * DBLP
+    * CIAW
+* 是否有开源代码：无
+
+#### Spatio-Temporal Attentive RNN for Node Classification in Temporal Attributed Graphs
+* 作者： Dongkuan Xu, et al. (Zhejiang University)
+* 发表时间：2019
+* 发表于：IJCAI 2019
+* 关键词：动态图表示，DTDG，节点分类
+* 概述：作者将节点的拓扑结构看作动态图的spatio特性，将动态图的拓扑结构演化看作动态图的temporal特性，提出了一种基于动态图时空特性的注意力RNN模型STAR，其中设计了双attention机制，即spatial attention（不同的邻居节点对节点的表示影响是不同的）与temporal attention（不同阶段的节点历史表示对当前节点表示影响是不同的）。针对任务特点，作者设计了面向节点分类结果、注意力机制多样性与惩罚因子对损失函数。该模型被用于离散动态图中的节点分类任务。作者在节点分类任务、temporal attention与spatial attention上进行了实验。
+* 链接：http://faculty.ist.psu.edu/xzz89/publications/IJCAI2019_STAR.pdf
+* 相关数据集：
+    * Brain （https://tinyurl.com/y4hhw8ro）
+    * Reddit
+    * DBLP-5
+    * DBLP-3
+* 是否有开源代码：无
+
 #### DYREP: LEARNING REPRESENTATIONS OVER DYNAMIC GRAPHS
 * 作者： Rakshit Trivedi, et al. (Georgia Institute of Technology & DeepMind)
 * 发表时间：2019
@@ -594,6 +622,23 @@
 * 链接：https://arxiv.org/abs/2004.09974
 * 相关数据集：
     * GraphNovel
+* 是否有开源代码：无
+
+
+#### Link prediction of time-evolving network based on node ranking
+* 作者： Canxiang Yan, et al.
+* 发表时间：2020
+* 发表于：Knowledge-Based Systems
+* 标签：链接预测，Node ranking，Time series forecasting
+* 概述：本文并非一篇深度学习与动态图表示学习相关的论文，而是以传统图分析的角度进行链接预测。以往面向无尺度演化网络（time-evolving scale-free network）和真实世界的动态网络（real-world dynamic network ）【作者认为后者较于前者的区别是后者的节点数目是恒定的】的动态网络链接预测方法是通过节点对相似性进行判断，而非仅从单节点的角度判断。作者认为，节点的重要性越高的节点会具有更强的吸引力，而节点对相似性是彼此吸引的概率。基于此，作者提出了一种node-ranking-based approach。此外，作者提出了一种自适应时间序列预测的方法，使用了节点对历史序列上的相似性预测节点对形成链接的概率。
+* 链接：https://www.sciencedirect.com/science/article/pii/S095070512030157X
+* 相关数据集：
+    * Hypertext 2009 
+    * dynamic-forum
+    * Enron-employees
+    * fb-messages
+    * Dynamic-reality-call
+    * Wiki-election
 * 是否有开源代码：无
 
 
