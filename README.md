@@ -35,6 +35,8 @@
     + [Embedding Temporal Network via Neighborhood Formation](#embedding-temporal-network-via-neighborhood-formation)
     + [Continuous-Time Dynamic Network Embeddings](#continuous-time-dynamic-network-embeddings)
     + [Dynamic Network Embedding by Modeling Triadic Closure Process](#dynamic-network-embedding-by-modeling-triadic-closure-process)
+    + [Dynamic graph convolutional networks](#dynamic-graph-convolutional-networks)
+    + [Spatio-Temporal Attentive RNN for Node Classification in Temporal Attributed Graphs](#spatio-temporal-attentive-rnn-for-node-classification-in-temporal-attributed-graphs)
     + [DYREP: LEARNING REPRESENTATIONS OVER DYNAMIC GRAPHS](#dyrep--learning-representations-over-dynamic-graphs)
     + [Learning to Represent the Evolution of Dynamic Graphs with Recurrent Models](#learning-to-represent-the-evolution-of-dynamic-graphs-with-recurrent-models)
     + [Context-Aware Temporal Knowledge Graph Embedding](#context-aware-temporal-knowledge-graph-embedding)
@@ -53,12 +55,14 @@
     + [A Data-Driven Graph Generative Model for Temporal Interaction Networks](#a-data-driven-graph-generative-model-for-temporal-interaction-networks)
     + [Embedding Dynamic Attributed Networks by Modeling the Evolution Processes](#embedding-dynamic-attributed-networks-by-modeling-the-evolution-processes)
     + [Learning to Encode Evolutionary Knowledge for Automatic Commenting Long Novels](#learning-to-encode-evolutionary-knowledge-for-automatic-commenting-long-novels)
+    + [Link prediction of time-evolving network based on node ranking](#link-prediction-of-time-evolving-network-based-on-node-ranking)
     + [Generic Representation Learning for Dynamic Social Interaction](#generic-representation-learning-for-dynamic-social-interaction)
     + [Motif-Preserving Temporal Network Embedding](#motif-preserving-temporal-network-embedding)
     + [Local Motif Clustering on Time-Evolving Graphs](#local-motif-clustering-on-time-evolving-graphs)
     + [INDUCTIVE REPRESENTATION LEARNING ON TEMPORAL GRAPHS](#inductive-representation-learning-on-temporal-graphs)
     + [INDUCTIVE REPRESENTATION LEARNING IN TEMPORAL NETWORKS VIA CAUSAL ANONYMOUS WALKS](#inductive-representation-learning-in-temporal-networks-via-causal-anonymous-walks)
     + [Time-Series Event Prediction with Evolutionary State Graph](#time-series-event-prediction-with-evolutionary-state-graph)
+    + [Learning Continuous System Dynamics from Irregularly-Sampled Partial Observations](#learning-continuous-system-dynamics-from-irregularly-sampled-partial-observations)
 - [Other Related Works](#other-related-works)
   * [Heterogeneous Graph/Heterogeneous Information Network](#heterogeneous-graph-heterogeneous-information-network)
     + [Heterogeneous Network Representation Learning: Survey, Benchmark, Evaluation, and Beyond](#heterogeneous-network-representation-learning--survey--benchmark--evaluation--and-beyond)
@@ -80,6 +84,7 @@
     + [Link Prediction on Dynamic Heterogeneous Information Networks](#link-prediction-on-dynamic-heterogeneous-information-networks)
     + [Heterogeneous Graph Transformer](#heterogeneous-graph-transformer)
     + [基于动态异构信息网络的时序关系预测](#-----------------)
+    + [RetaGNN: Relational Temporal Attentive Graph Neural Networks for Holistic Sequential Recommendation](#retagnn--relational-temporal-attentive-graph-neural-networks-for-holistic-sequential-recommendation)
   * [Others](#others)
     + [A Survey on Knowledge Graphs: Representation, Acquisition and Applications](#a-survey-on-knowledge-graphs--representation--acquisition-and-applications-1)
     + [Recovering dynamic networks in big static datasets](#recovering-dynamic-networks-in-big-static-datasets)
@@ -87,7 +92,6 @@
 - [其他参考资料](#------)
   * [图神经网络相关学习/参考资料：](#---------------)
     + [图与机器学习课程](#--------)
-
 
 
 ## Static Graph Representation & Analyzing Works
@@ -269,7 +273,7 @@
 * 发表时间：2018
 * 发表于：ICLR 2018
 * 关键词：神经网络推断（neural relational inference），动态交互系统（dynamic interaction system）
-* 概述：交互系统（dynamic interaction system）的特征是由组成系统的个体（individual）与个体间的交互刻画的，如一些物理系统，社交网络以及交通系统。建模交互系统的动态性是一个挑战性问题，因为个体之间的关系是隐性的，无法直接获取，仅有个体的轨迹数据是显式存在的。基于此，作者提出了神经网络推断（neural relational inference）模型，其可以依据交互系统中的个体运动轨迹，通过无监督的方式推断个体间存在的隐性关系结构。具体地，作者使用了概率隐变量模型中的变分自编码器（Variational autoencoder）框架，使用GNN做为编码器在全连接图上进行点-边-点的信息传播，通过观察到的节点轨迹特征编码pairwise的隐含变量，再通过隐含变量重采样得到隐含表示，得到整个系统的边隐含表示；解码时通过节点的历史轨迹特征与整个系统的边隐含表示得到节点在下一时间步的表示。作者在两个物理学仿真数据集上进行了实验，相较于传统静态方法或使用LSTM的动态序列预测方法，在单步预测与多步预测两个指标中，精度得到了提升，并在一个动作捕捉数据集上进行了可视化分析。
+* 概述：交互系统（dynamic interaction system）的特征是由组成系统的个体（individual）与个体间的交互刻画的，如一些物理系统，社交网络以及交通系统。建模交互系统的动态性是一个挑战性问题，因为个体之间的关系是隐性的，无法直接获取，仅有个体的轨迹数据是显式存在的。基于此，作者提出了神经网络推断（NRI, neural relational inference）模型，其可以依据交互系统中的个体运动轨迹，通过无监督的方式推断个体间存在的隐性关系结构。具体地，作者使用了概率隐变量模型中的变分自编码器（Variational autoencoder）框架，使用GNN做为编码器在全连接图上进行点-边-点的信息传播，通过观察到的节点轨迹特征编码pairwise的隐含变量，再通过隐含变量重采样得到隐含表示，得到整个系统的边隐含表示；解码时通过节点的历史轨迹特征与整个系统的边隐含表示得到节点在下一时间步的表示。作者在两个物理学仿真数据集上进行了实验，相较于传统静态方法或使用LSTM的动态序列预测方法，在单步预测与多步预测两个指标中，精度得到了提升，并在一个动作捕捉数据集上进行了可视化分析。
 * 链接：http://www.cs.toronto.edu/~zemel/documents/nriIcml.pdf
 * 相关数据集：
     * Springs
@@ -733,6 +737,19 @@
     * AbServe
 * 是否有开源代码：有（https://github.com/zjunet/EvoNet ）
 
+#### Learning Continuous System Dynamics from Irregularly-Sampled Partial Observations
+* 作者： Zijie Huang, et al.
+* 发表时间：2020
+* 发表于：NIPS 2021
+* 标签：动态交互系统（dynamic interaction system），非周期、部分采集数据（irregularly-sampled partial observations），latent ordinary differential equation（ODE） generative model
+* 概述：本工作是神经关系推断（NRI）的后续工作。在多主体（agent）动态系统中，我们的任务是通过agent运动、交互的轨迹推断agent之间的关系。作者认为现有的研究工作建立在一个假设之上，即观测轨迹数据是规律性采集，且采集时所有数据均可被观测到，并以此数据为基础推断agent间关系，然而，这是与现实情况不相符的。本文提出了一种LG-ODE方法，即一个隐式的常微分方程生成模型，用于建模具有已知图结构的多主体动态系统。具体地，该编码器可以从结构对象的不规则采样局部观察数据中以无监督的方式推断初始状态，并利用神经网络构成的ODE模块推断任意复杂的连续时间隐式动力学。与NRI相同，作者仍在Springs/Charged/Motion三个数据集上进行了实验。
+* 链接：https://arxiv.org/pdf/2011.03880.pdf
+* 相关数据集：
+    * Springs
+    * Charged
+    * Motion
+* 是否有开源代码：有（https://github.com/ZijieH/LG-ODE.git ）
+
 ## Other Related Works
 ### Heterogeneous Graph/Heterogeneous Information Network
 #### Heterogeneous Network Representation Learning: Survey, Benchmark, Evaluation, and Beyond
@@ -763,7 +780,7 @@
 * 发表时间：2018
 * 发表于：ESWC 2018
 * 标签：Knowledge Graph, Multi Relation, Graph Neural Network
-* 概述：本文关注于真实世界图中边的异质性，例如FB15K-237和WN18包含多种类型的边。现有图神经网络GCN无法建模边的异质性，因此本文提出了R-GCN模型，在信息传递时对于不同类型的边使用不同的权值矩阵，同时考虑到在边比较多的情况下矩阵的数目也较多，因此采取了共享权值的方式，将每种类型边的权值矩阵视作多个基的带权加和，以此缩小参数量。对于实验部分，本文在FB15K，和WN18两个数据集上，从实体分类以及连接预测(知识图谱补全)两个实验角度验证了模型的有效性。
+* 概述：本文关注于真实世界图中边的异质性，例如FB15K-237和WN18包含多种类型的边。现有图神经网络GCN无法建模边的异质性，因此本文提出了R-GCN模型，在信息传递时对于不同类型的边使用不同的权值矩阵，同时考虑到在边比较多的情况下矩阵的数目也较多，因此采取了共享权值的方式，将每种类型边的权值矩阵视作多个基的带权加和，以此缩小参数量。对于实验部分，本文在FB15K和WN18两个数据集上，从实体分类以及连接预测(知识图谱补全)两个实验角度验证了模型的有效性。
 * 链接：https://arxiv.org/abs/1703.06103
 * 相关数据集：
     * WN18
@@ -966,6 +983,19 @@
 * 相关数据集：
     * DBLP
 * 是否有开源代码：无
+
+#### RetaGNN: Relational Temporal Attentive Graph Neural Networks for Holistic Sequential Recommendation
+* 作者： Cheng Hsu, et al.(National Cheng Kung University)
+* 发表时间：2021
+* 发表于：WWW 2021
+* 标签：序列推荐（Sequential recommendation），关系注意力GNN网络（Relational Temporal Attentive Graph Neural Networks）
+* 概述：该工作解决的是序列预测任务的transferable问题。作者将目前SR领域的研究分为三类，即Conventional Sequential Recommendation/Inductive Sequential Recommendation（测试集中的user可能在训练集中未出现）/Transferable Sequential Recommendation（测试集中的user/item可能在训练集中均未出现）。基于此，作者提出了用户-物品-属性的三分图结构，通过对特定用户-物品对为中心抽取封闭子图（enclosing subgraph），将封闭子图中用户/物品的随机初始化向量表示通过关系注意力GNN网络（Reta）得到更新的节点向量表示，再将item的向量转化为序列，进行自注意力表示得到每个item的权重，最后生成特定用户-物品对的表示向量。作者在3个数据集上进行了实验，测试了Precision@k, Recall@k与NDCG@k指标，并针对Conventional Sequential Recommendation/Inductive Sequential Recommendation）/Transferable Sequential Recommendation三种场景做了实验。
+* 链接：https://arxiv.org/pdf/2101.12457.pdf
+* 相关数据集：
+    * Instagram
+    * MovieLens（https://grouplens.org/datasets/movielens/1m/ ）
+    * Book-Crossing（http://www2.informatik.uni-freiburg.de/~cziegler/BX/ ）
+* 是否有开源代码：有（https://github.com/retagnn/RetaGNN ）
 
 ### Others
 #### A Survey on Knowledge Graphs: Representation, Acquisition and Applications
