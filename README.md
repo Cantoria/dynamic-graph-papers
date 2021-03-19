@@ -63,6 +63,7 @@
     + [INDUCTIVE REPRESENTATION LEARNING IN TEMPORAL NETWORKS VIA CAUSAL ANONYMOUS WALKS](#inductive-representation-learning-in-temporal-networks-via-causal-anonymous-walks)
     + [Time-Series Event Prediction with Evolutionary State Graph](#time-series-event-prediction-with-evolutionary-state-graph)
     + [Learning Continuous System Dynamics from Irregularly-Sampled Partial Observations](#learning-continuous-system-dynamics-from-irregularly-sampled-partial-observations)
+    + [GloDyNE: Global Topology Preserving Dynamic Network Embedding](#glodyne--global-topology-preserving-dynamic-network-embedding)
 - [Other Related Works](#other-related-works)
   * [Heterogeneous Graph/Heterogeneous Information Network](#heterogeneous-graph-heterogeneous-information-network)
     + [Heterogeneous Network Representation Learning: Survey, Benchmark, Evaluation, and Beyond](#heterogeneous-network-representation-learning--survey--benchmark--evaluation--and-beyond)
@@ -92,6 +93,7 @@
 - [其他参考资料](#------)
   * [图神经网络相关学习/参考资料：](#---------------)
     + [图与机器学习课程](#--------)
+
 
 
 ## Static Graph Representation & Analyzing Works
@@ -742,13 +744,31 @@
 * 发表时间：2020
 * 发表于：NIPS 2021
 * 标签：动态交互系统（dynamic interaction system），非周期、部分采集数据（irregularly-sampled partial observations），latent ordinary differential equation（ODE） generative model
-* 概述：本工作是神经关系推断（NRI）的后续工作。在多主体（agent）动态系统中，我们的任务是通过agent运动、交互的轨迹推断agent之间的关系。作者认为现有的研究工作建立在一个假设之上，即观测轨迹数据是规律性采集，且采集时所有数据均可被观测到，并以此数据为基础推断agent间关系，然而，这是与现实情况不相符的。本文提出了一种LG-ODE方法，即一个隐式的常微分方程生成模型，用于建模具有已知图结构的多主体动态系统。具体地，该编码器可以从结构对象的不规则采样局部观察数据中以无监督的方式推断初始状态，并利用神经网络构成的ODE模块推断任意复杂的连续时间隐式动力学。与NRI相同，作者仍在Springs/Charged/Motion三个数据集上进行了实验。
+* 概述：本工作是神经关系推断（NRI）的后续工作。在多主体（agent）动态系统中，我们的任务是通过agent运动、交互的轨迹推断agent之间的关系。作者认为现有的研究工作建立在一个假设之上，即观测轨迹数据是规律性采集，且采集时所有数据均可被观测到，并以此数据为基础推断agent间关系，然而，这是与现实情况不相符的。本文提出了一种LG-ODE方法，即一个隐式的常微分方程生成模型，用于建模具有已知图结构的多主体动态系统。具体地，该编码器可以从结构对象的不规则采样局部观察数据中以无监督的方式推断初始状态，并利用神经网络构成的ODE模块推断任意复杂的连续时间隐式动力学。与NRI相同，作者仍在Springs/Charged/Motion三个数据集上进行了实验，并按照Interpolation/Extrapolation两种不同的数据集划分方式进行了测试。
 * 链接：https://arxiv.org/pdf/2011.03880.pdf
 * 相关数据集：
     * Springs
     * Charged
     * Motion
 * 是否有开源代码：有（https://github.com/ZijieH/LG-ODE.git ）
+
+#### GloDyNE: Global Topology Preserving Dynamic Network Embedding
+* 作者： Chengbin Hou, et al.
+* 发表时间：2020
+* 发表于：NIPS 2021
+* 标签：DTDG，Global Topology
+* 概述：传统的DNE工作在面对节点拓扑结构随时间演变的情况，为了节省运算时间，会选择演变程度最大的节点更新其表示。这种方式虽然提升了效率，但丢失了每一时间步中图结构的宏观拓扑信息。作者发现，在动态图的演化过程中，总会存在一些子图在过去的若干时间步内处于不活跃状态。基于此，作者提出了GloDyNE模型。该模型首先将目前的网络划分为若干更小的子网络，每个子网有一代表节点；然后模型捕捉代表节点邻居的近期演化状态，以此判断该子网是否处于活跃状态；最后基于Skip-Gram的负采样算法和增量式学习更新节点表示。作者在6个离散动态网络表示的数据集上进行了实验，在Graph Reconstruction/Link Prediction/Node Classification/embedding训练时间/模型的性能与效率等方面进行了分析。
+* 链接：https://ieeexplore.ieee.org/document/9302718
+* 相关数据集：
+    * AS733（https://snap.stanford.edu/data/as-733.html ）
+    * Elec（http://konect.cc/networks/elec ）
+    * FBW（http://konect.cc/networks/facebook-wosn-wall ）
+    * HepPh（http://konect.cc/networks/ca-cit-HepPh ）
+    * Cora
+    * DBLP
+* 是否有开源代码：有（https://github.com/houchengbin/GloDyNE ）
+
+
 
 ## Other Related Works
 ### Heterogeneous Graph/Heterogeneous Information Network
