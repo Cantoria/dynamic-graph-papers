@@ -11,88 +11,93 @@
 
 目录如下：
 
-- [Static Graph Representation & Analyzing Works](#static-graph-representation---analyzing-works)
-    + [node2vec: Scalable Feature Learning for Networks](#node2vec--scalable-feature-learning-for-networks)
-    + [Semi-Supervised Classification with Graph Convolutional Networks](#semi-supervised-classification-with-graph-convolutional-networks)
-    + [LINE: Large-scale Information Network Embedding](#line--large-scale-information-network-embedding)
-    + [Inductive representation learning on large graphs](#inductive-representation-learning-on-large-graphs)
-- [Dynamic Graph Representation](#dynamic-graph-representation)
-    + [Representation Learning for Dynamic Graphs: A Survey](#representation-learning-for-dynamic-graphs--a-survey)
-    + [Foundations and modelling of dynamic networks using Dynamic Graph Neural Networks: A survey](#foundations-and-modelling-of-dynamic-networks-using-dynamic-graph-neural-networks--a-survey)
-    + [A Survey on Knowledge Graphs: Representation, Acquisition and Applications](#a-survey-on-knowledge-graphs--representation--acquisition-and-applications)
-    + [Temporal Link Prediction: A Survey](#temporal-link-prediction--a-survey)
-    + [Temporal Networks](#temporal-networks)
-    + [Evolutionary Network Analysis: A Survey](#evolutionary-network-analysis--a-survey)
-    + [Motifs in Temporal Networks](#motifs-in-temporal-networks)
-    + [动态网络模式挖掘方法及其应用](#--------------)
-- [New Works of Dynamic Graph Representation (Updating)](#new-works-of-dynamic-graph-representation--updating-)
-    + [Link Prediction with Spatial and Temporal Consistency in Dynamic Networks](#link-prediction-with-spatial-and-temporal-consistency-in-dynamic-networks)
-    + [Deep Coevolutionary Network: Embedding User and Item Features for Recommendation](#deep-coevolutionary-network--embedding-user-and-item-features-for-recommendation)
-    + [Know-Evolve: Deep Temporal Reasoning for Dynamic Knowledge Graphs](#know-evolve--deep-temporal-reasoning-for-dynamic-knowledge-graphs)
-    + [NEURAL RELATIONAL INFERENCE FOR INTERACTING SYSTEMS](#neural-relational-inference-for-interacting-systems)
-    + [Spatio-Temporal Graph Convolutional Networks: A Deep Learning Framework for Traffic Forecasting](#spatio-temporal-graph-convolutional-networks--a-deep-learning-framework-for-traffic-forecasting)
-    + [Dynamic Network Embedding : An Extended Approach for Skip-gram based Network Embedding](#dynamic-network-embedding---an-extended-approach-for-skip-gram-based-network-embedding)
-    + [Embedding Temporal Network via Neighborhood Formation](#embedding-temporal-network-via-neighborhood-formation)
-    + [Continuous-Time Dynamic Network Embeddings](#continuous-time-dynamic-network-embeddings)
-    + [Dynamic Network Embedding by Modeling Triadic Closure Process](#dynamic-network-embedding-by-modeling-triadic-closure-process)
-    + [Dynamic graph convolutional networks](#dynamic-graph-convolutional-networks)
-    + [Spatio-Temporal Attentive RNN for Node Classification in Temporal Attributed Graphs](#spatio-temporal-attentive-rnn-for-node-classification-in-temporal-attributed-graphs)
-    + [DYREP: LEARNING REPRESENTATIONS OVER DYNAMIC GRAPHS](#dyrep--learning-representations-over-dynamic-graphs)
-    + [Learning to Represent the Evolution of Dynamic Graphs with Recurrent Models](#learning-to-represent-the-evolution-of-dynamic-graphs-with-recurrent-models)
-    + [Context-Aware Temporal Knowledge Graph Embedding](#context-aware-temporal-knowledge-graph-embedding)
-    + [Real-Time Streaming Graph Embedding Through Local Actions](#real-time-streaming-graph-embedding-through-local-actions)
-    + [Predicting Dynamic Embedding Trajectory in Temporal Interaction Networks](#predicting-dynamic-embedding-trajectory-in-temporal-interaction-networks)
-    + [dyngraph2vec-Capturing Network Dynamics using Dynamic Graph Representation Learning](#dyngraph2vec-capturing-network-dynamics-using-dynamic-graph-representation-learning)
-    + [Temporal Network Embedding with Micro- and Macro-dynamics](#temporal-network-embedding-with-micro--and-macro-dynamics)
-    + [EvolveGCN: Evolving Graph Convolutional Networks for Dynamic Graphs](#evolvegcn--evolving-graph-convolutional-networks-for-dynamic-graphs)
-    + [Temporal Graph Networks for Deep Learning on Dynamic Graphs](#temporal-graph-networks-for-deep-learning-on-dynamic-graphs)
-    + [Modeling Dynamic Heterogeneous Network for Link Prediction using Hierarchical Attention with Temporal RNN](#modeling-dynamic-heterogeneous-network-for-link-prediction-using-hierarchical-attention-with-temporal-rnn)
-    + [DySAT: Deep Neural Representation Learning on Dynamic Graphs via Self-Attention Networks](#dysat--deep-neural-representation-learning-on-dynamic-graphs-via-self-attention-networks)
-    + [Evolving network representation learning based on random walks](#evolving-network-representation-learning-based-on-random-walks)
-    + [TemporalGAT: Attention-Based Dynamic Graph Representation Learning](#temporalgat--attention-based-dynamic-graph-representation-learning)
-    + [Continuous-Time Relationship Prediction in Dynamic Heterogeneous Information Networks](#continuous-time-relationship-prediction-in-dynamic-heterogeneous-information-networks)
-    + [Continuous-Time Dynamic Graph Learning via Neural Interaction Processes](#continuous-time-dynamic-graph-learning-via-neural-interaction-processes)
-    + [A Data-Driven Graph Generative Model for Temporal Interaction Networks](#a-data-driven-graph-generative-model-for-temporal-interaction-networks)
-    + [Embedding Dynamic Attributed Networks by Modeling the Evolution Processes](#embedding-dynamic-attributed-networks-by-modeling-the-evolution-processes)
-    + [Learning to Encode Evolutionary Knowledge for Automatic Commenting Long Novels](#learning-to-encode-evolutionary-knowledge-for-automatic-commenting-long-novels)
-    + [Link prediction of time-evolving network based on node ranking](#link-prediction-of-time-evolving-network-based-on-node-ranking)
-    + [Generic Representation Learning for Dynamic Social Interaction](#generic-representation-learning-for-dynamic-social-interaction)
-    + [Motif-Preserving Temporal Network Embedding](#motif-preserving-temporal-network-embedding)
-    + [Local Motif Clustering on Time-Evolving Graphs](#local-motif-clustering-on-time-evolving-graphs)
-    + [INDUCTIVE REPRESENTATION LEARNING ON TEMPORAL GRAPHS](#inductive-representation-learning-on-temporal-graphs)
-    + [INDUCTIVE REPRESENTATION LEARNING IN TEMPORAL NETWORKS VIA CAUSAL ANONYMOUS WALKS](#inductive-representation-learning-in-temporal-networks-via-causal-anonymous-walks)
-    + [Time-Series Event Prediction with Evolutionary State Graph](#time-series-event-prediction-with-evolutionary-state-graph)
-    + [Learning Continuous System Dynamics from Irregularly-Sampled Partial Observations](#learning-continuous-system-dynamics-from-irregularly-sampled-partial-observations)
-    + [GloDyNE: Global Topology Preserving Dynamic Network Embedding](#glodyne--global-topology-preserving-dynamic-network-embedding)
-- [Other Related Works](#other-related-works)
-  * [Heterogeneous Graph/Heterogeneous Information Network](#heterogeneous-graph-heterogeneous-information-network)
-    + [Heterogeneous Network Representation Learning: Survey, Benchmark, Evaluation, and Beyond](#heterogeneous-network-representation-learning--survey--benchmark--evaluation--and-beyond)
-    + [异质信息网络分析与应用综述](#-------------)
-    + [Modeling Relational Data with Graph Convolutional Networks](#modeling-relational-data-with-graph-convolutional-networks)
-    + [Relation Structure-Aware Heterogeneous Information Network Embedding](#relation-structure-aware-heterogeneous-information-network-embedding)
-    + [Fast Attributed Multiplex Heterogeneous Network Embedding](#fast-attributed-multiplex-heterogeneous-network-embedding)
-    + [Genetic Meta-Structure Search for Recommendation on Heterogeneous Information Network](#genetic-meta-structure-search-for-recommendation-on-heterogeneous-information-network)
-    + [Homogenization with Explicit Semantics Preservation for Heterogeneous Information Network](#homogenization-with-explicit-semantics-preservation-for-heterogeneous-information-network)
-    + [Heterogeneous Graph Structure Learning for Graph Neural Networks](#heterogeneous-graph-structure-learning-for-graph-neural-networks)
-    + [Learning Intents behind Interactions with Knowledge Graph for Recommendation](#learning-intents-behind-interactions-with-knowledge-graph-for-recommendation)
-    + [MultiSage: Empowering GCN with Contextualized Multi-Embeddings on Web-Scale Multipartite Networks](#multisage--empowering-gcn-with-contextualized-multi-embeddings-on-web-scale-multipartite-networks)
-    + [RHINE: Relation Structure-Aware Heterogeneous Information Network Embedding](#rhine--relation-structure-aware-heterogeneous-information-network-embedding)
-  * [Dynamic & Heterogeneous Graph Representation](#dynamic---heterogeneous-graph-representation)
-    + [DHNE: Network Representation Learning Method for Dynamic Heterogeneous Networks](#dhne--network-representation-learning-method-for-dynamic-heterogeneous-networks)
-    + [Modeling Dynamic Heterogeneous Network for Link Prediction using Hierarchical Attention with Temporal RNN](#modeling-dynamic-heterogeneous-network-for-link-prediction-using-hierarchical-attention-with-temporal-rnn-1)
-    + [Dynamic Heterogeneous Information NetworkEmbedding with Meta-path based Proximity](#dynamic-heterogeneous-information-networkembedding-with-meta-path-based-proximity)
-    + [Relationship Prediction in Dynamic Heterogeneous Information Networks](#relationship-prediction-in-dynamic-heterogeneous-information-networks)
-    + [Link Prediction on Dynamic Heterogeneous Information Networks](#link-prediction-on-dynamic-heterogeneous-information-networks)
-    + [Heterogeneous Graph Transformer](#heterogeneous-graph-transformer)
-    + [基于动态异构信息网络的时序关系预测](#-----------------)
-    + [RetaGNN: Relational Temporal Attentive Graph Neural Networks for Holistic Sequential Recommendation](#retagnn--relational-temporal-attentive-graph-neural-networks-for-holistic-sequential-recommendation)
-  * [Others](#others)
-    + [A Survey on Knowledge Graphs: Representation, Acquisition and Applications](#a-survey-on-knowledge-graphs--representation--acquisition-and-applications-1)
-    + [Recovering dynamic networks in big static datasets](#recovering-dynamic-networks-in-big-static-datasets)
-- [Related Datasets](#related-datasets)
-- [其他参考资料](#------)
-  * [图神经网络相关学习/参考资料：](#---------------)
-    + [图与机器学习课程](#--------)
+- [动态图表示学习、动态图分析论文汇总项目](#-------------------)
+  * [Static Graph Representation & Analyzing Works](#static-graph-representation---analyzing-works)
+      - [node2vec: Scalable Feature Learning for Networks](#node2vec--scalable-feature-learning-for-networks)
+      - [Semi-Supervised Classification with Graph Convolutional Networks](#semi-supervised-classification-with-graph-convolutional-networks)
+      - [LINE: Large-scale Information Network Embedding](#line--large-scale-information-network-embedding)
+      - [Inductive representation learning on large graphs](#inductive-representation-learning-on-large-graphs)
+      - [Graph Attention Networks](#graph-attention-networks)
+  * [Dynamic Graph Representation](#dynamic-graph-representation)
+      - [Representation Learning for Dynamic Graphs: A Survey](#representation-learning-for-dynamic-graphs--a-survey)
+      - [Foundations and modelling of dynamic networks using Dynamic Graph Neural Networks: A survey](#foundations-and-modelling-of-dynamic-networks-using-dynamic-graph-neural-networks--a-survey)
+      - [A Survey on Knowledge Graphs: Representation, Acquisition and Applications](#a-survey-on-knowledge-graphs--representation--acquisition-and-applications)
+      - [Temporal Link Prediction: A Survey](#temporal-link-prediction--a-survey)
+      - [Temporal Networks](#temporal-networks)
+      - [Evolutionary Network Analysis: A Survey](#evolutionary-network-analysis--a-survey)
+      - [Motifs in Temporal Networks](#motifs-in-temporal-networks)
+      - [动态网络模式挖掘方法及其应用](#--------------)
+  * [New Works of Dynamic Graph Representation (Updating)](#new-works-of-dynamic-graph-representation--updating-)
+      - [Link Prediction with Spatial and Temporal Consistency in Dynamic Networks](#link-prediction-with-spatial-and-temporal-consistency-in-dynamic-networks)
+      - [Deep Coevolutionary Network: Embedding User and Item Features for Recommendation](#deep-coevolutionary-network--embedding-user-and-item-features-for-recommendation)
+      - [Know-Evolve: Deep Temporal Reasoning for Dynamic Knowledge Graphs](#know-evolve--deep-temporal-reasoning-for-dynamic-knowledge-graphs)
+      - [NEURAL RELATIONAL INFERENCE FOR INTERACTING SYSTEMS](#neural-relational-inference-for-interacting-systems)
+      - [Spatio-Temporal Graph Convolutional Networks: A Deep Learning Framework for Traffic Forecasting](#spatio-temporal-graph-convolutional-networks--a-deep-learning-framework-for-traffic-forecasting)
+      - [Dynamic Network Embedding : An Extended Approach for Skip-gram based Network Embedding](#dynamic-network-embedding---an-extended-approach-for-skip-gram-based-network-embedding)
+      - [Embedding Temporal Network via Neighborhood Formation](#embedding-temporal-network-via-neighborhood-formation)
+      - [Continuous-Time Dynamic Network Embeddings](#continuous-time-dynamic-network-embeddings)
+      - [Dynamic Network Embedding by Modeling Triadic Closure Process](#dynamic-network-embedding-by-modeling-triadic-closure-process)
+      - [Dynamic graph convolutional networks](#dynamic-graph-convolutional-networks)
+      - [Spatio-Temporal Attentive RNN for Node Classification in Temporal Attributed Graphs](#spatio-temporal-attentive-rnn-for-node-classification-in-temporal-attributed-graphs)
+      - [DYREP: LEARNING REPRESENTATIONS OVER DYNAMIC GRAPHS](#dyrep--learning-representations-over-dynamic-graphs)
+      - [Learning to Represent the Evolution of Dynamic Graphs with Recurrent Models](#learning-to-represent-the-evolution-of-dynamic-graphs-with-recurrent-models)
+      - [Context-Aware Temporal Knowledge Graph Embedding](#context-aware-temporal-knowledge-graph-embedding)
+      - [Real-Time Streaming Graph Embedding Through Local Actions](#real-time-streaming-graph-embedding-through-local-actions)
+      - [Predicting Dynamic Embedding Trajectory in Temporal Interaction Networks](#predicting-dynamic-embedding-trajectory-in-temporal-interaction-networks)
+      - [dyngraph2vec-Capturing Network Dynamics using Dynamic Graph Representation Learning](#dyngraph2vec-capturing-network-dynamics-using-dynamic-graph-representation-learning)
+      - [Temporal Network Embedding with Micro- and Macro-dynamics](#temporal-network-embedding-with-micro--and-macro-dynamics)
+      - [EvolveGCN: Evolving Graph Convolutional Networks for Dynamic Graphs](#evolvegcn--evolving-graph-convolutional-networks-for-dynamic-graphs)
+      - [Temporal Graph Networks for Deep Learning on Dynamic Graphs](#temporal-graph-networks-for-deep-learning-on-dynamic-graphs)
+      - [Modeling Dynamic Heterogeneous Network for Link Prediction using Hierarchical Attention with Temporal RNN](#modeling-dynamic-heterogeneous-network-for-link-prediction-using-hierarchical-attention-with-temporal-rnn)
+      - [DySAT: Deep Neural Representation Learning on Dynamic Graphs via Self-Attention Networks](#dysat--deep-neural-representation-learning-on-dynamic-graphs-via-self-attention-networks)
+      - [Evolving network representation learning based on random walks](#evolving-network-representation-learning-based-on-random-walks)
+      - [TemporalGAT: Attention-Based Dynamic Graph Representation Learning](#temporalgat--attention-based-dynamic-graph-representation-learning)
+      - [Continuous-Time Relationship Prediction in Dynamic Heterogeneous Information Networks](#continuous-time-relationship-prediction-in-dynamic-heterogeneous-information-networks)
+      - [Continuous-Time Dynamic Graph Learning via Neural Interaction Processes](#continuous-time-dynamic-graph-learning-via-neural-interaction-processes)
+      - [A Data-Driven Graph Generative Model for Temporal Interaction Networks](#a-data-driven-graph-generative-model-for-temporal-interaction-networks)
+      - [Embedding Dynamic Attributed Networks by Modeling the Evolution Processes](#embedding-dynamic-attributed-networks-by-modeling-the-evolution-processes)
+      - [Learning to Encode Evolutionary Knowledge for Automatic Commenting Long Novels](#learning-to-encode-evolutionary-knowledge-for-automatic-commenting-long-novels)
+      - [Link prediction of time-evolving network based on node ranking](#link-prediction-of-time-evolving-network-based-on-node-ranking)
+      - [Generic Representation Learning for Dynamic Social Interaction](#generic-representation-learning-for-dynamic-social-interaction)
+      - [Motif-Preserving Temporal Network Embedding](#motif-preserving-temporal-network-embedding)
+      - [Local Motif Clustering on Time-Evolving Graphs](#local-motif-clustering-on-time-evolving-graphs)
+      - [INDUCTIVE REPRESENTATION LEARNING ON TEMPORAL GRAPHS](#inductive-representation-learning-on-temporal-graphs)
+      - [INDUCTIVE REPRESENTATION LEARNING IN TEMPORAL NETWORKS VIA CAUSAL ANONYMOUS WALKS](#inductive-representation-learning-in-temporal-networks-via-causal-anonymous-walks)
+      - [Time-Series Event Prediction with Evolutionary State Graph](#time-series-event-prediction-with-evolutionary-state-graph)
+      - [Learning Continuous System Dynamics from Irregularly-Sampled Partial Observations](#learning-continuous-system-dynamics-from-irregularly-sampled-partial-observations)
+      - [GloDyNE: Global Topology Preserving Dynamic Network Embedding](#glodyne--global-topology-preserving-dynamic-network-embedding)
+  * [Other Related Works](#other-related-works)
+    + [Heterogeneous Graph/Heterogeneous Information Network](#heterogeneous-graph-heterogeneous-information-network)
+      - [Heterogeneous Network Representation Learning: Survey, Benchmark, Evaluation, and Beyond](#heterogeneous-network-representation-learning--survey--benchmark--evaluation--and-beyond)
+      - [异质信息网络分析与应用综述](#-------------)
+      - [Modeling Relational Data with Graph Convolutional Networks](#modeling-relational-data-with-graph-convolutional-networks)
+      - [Relation Structure-Aware Heterogeneous Information Network Embedding](#relation-structure-aware-heterogeneous-information-network-embedding)
+      - [Fast Attributed Multiplex Heterogeneous Network Embedding](#fast-attributed-multiplex-heterogeneous-network-embedding)
+      - [Genetic Meta-Structure Search for Recommendation on Heterogeneous Information Network](#genetic-meta-structure-search-for-recommendation-on-heterogeneous-information-network)
+      - [Homogenization with Explicit Semantics Preservation for Heterogeneous Information Network](#homogenization-with-explicit-semantics-preservation-for-heterogeneous-information-network)
+      - [Heterogeneous Graph Structure Learning for Graph Neural Networks](#heterogeneous-graph-structure-learning-for-graph-neural-networks)
+      - [Learning Intents behind Interactions with Knowledge Graph for Recommendation](#learning-intents-behind-interactions-with-knowledge-graph-for-recommendation)
+      - [MultiSage: Empowering GCN with Contextualized Multi-Embeddings on Web-Scale Multipartite Networks](#multisage--empowering-gcn-with-contextualized-multi-embeddings-on-web-scale-multipartite-networks)
+      - [RHINE: Relation Structure-Aware Heterogeneous Information Network Embedding](#rhine--relation-structure-aware-heterogeneous-information-network-embedding)
+    + [Dynamic & Heterogeneous Graph Representation](#dynamic---heterogeneous-graph-representation)
+      - [DHNE: Network Representation Learning Method for Dynamic Heterogeneous Networks](#dhne--network-representation-learning-method-for-dynamic-heterogeneous-networks)
+      - [Modeling Dynamic Heterogeneous Network for Link Prediction using Hierarchical Attention with Temporal RNN](#modeling-dynamic-heterogeneous-network-for-link-prediction-using-hierarchical-attention-with-temporal-rnn-1)
+      - [Dynamic Heterogeneous Information NetworkEmbedding with Meta-path based Proximity](#dynamic-heterogeneous-information-networkembedding-with-meta-path-based-proximity)
+      - [Relationship Prediction in Dynamic Heterogeneous Information Networks](#relationship-prediction-in-dynamic-heterogeneous-information-networks)
+      - [Link Prediction on Dynamic Heterogeneous Information Networks](#link-prediction-on-dynamic-heterogeneous-information-networks)
+      - [Heterogeneous Graph Transformer](#heterogeneous-graph-transformer)
+      - [基于动态异构信息网络的时序关系预测](#-----------------)
+      - [RetaGNN: Relational Temporal Attentive Graph Neural Networks for Holistic Sequential Recommendation](#retagnn--relational-temporal-attentive-graph-neural-networks-for-holistic-sequential-recommendation)
+    + [Others](#others)
+      - [A Survey on Knowledge Graphs: Representation, Acquisition and Applications](#a-survey-on-knowledge-graphs--representation--acquisition-and-applications-1)
+      - [Recovering dynamic networks in big static datasets](#recovering-dynamic-networks-in-big-static-datasets)
+  * [Related Datasets](#related-datasets)
+  * [其他参考资料](#------)
+    + [图神经网络相关学习/参考资料：](#---------------)
+      - [图与机器学习课程](#--------)
+
+<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
+
 
 
 
@@ -117,7 +122,7 @@
 * 发表时间：2016
 * 发表于：ICLR 2017
 * 标签：图神经网络
-* 概述：提出了图卷积神经网络的概念，并使用其聚合、激活节点的一阶邻居特征。
+* 概述：提出了图卷积神经网络（GCN）的概念，并使用其聚合、激活节点的一阶邻居特征。
 * 链接：https://arxiv.org/pdf/1609.02907.pdf
 * 相关数据集：
     * Citeseer
@@ -151,6 +156,20 @@
     * Reddit
     * PPI
 * 是否有开源代码：有
+
+#### Graph Attention Networks
+* 作者：Petar Velickovic
+* 发表时间：2018
+* 发表于：ICLR 2018
+* 标签：Inductive Graph Embedding
+* 概述：相较于GCN/GraphSage等模型，该模型提出了图注意力机制的思想，在信息传递时计算目标节点邻居节点的权重，依据权重进行信息聚合。该模型能够适用于transductive/inductive任务。
+* 链接：https://arxiv.org/pdf/1710.10903.pdf
+* 相关数据集：
+    * Cora
+    * Citeseer
+    * Pubmed
+    * PPI
+* 是否有开源代码：有（原始代码为https://github.com/PetarV-/GAT ）
 
 
 ## Dynamic Graph Representation
@@ -766,6 +785,7 @@
     * HepPh（http://konect.cc/networks/ca-cit-HepPh ）
     * Cora
     * DBLP
+    * 作者整理的数据集合：https://drive.google.com/drive/folders/14CcDB_aEVA3RjALFUYl69utB7ErViENo
 * 是否有开源代码：有（https://github.com/houchengbin/GloDyNE ）
 
 
