@@ -96,10 +96,6 @@
     + [图神经网络相关学习/参考资料：](#---------------)
       - [图与机器学习课程](#--------)
 
-<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
-
-
-
 
 ## Static Graph Representation & Analyzing Works
 针对静态图表示学习以及静态图分析、挖掘领域，挑选了个人认为值得借鉴的引用数较高、知名度较大的或最近的一些工作。
@@ -268,8 +264,8 @@
 * 作者： Hanjun Dai, et al. (Georgia Institute of Technology)
 * 发表时间：2017
 * 发表于：KDD 2017
-* 关键词：动态演化网络，推荐系统，点过程
-* 概述：该论文首次将时态点过程与深度学习相结合，针对推荐系统中的user-item时态交互网络中两类节点互相演化的特点，依据点过程（Point Process）理论，提出了一套能够依据交互过程，不断迭代更新user/item节点表示的框架。其中，框架主体采用了两套RNN模型损失函数采用了基于Rayleigh process的强度函数（Intensity function）的联合非负似然概率函数，其包括发生概率（happened probability）与生存概率（survival probability）组成。作者在两个real-world数据集上对链接预测、实体预测、时间预测与滑动窗口预测等任务进行了评价，验证了该框架的有效性。
+* 关键词：CTDG，动态演化网络，推荐系统，点过程
+* 概述：该论文首次将时态点过程与深度学习相结合，针对推荐系统中的user-item时态交互网络中两类节点互相演化的特点，依据点过程（Point Process）理论，提出了一套能够依据交互过程，不断迭代更新user/item节点表示的框架。其中，框架主体采用了两套RNN模型，损失函数采用了基于Rayleigh process的强度函数（Intensity function）的联合非负似然概率函数，其包括发生概率（happened probability）与生存概率（survival probability）组成。作者在两个real-world数据集上对链接预测、实体预测、时间预测与滑动窗口预测等任务进行了评价，验证了该框架的有效性。
 * 链接：https://arxiv.org/pdf/1609.03675.pdf
 * 相关数据集：
     * IPTV
@@ -281,7 +277,7 @@
 * 作者： Rakshit Trivedi, et al. (Georgia Institute of Technology)
 * 发表时间：2017
 * 发表于：PMLR 2017
-* 关键词：动态知识图谱,knowledge
+* 关键词：动态知识图谱，knowledge，点过程
 * 概述：作者提出了一套能够在动态演化知识图谱上学习实体表示随时间动态演化的框架。其中采用了基于强度函数的多变量点过程来建模事实的发生概率。作者在两个real-world数据集上对链接预测、实体预测、时间预测与滑动窗口预测等任务进行了评价，验证了该框架的有效性。该论文可以看作DyRep的前置工作。
 * 链接：https://arxiv.org/pdf/1705.05742.pdf
 * 相关数据集：
@@ -346,7 +342,7 @@
 * 作者： Giang Hoang Nguyen, et al. (Worcester Polytechnic Institute)
 * 发表时间：2018
 * 发表于：WWW 2018
-* 关键词：动态图表示，temporal random walk
+* 关键词：CTDG，动态图表示，temporal random walk
 * 概述：依据deepwalk与node2vec等模型的启发，作者基于动态图的性质，提出了temporal random walk的概念，即在一条随机游走路径上，从起始节点到终止节点，连边的时态信息依次递增。针对边上存在时态信息的问题，作者提出了unbiased/biased采样算法。采样后的路径将会蕴含动态图中的时态依赖信息。作者在多个动态图数据集上做了实验，并与Deepwalk/Node2vec/LINE等静态图表示学习算法进行了对比。
 * 链接：https://dl.acm.org/doi/abs/10.1145/3184558.3191526
 * 相关数据集：
@@ -373,6 +369,19 @@
     * Academic
 * 是否有开源代码：有（https://github.com/luckiezhou/DynamicTriad ）
 
+#### NetWalk: A Flexible Deep Embedding Approach for Anomaly Detection in Dynamic Networks
+* 作者： Wenchao Yu, et al. (UCLA)
+* 发表时间：2018
+* 发表于：KDD 2018
+* 关键词：DTDG，异常检测，深度自编码器，团体嵌入（clique embedding）
+* 概述：针对在动态网络上的异常检测任务，作者定义了动态网络上的游走路径（Network Walk），使用深度自编码器模型重建游走路径上的节点表示与团体嵌入（clique embedding），并依据重建节点表示与团体嵌入重构损失。作者还提出了动态边的表示方法与增量式更新节点表示的算法，利用训练的节点表示通过聚类进行节点或边的异常识别。作者在异常检测的准确度、walk generation time上做了实验，并做了相应参数分析的实验。
+* 链接：https://www.kdd.org/kdd2018/accepted-papers/view/netwalk-a-flexible-deep-embedding-approach-for-anomaly-detection-in-dynamic
+* 相关数据集：
+    * UCI Messages
+    * arXiv hep-th
+    * Digg
+    * DBLP
+* 是否有开源代码：无
 
 #### Dynamic graph convolutional networks
 * 作者： Franco Manessi, et al. 
@@ -440,7 +449,7 @@
 * 作者： Xi Liu, et al. (德州农工大学)
 * 发表时间：2019
 * 发表于：WWW 2019
-* 关键词：streaming graph
+* 关键词：CTDG，streaming graph
 * 概述：本文认为已有的动态图嵌入式学习方法强烈依赖节点属性，时间复杂度高，新节点加入后需要重新训练等缺点。本文提出了streaming graph的概念，提出了一种动态图表示的在线近似算法。该算法能够为新加入图中的节点快速高效生成节点表示，并能够为新加入节点“影响”到的节点更新节点的表示。
 * 链接：https://dl.acm.org/doi/abs/10.1145/3308560.3316585
 * 相关数据集：
@@ -508,6 +517,18 @@
     * Reddit Hyperlink Network
     * Elliptic      
 * 是否有开源代码：有（https://github.com/IBM/EvolveGCN ）
+
+#### Hierarchical Temporal Convolutional Networks for Dynamic Recommender Systems
+* 作者： Jiaxuan You, et al.(Jure Leskovec团队)
+* 发表时间：2019
+* 发表于：WWW 2019
+* 标签：CTDG，推荐系统、时态卷积网络（Temporal Convolutional Network）
+* 概述：动态推荐系统的任务是依据用户与商品历史互动的历史数据，为用户未来与商品的互动行为做出预测。传统的序列预测模型（rule-based/RNN/1D-CNN）均不能适用于海量互动数据下的用户行为预测。基于此，作者提出了一种层次化的时态卷积网络HierTCN，并在两个大规模推荐系统数据集上做了实验。
+* 链接：https://dl.acm.org/doi/abs/10.1145/3308558.3313747
+* 相关数据集：
+    * XING
+    * Pinterest     
+* 是否有开源代码：无
 
 #### Temporal Graph Networks for Deep Learning on Dynamic Graphs
 * 作者：Rossi, Emanuele, et al.（Twitter）
@@ -685,7 +706,7 @@
 * 发表时间：2020
 * 发表于：IJCAI 2020
 * 标签：CTDG，motif，hawkes
-* 概述：本论文采用了一种meso-dynamics的建模方法，通过一种时序网络上的motif——open triad，考虑三个节点之间的triad结构，利用Hawkes过程建模节点对之间的密度函数，来学习时态网络中的embedding。论文在节点分类、链接预测（这一部分实验写的不清楚，不太明白是怎么做的实验）、链接推荐上取得了较好的效果。
+* 概述：本论文采用了一种meso-dynamics的建模方法MTNE，通过一种时序网络上的motif——open triad，考虑三个节点之间的triad结构，利用Hawkes过程建模节点对之间的密度函数，来学习时态网络中的embedding。论文在节点分类、链接预测（这一部分实验写的不清楚，不太明白是怎么做的实验）、链接推荐上取得了较好的效果。
 * 链接：https://www.ijcai.org/Proceedings/2020/0172.pdf
 * 相关数据集：
     * School 
