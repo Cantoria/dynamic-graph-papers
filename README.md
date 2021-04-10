@@ -17,6 +17,7 @@
     + [LINE: Large-scale Information Network Embedding](#line--large-scale-information-network-embedding)
     + [Inductive representation learning on large graphs](#inductive-representation-learning-on-large-graphs)
     + [Graph Attention Networks](#graph-attention-networks)
+    + [Anonymous Walk Embeddings](#anonymous-walk-embeddings)
 - [Dynamic Graph Representation](#dynamic-graph-representation)
     + [Representation Learning for Dynamic Graphs: A Survey](#representation-learning-for-dynamic-graphs--a-survey)
     + [Foundations and modelling of dynamic networks using Dynamic Graph Neural Networks: A survey](#foundations-and-modelling-of-dynamic-networks-using-dynamic-graph-neural-networks--a-survey)
@@ -169,6 +170,25 @@
     * Pubmed
     * PPI
 * 是否有开源代码：有（原始代码为https://github.com/PetarV-/GAT ）
+
+#### Anonymous Walk Embeddings
+* 作者：Sergey Ivanov
+* 发表时间：2018
+* 发表于：ICML 2018
+* 标签：Anonymous walk, Graph embedding
+* 概述：有别于特征工程或纯粹数据驱动的图表示学习方法，作者提出了一种匿名路径嵌入（AWE）的方法，结合了特征工程与数据驱动的方式，用于整图的表示学习工作。其分为Feature-Based model与data-driven model两部分。Feature-Based model将带权图转化为马尔可夫图，通过预定义好的匿名路径（固定数目、固定长度）及匿名路径在该马尔可夫图上的采样归一化概率，得到带权图的向量表示d。在data-driven model中，作者定义了anonymous walks邻居的概念，通过skip-gram的形式结合图向量表示d对anonymous walk的表示以及进行训练，最终可以得到每个匿名路径的表示与图向量表示。作者在图分类任务上进行了实验，与基于特征工程的方法（核方法等）与数据驱动的方法（神经网络方法等）进行了对比，在图分类准确率、训练效率等方面进行了比较。
+* 链接：https://arxiv.org/pdf/1805.11921.pdf
+* 相关数据集：
+    * COLLAB
+    * IMDB-B
+    * IMDB-M
+    * RE-B
+    * RE-M5K
+    * RE-M12K
+    * Enzymes
+    * DD
+    * Mutag
+* 是否有开源代码：有（原始代码为https://github.com/nd7141/AWE ）
 
 
 ## Dynamic Graph Representation
