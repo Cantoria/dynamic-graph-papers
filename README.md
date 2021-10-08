@@ -716,7 +716,7 @@
 * 发表时间：2020
 * 发表于：KDD
 * 标签：时态网络，Dynamic Social Interaction
-* 概述：社交互动（Social interactions）能够反应人类的社会地位与心理状态。社交关系是动态演变的，因此，在一个人群中，人们之间互相的动作能够反应这种模式。传统的方法一般适用人工定义模板的方法作者使用时态网络定义该问题，提出了一种temporal network-diffusion convolution network的方法，并在三个不同的数据集中对三种不同的心理状态进行了预测。
+* 概述：社交互动（Social interactions）能够反应人类的社会地位与心理状态。社交关系是动态演变的，因此，在一个人群中，人们之间互相的动作能够反应这种模式。传统的方法一般适用人工定义模板的方法作者使用时态网络定义该问题，提出了一种temporal network-diffusion convolution network(TNDCN)的方法，并在三个不同的数据集中对三种不同的心理状态进行了预测。
 * 链接：http://www.mlgworkshop.org/2020/papers/MLG2020_paper_6.pdf
 * 相关数据集：
     * RESISTANCE-1/2/3
@@ -760,13 +760,13 @@
 * 发表时间：2020
 * 发表于：ICLR 2020
 * 标签：CTDG，inductive learning
-* 概述：传统动态图表示学习的工作是transductive的，意即只能对训练集中出现过的节点进行表示，无法对unseen nodes进行表示。作者受到静态图中GraphSage、GAT等inductive learning方法的启发，提出了temporal graph attention layer（TGAT）这一结构。该结构使用了通过Bochner定理推导出时态核函数的时态编码模块，建模节点embedding识别为时间的函数，并能够随着图的演化，来有效聚合时态-拓扑邻居特征，从而学习到节点的时态-拓扑邻居聚合函数，使用inductive的方法快速生成节点表示。
+* 概述：传统动态图表示学习的工作是transductive的，即只能对训练集中出现过的节点进行表示，无法对unseen nodes进行表示。作者受到静态图中GraphSage、GAT等inductive learning方法的启发，提出了temporal graph attention layer（TGAT）这一结构。该结构使用了通过Bochner定理推导出时态核函数的时态编码模块，建模节点embedding识别为时间的函数，并能够随着图的演化，来有效聚合时态-拓扑邻居特征，从而学习到节点的时态-拓扑邻居聚合函数，使用inductive的方法快速生成节点表示。
 * 链接：https://arxiv.org/abs/2002.07962
 * 相关数据集：
     * Wikipedia
     * Reddit
     * Industrial dataset
-* 是否有开源代码：无
+* 是否有开源代码：有（https://github.com/StatsDLMathsRecomSys/Inductive-representation-learning-on-temporal-graphs ）
 
 
 #### INDUCTIVE REPRESENTATION LEARNING IN TEMPORAL NETWORKS VIA CAUSAL ANONYMOUS WALKS
@@ -1146,4 +1146,10 @@
 #### 图与机器学习课程
 * 简介：斯坦福开设的本科课程，Jure Leskovec担任课程顾问。
 * 链接：http://web.stanford.edu/class/cs224w/
+
+#### 时态表示学习与推理研究论坛
+* 简介：TIME has been for more than twenty years the only yearly multidisciplinary international event dedicated to the topic of time in computer science. The purpose of the symposium is to bring together active researchers in different research areas involving temporal representation and reasoning. The symposium also welcomes research papers on the related topics of spatial and spatio-temporal representation and reasoning. In the early years, most contributions came from the Artificial Intelligence community, but the number of contributions from other areas such as Temporal Logic and Verification and  partly from Temporal Databases has been increasing in the last years.
+* 论坛链接：http://time.di.unimi.it/TIME_Home.html
+* 1996-2016 论文集：https://www.computer.org/csdl/proceedings/1000750
+* 2017-2021论文集（搜索TIME关键字即可）：https://drops.dagstuhl.de/opus/institut_lipics.php?fakultaet=04
 
